@@ -47,6 +47,7 @@ a {
   --white: #fcfaff;
   --purple-main: #5603a9;
   --black: #1d1d1b;
+  --gray: #b2b2b2;
 }
 
 [data-theme="dark"] {

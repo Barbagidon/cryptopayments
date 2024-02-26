@@ -10,3 +10,9 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+
+@media (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+}

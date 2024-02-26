@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import Theme from "@/components/providers/Theme";
 
 const interTight = Inter_Tight({ subsets: ["latin"] });
 
@@ -17,8 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-theme="dark" lang="en">
-      <body className={interTight.className}>{children}</body>
+    <html lang="en">
+      <body
+        style={{
+          overflowX: "hidden",
+          height: 2000,
+        }}
+        className={interTight.className}
+      >
+        {children}
+      </body>
     </html>
   );
 }
