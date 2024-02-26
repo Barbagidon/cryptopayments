@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --white-50: rgba(252, 250, 255, 0.5);
+  --white-30: rgba(252, 250, 255, 0.3);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white: #fcfaff;
+  --purple-main: #5603a9;
+  --black: #1d1d1b;
+}
+
+[data-theme="dark"] {
+  --white-30: red;
+}

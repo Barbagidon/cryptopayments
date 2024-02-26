@@ -1,0 +1,46 @@
+.header {
+  border-bottom: 2px solid var(--white-50);
+  background: var(--white-30);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContent {
+  max-width: 1238px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btnLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.loginLink {
+  padding: 16px 32px;
+  border-radius: 50px;
+  border: 1px solid var(--black);
+  background: var(--white-10);
+  backdrop-filter: blur(4px);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.joinLink {
+  padding: 16px 32px;
+  border-radius: 50px;
+  border: 1px solid var(--black);
+  background: var(--purple-main);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+}
