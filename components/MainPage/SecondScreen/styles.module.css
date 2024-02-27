@@ -102,6 +102,12 @@
   }
 }
 
+@media (max-width: 880px) {
+  .content {
+    padding: 60px 24px 80px 24px;
+  }
+}
+
 @media (max-width: 645px) {
   .content {
     padding: 23px 24px 67px 24px;
