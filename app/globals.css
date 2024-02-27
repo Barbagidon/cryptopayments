@@ -48,6 +48,8 @@ a {
   --purple-main: #5603a9;
   --black: #1d1d1b;
   --gray: #b2b2b2;
+  --yellow: #f8e32b;
+  --absolut-white: #fff;
 }
 
 [data-theme="dark"] {
