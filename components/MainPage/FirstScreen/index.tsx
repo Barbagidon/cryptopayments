@@ -7,7 +7,7 @@ import StartedBtnBg from "./icons/startedBtnBg";
 
 const FirstScreen = () => {
   return (
-    <div className={styles.firstScreen}>
+    <section className={styles.firstScreen}>
       <Header />
       <div className={styles.content}>
         <div className={styles.topContent}>
@@ -41,7 +41,7 @@ const FirstScreen = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

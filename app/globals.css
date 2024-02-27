@@ -50,6 +50,10 @@ a {
   --gray: #b2b2b2;
   --yellow: #f8e32b;
   --absolut-white: #fff;
+  --black-light-1: #4a4a49;
+  --purple-light-2: #9a68cb;
+  --purple-light-3: #bb9add;
+  --purple-light-4: #ddcdee;
 }
 
 [data-theme="dark"] {

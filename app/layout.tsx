@@ -19,7 +19,6 @@ export default function RootLayout({
       <body
         style={{
           overflowX: "hidden",
-          height: 2000,
         }}
         className={interTight.className}
       >
