@@ -61,16 +61,7 @@
 }
 
 .startedBtnWrap {
-  width: 209px;
-  border-radius: 50px;
-  border: 2px solid var(--yellow);
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-left: 95px;
-  position: relative;
-  z-index: 2;
 }
 
 .startedBtn {
@@ -84,6 +75,11 @@
   font-weight: 600;
   height: 54px;
   color: var(--black);
+  transition: box-shadow 0.3s;
+}
+
+.startedBtn:hover {
+  box-shadow: 0px 0px 18px var(--yellow);
 }
 
 .startedBtnBgWrap {

@@ -12,6 +12,11 @@
   position: relative;
   z-index: 1;
   background: var(--absolut-white);
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 13px -16px 5px var(--yellow);
 }
 
 .card:nth-child(1) {

@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import BlackArrow from "./icons/BlackArrow";
 import StartedBtnBg from "./icons/startedBtnBg";
+import StartedBtn from "@/components/ui/StartedBtn";
 
 const FirstScreen = () => {
   return (
@@ -26,12 +27,7 @@ const FirstScreen = () => {
         </div>
         <div className={styles.bottomContent}>
           <div className={styles.startedContent}>
-            <div className={styles.startedBtnWrap}>
-              <button className={styles.startedBtn}>get started</button>
-              <button className={styles.arrowBtn}>
-                <BlackArrow />
-              </button>
-            </div>
+            <StartedBtn className={styles.startedBtnWrap} />
             <div className={styles.startedBtnBgWrap}>
               <StartedBtnBg />
             </div>

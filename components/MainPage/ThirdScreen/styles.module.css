@@ -1,0 +1,60 @@
+.thirdScreen {
+  background: url("/mainPage/thirdSectionBg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 37px;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.title {
+  font-size: 112px;
+  font-weight: 600;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.titleDivider {
+  width: 100%;
+  border-radius: 4px;
+  height: 8px;
+  background: var(--white-50);
+}
+
+.imageWrap {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+
+.triangleWrap {
+  position: absolute;
+  left: -75px;
+  top: -44px;
+}
+
+.bottomContent {
+  margin-top: 108px;
+  display: flex;
+  justify-content: space-between;
+}

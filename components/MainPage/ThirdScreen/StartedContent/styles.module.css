@@ -1,0 +1,22 @@
+.startedContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  max-width: 320px;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--yellow);
+}
+
+.descr {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 240px;
+  width: 100%;
+  line-height: 140%;
+}

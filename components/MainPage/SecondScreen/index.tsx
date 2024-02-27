@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
 import CardList from "./CardList";
-import GearIcon from "./icons/gearIcon";
 import Image from "next/image";
 
 const SecondScreen = () => {
