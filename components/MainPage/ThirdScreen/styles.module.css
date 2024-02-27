@@ -60,7 +60,7 @@
   margin-top: 108px;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 68px;
 }
 
 @media (max-width: 1300px) {
