@@ -13,12 +13,18 @@ const Card = ({ cardData }: Props) => {
   return (
     <div className={styles.card}>
       <div className={styles.purpleBg} />
-      <div className={styles.arrowWrap}>
+      <div className={styles.pcArrow}>
         <Arrow />
       </div>
 
       <div className={styles.cardContent}>
-        <span className={styles.cardTitle}>{cardData.title}</span>
+        <span className={styles.cardTitle}>
+          <span className={styles.title}> {cardData.title}</span>
+
+          <span className={styles.mobileArrow}>
+            <Arrow />
+          </span>
+        </span>
         <div className={styles.divider} />
         <span className={styles.descr}>{cardData.descr}</span>
       </div>

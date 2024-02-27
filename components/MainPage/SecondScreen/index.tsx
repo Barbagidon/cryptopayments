@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./styles.module.css";
 import CardList from "./CardList";
+import GearIcon from "./icons/gearIcon";
+import Image from "next/image";
 
 const SecondScreen = () => {
   return (
@@ -13,6 +15,11 @@ const SecondScreen = () => {
           <h2 className={styles.title}>TAILORED TO YOUR NEEDS</h2>
         </div>
         <CardList />
+        <div className={styles.bigCircle}>
+          <div className={styles.gearIconWrap}>
+            <Image alt={"gear icon"} fill src={"/gear.png"} />
+          </div>
+        </div>
       </div>
     </section>
   );

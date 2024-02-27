@@ -1,6 +1,11 @@
 .cardList {
   margin-top: 56px;
   display: flex;
-  align-items: center;
   gap: 24px;
+}
+
+@media (max-width: 930px) {
+  .cardList {
+    flex-direction: column;
+  }
 }
