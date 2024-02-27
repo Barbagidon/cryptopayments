@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import Header from "@/components/Header";
 import Image from "next/image";
-import BlackArrow from "./icons/BlackArrow";
+
 import StartedBtnBg from "./icons/startedBtnBg";
 import StartedBtn from "@/components/ui/StartedBtn";
 
