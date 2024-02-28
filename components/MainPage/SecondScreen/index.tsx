@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 import CardList from "./CardList";
-import Image from "next/image";
+import BigCircle from "@/components/ui/BigCircle";
 
 const SecondScreen = () => {
   return (
@@ -16,11 +16,8 @@ const SecondScreen = () => {
           </div>
           <CardList />
         </div>
-        <div className={styles.bigCircle}>
-          <div className={styles.gearIconWrap}>
-            <Image alt={"gear icon"} fill src={"/gear.png"} />
-          </div>
-        </div>
+
+        <BigCircle />
       </div>
     </section>
   );

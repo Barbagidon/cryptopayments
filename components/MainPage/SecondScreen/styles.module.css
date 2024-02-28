@@ -42,43 +42,9 @@
   text-transform: uppercase;
 }
 
-.bigCircle {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  background: var(--absolut-white);
-  top: -190px;
-  right: -13px;
-}
-
-.gearIconWrap {
-  max-width: 366px;
-  width: 100%;
-  height: 366px;
-  position: relative;
-}
-
-@media (max-width: 1200px) {
-  .content {
-    max-width: unset;
-  }
-
-  .bigCircle {
-    right: -90px;
-  }
-}
-
 @media (max-width: 1280px) {
   .content {
     max-width: unset;
-  }
-
-  .bigCircle {
-    right: -90px;
   }
 }
 
@@ -87,35 +53,8 @@
     padding: 60px 40px 80px 40px;
   }
 
-  .bigCircle {
-    width: 320px;
-    height: 320px;
-    top: -127px;
-    right: -10px;
-  }
-
-  .gearIconWrap {
-    max-width: 234px;
-    height: 234px;
-  }
-
   .title {
     font-size: 48px;
-  }
-}
-
-@media (max-width: 930px) {
-  .bigCircle {
-    width: 344px;
-    height: 344px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -103px;
-  }
-
-  .gearIconWrap {
-    width: 251px;
-    height: 251px;
   }
 }
 
@@ -141,9 +80,5 @@
 
   .subTitle {
     font-size: 16px;
-  }
-
-  .bigCircle {
-    top: -137px;
   }
 }
