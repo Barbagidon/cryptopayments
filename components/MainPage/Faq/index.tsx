@@ -3,6 +3,9 @@ import styles from "./styles.module.css";
 import FaqList from "@/components/ui/FaqList";
 import { config } from "./config";
 import BigCircle from "@/components/ui/BigCircle";
+import Arrow from "./icons/arrow";
+import Link from "next/link";
+import MobileArrow from "./icons/mobileArrow";
 
 const Faq = () => {
   return (
@@ -16,12 +19,17 @@ const Faq = () => {
         </div>
 
         <FaqList className={styles.faqList} data={config} />
-        <div
-          style={{
-            height: 209,
-            width: "100%",
-          }}
-        ></div>
+
+        <div className={styles.showMore}>
+          <span className={styles.showMoreText}>
+            Didn&apos;t find the answer you were looking for?
+          </span>
+          <Arrow className={styles.arrowPc} />
+
+          <Link href={"#"} className={styles.showMoreBtn}>
+            show more
+          </Link>
+        </div>
       </div>
       <BigCircle />
     </section>
