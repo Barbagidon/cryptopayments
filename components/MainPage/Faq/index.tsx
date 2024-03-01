@@ -5,7 +5,6 @@ import { config } from "./config";
 import BigCircle from "@/components/ui/BigCircle";
 import Arrow from "./icons/arrow";
 import Link from "next/link";
-import MobileArrow from "./icons/mobileArrow";
 
 const Faq = () => {
   return (
