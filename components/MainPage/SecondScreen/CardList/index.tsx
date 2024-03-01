@@ -15,7 +15,7 @@ const CardList = () => {
     },
     {
       title: "B2B EXCHANGE",
-      descr: "Exchange Crypto and settle to Your Bank Account",
+      descr: "Exchange Crypto to fiat and settle to Your Bank Account",
     },
   ];
 

@@ -95,11 +95,17 @@
 
 @media (max-width: 880px) {
   .getStartedSection {
-    padding: 48px 16px 60px 16px;
+    padding: 48px 24px 60px 24px;
   }
   .title,
   .subTitle {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 645px) {
+  .getStartedSection {
+    padding: 48px 16px 60px 16px;
   }
 }
 
@@ -109,7 +115,7 @@
     text-align: center;
     font-size: 32px;
   }
-  .content{
+  .content {
     gap: 28px;
   }
 }

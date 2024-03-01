@@ -66,13 +66,9 @@
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 645px) {
   .meetSection {
     padding: 80px 16px 80px 16px;
-  }
-
-  .gearIcon {
-    left: -18px;
   }
 }
 

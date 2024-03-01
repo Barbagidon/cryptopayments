@@ -127,11 +127,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 645px) {
   .thirdScreen {
     padding: 63px 16px 0 16px;
   }
+}
 
+@media (max-width: 600px) {
   .header {
     flex-direction: column;
     gap: 16px;
