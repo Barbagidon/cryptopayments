@@ -37,6 +37,12 @@
   font-weight: 600;
   color: var(--black);
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.loginLink:hover {
+  border-color: var(--purple-main);
+  color: var(--purple-main);
 }
 
 .joinLink {
@@ -48,6 +54,12 @@
   font-weight: 600;
   color: var(--white);
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.joinLink:hover {
+  background: var(--purple-light-1);
+  border-color: transparent;
 }
 
 .mobileMenuBtn {

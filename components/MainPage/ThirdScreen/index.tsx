@@ -7,7 +7,7 @@ import InstructionList from "./InstructionList";
 
 const ThirdScreen = () => {
   return (
-    <div className={styles.thirdScreen}>
+    <section className={styles.thirdScreen}>
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.titleWrap}>
@@ -31,7 +31,7 @@ const ThirdScreen = () => {
           <InstructionList />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

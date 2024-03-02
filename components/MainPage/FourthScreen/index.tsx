@@ -6,7 +6,7 @@ import Bg from "./icons/bg";
 
 const FourthScreen = () => {
   return (
-    <div className={styles.fourthScreen}>
+    <section className={styles.fourthScreen}>
       <div className={styles.content}>
         <div className={styles.topContent}>
           <h2 className={styles.title}>Multicurrency support</h2>
@@ -36,13 +36,10 @@ const FourthScreen = () => {
           />
         </div>
         <div className={styles.lineBg}>
-          {/* <FirstLine />
-          <SecondLine />
-          <ThirdLine /> */}
           <Bg />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

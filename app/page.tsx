@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className={styles.mainPage}>
+    <main className={styles.mainPage}>
       <FirstScreen />
       <SecondScreen />
       <ThirdScreen />
@@ -19,6 +19,6 @@ export default function Home() {
       <MeetSection />
       <GetStartedSection />
       <Footer />
-    </div>
+    </main>
   );
 }

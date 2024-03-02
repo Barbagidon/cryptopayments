@@ -1,0 +1,25 @@
+.sectionWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 80px 0px 80px;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .sectionWrap {
+    padding: 0px 40px;
+  }
+}
+
+@media (max-width: 880px) {
+  .sectionWrap {
+    padding: 0px 24px 0px 24px;
+  }
+}
+
+@media (max-width: 645px) {
+  .sectionWrap {
+    padding: 0px 16px 0px 16px;
+  }
+}

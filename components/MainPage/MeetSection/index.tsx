@@ -5,7 +5,7 @@ import GearIcon from "./icons/gearIcon";
 
 const MeetSection = () => {
   return (
-    <div className={styles.meetSection}>
+    <section className={styles.meetSection}>
       <div className={styles.content}>
         <h2 className={styles.title}>where to meet us in 2024</h2>
 
@@ -16,7 +16,7 @@ const MeetSection = () => {
           <GearIcon className={styles.gearIcon} />
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

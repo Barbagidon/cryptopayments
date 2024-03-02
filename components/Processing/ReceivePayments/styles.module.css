@@ -1,0 +1,8 @@
+.receivePayments {
+  background: url("/processing/processingMainBg.png");
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+}
