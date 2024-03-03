@@ -5,11 +5,16 @@ import styles from "./styles.module.css";
 interface Props {
   className?: string;
   children: ReactNode;
+  tag?: string;
 }
 
-const SectionWrap = ({ className, children }: Props) => {
+const SectionWrap = ({ className, children, tag = "section" }: Props) => {
+  const CustomTag = tag as keyof JSX.IntrinsicElements;
+
   return (
-    <section className={cn(styles.sectionWrap, className)}>{children}</section>
+    <CustomTag className={cn(styles.sectionWrap, className)}>
+      {children}
+    </CustomTag>
   );
 };
 
