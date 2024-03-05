@@ -6,6 +6,7 @@ import styles from "./styles.module.css";
 import CryptoPayments from "./CryptoPayments";
 import Exchange from "./Exchange";
 import EasyApi from "./EasyApi";
+import Merchant from "./Merchant";
 
 const Slider = () => {
   return (
@@ -13,7 +14,8 @@ const Slider = () => {
       <div className={styles.content}>
         {/* <CryptoPayments /> */}
         {/* <Exchange /> */}
-        <EasyApi />
+        {/* <EasyApi /> */}
+        <Merchant />
       </div>
     </SectionWrap>
   );

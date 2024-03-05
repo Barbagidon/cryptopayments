@@ -5,7 +5,7 @@ import CheckedIcon from "./icons/checkedIcon";
 interface Props {
   item: {
     title: string;
-    descr: string;
+    descr?: string;
   };
 }
 
@@ -17,7 +17,7 @@ const AdvItem = ({ item }: Props) => {
         <CheckedIcon />
         <span className={styles.text}>{title}</span>
       </div>
-      <div className={styles.descr}>{descr}</div>
+      {descr && <div className={styles.descr}>{descr}</div>}
     </div>
   );
 };
