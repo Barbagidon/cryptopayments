@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import AdvItem from "./AdvItem";
 import styles from "./styles.module.css";
 import React, { Fragment } from "react";
+import AdvItem from "../AdvItem";
 
 const config = [
   {
