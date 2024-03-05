@@ -1,17 +1,27 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const AdvCard = () => {
+interface Props {
+  cardData: {
+    title: string;
+    descr: string;
+    num: number;
+  };
+}
+
+const AdvCard = ({ cardData }: Props) => {
+  const { descr, num, title } = cardData;
+
   return (
     <div className={styles.advCard}>
       <div className={styles.number}>
-        <span>01</span> <span>—</span>
+        <span>0{num}</span> <span>—</span>
       </div>
 
       <div className={styles.content}>
-        <div className={styles.mainText}>RELIABLE FEES</div>
-        <div className={styles.divider}></div>
-        <div className={styles.text}>No Setup Fees. No Hidden Fees</div>
+        <div className={styles.mainText}>{title}</div>
+        <div className={styles.divider} />
+        <div className={styles.text}>{descr}</div>
       </div>
     </div>
   );

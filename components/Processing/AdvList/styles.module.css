@@ -8,24 +8,23 @@
 .advList {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 24px;
   position: absolute;
   width: 100%;
   top: -125px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .advList {
     flex-direction: column;
   }
 
   .content {
-    height: 435px;
+    min-height: 435px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .content {
     height: 625px;
   }

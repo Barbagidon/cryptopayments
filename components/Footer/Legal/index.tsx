@@ -10,7 +10,12 @@ const Legal = () => {
     "Risk Disclaimer",
     "Fees and Limits",
   ];
-  const rightLinks = ["Cookies Policy", "AML Policy", "FAQ"];
+  const rightLinks = [
+    "Complaints policy",
+    "Cookies Policy",
+    "AML Policy",
+    "FAQ",
+  ];
   return (
     <div className={styles.legal}>
       <FooterTitle>Legal</FooterTitle>

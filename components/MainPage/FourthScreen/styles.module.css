@@ -89,6 +89,12 @@
   left: -90px;
 }
 
+.coinsIcon {
+  margin-top: auto;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 1200px) {
   .fourthScreen {
     padding: 0px 40px 221px 40px;

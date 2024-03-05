@@ -24,7 +24,9 @@ const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <LogoIcon />
+          <Link className={styles.logoLink} href={"/"}>
+            <LogoIcon />
+          </Link>
           <Navigation />
 
           <div className={styles.links}>

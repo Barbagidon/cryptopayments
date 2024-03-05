@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import StartedBtn from "@/components/ui/StartedBtn";
 import Image from "next/image";
 import Bg from "./icons/bg";
+import CoinsIcon from "./icons/coins";
 
 const FourthScreen = () => {
   return (
@@ -26,14 +27,7 @@ const FourthScreen = () => {
             </div>
           </div>
 
-          <Image
-            width="0"
-            height="0"
-            sizes="100vw"
-            style={{ width: "100%", height: "auto", marginTop: "auto" }}
-            alt="coins"
-            src={"/mainPage/coins.png"}
-          />
+          <CoinsIcon className={styles.coinsIcon} />
         </div>
         <div className={styles.lineBg}>
           <Bg />
