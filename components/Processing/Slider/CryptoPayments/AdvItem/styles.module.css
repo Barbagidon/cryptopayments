@@ -1,0 +1,21 @@
+.advItem {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.text {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.descr {
+  max-width: 520px;
+}

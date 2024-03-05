@@ -4,6 +4,7 @@ import ReceivePayments from "@/components/Processing/ReceivePayments";
 import Footer from "@/components/Footer";
 import AdvList from "@/components/Processing/AdvList";
 import Integrate from "@/components/Processing/Integrate";
+import Slider from "@/components/Processing/Slider";
 
 const Processing = () => {
   return (
@@ -11,6 +12,7 @@ const Processing = () => {
       <ReceivePayments />
       <AdvList />
       <Integrate />
+      <Slider />
       <Footer />
     </main>
   );

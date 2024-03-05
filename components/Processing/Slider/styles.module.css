@@ -1,0 +1,16 @@
+.slider {
+  background: url("/processing/building.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+  padding-bottom: 206px;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
