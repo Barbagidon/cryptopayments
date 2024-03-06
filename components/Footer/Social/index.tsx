@@ -32,16 +32,16 @@ const Social = () => {
         <Arrow className={styles.arrow} />
       </div>
       <div className={styles.iconsLinks}>
-        <Link href={"#"}>
+        <Link className={styles.link} href={"#"}>
           <Inst />
         </Link>
-        <Link href={"#"}>
+        <Link className={styles.link} href={"#"}>
           <Face />
         </Link>
-        <Link href={"#"}>
+        <Link className={styles.link} href={"#"}>
           <Tlg />
         </Link>
-        <Link href={"#"}>
+        <Link className={styles.link} href={"#"}>
           <Linked />
         </Link>
       </div>

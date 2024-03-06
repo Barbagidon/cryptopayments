@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "./styles.module.css";
 import AdvItem from "../AdvItem";
 import Image from "next/image";
+import cn from "classnames";
 
 const config = [
   "Permission levels for your team",
@@ -11,9 +12,10 @@ const config = [
   "Transaction export",
 ];
 
-const Merchant = () => {
+interface Props extends React.HTMLProps<HTMLDivElement> {}
+const Merchant = ({ className, ...props }: Props) => {
   return (
-    <div className={styles.merchant}>
+    <div {...props} className={cn(styles.merchant, className)}>
       <div className={styles.header}>
         <div className={styles.leftText}>
           <div className={styles.title}>Merchant Account</div>
@@ -28,15 +30,14 @@ const Merchant = () => {
         <div className={styles.list}>
           {config.map((item, i) => {
             return (
-              <>
+              <Fragment key={i}>
                 <AdvItem
                   item={{
                     title: item,
                   }}
-                  key={i}
                 />
                 {i !== config.length - 1 && <div className={styles.divider} />}
-              </>
+              </Fragment>
             );
           })}
         </div>

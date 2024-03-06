@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import React, { Fragment } from "react";
 import AdvItem from "../AdvItem";
+import cn from "classnames";
 
 const config = [
   {
@@ -17,22 +18,20 @@ const config = [
   },
   {
     title: "No chargebacks or rolling reserve",
-    descr:
-      "Chargebacks and rolling reserves change the concept of uninterrupted financial procedures.",
+    descr: "Instant and limitless exchange.",
   },
 ];
 
-const CryptoPayments = () => {
+interface Props extends React.HTMLProps<HTMLDivElement> {}
+
+const CryptoPayments = ({ ...props }: Props) => {
   return (
-    <div className={styles.cryptoPayments}>
-      <div className={styles.header}>
-        <span className={styles.leftText}>Crypto payments</span>
-        <span className={styles.rightText}>
+    <div {...props} className={cn(styles.cryptoPayments, props.className)}>
+      <div className={styles.content}>
+        <span className={styles.title}>Crypto payments</span>
+        <span className={styles.subTitle}>
           Send and receive payments in 10 virtual currencies 24/7
         </span>
-      </div>
-
-      <div className={styles.content}>
         <div className={styles.advList}>
           {config.map((item, i) => {
             return (
@@ -43,17 +42,18 @@ const CryptoPayments = () => {
             );
           })}
         </div>
-        <Image
-          className={styles.image}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/btcPhone.png"}
-          alt={"btc phone"}
-          unoptimized
-          quality={100}
-        />
       </div>
+
+      <Image
+        className={styles.image}
+        sizes="100vw"
+        width={0}
+        height={0}
+        src={"/processing/btcPhone.png"}
+        alt={"btc phone"}
+        unoptimized
+        quality={100}
+      />
     </div>
   );
 };

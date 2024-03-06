@@ -6,6 +6,7 @@ import EthIcon from "./icons/ethIcon";
 import UsdtIcon from "./icons/usdtIcon";
 import AdvItem from "../AdvItem";
 import Image from "next/image";
+import cn from "classnames";
 
 const icons = [
   {
@@ -21,10 +22,11 @@ const icons = [
     icon: <UsdtIcon />,
   },
 ];
+interface Props extends React.HTMLProps<HTMLDivElement> {}
 
-const Exchange = () => {
+const Exchange = ({ ...props }: Props) => {
   return (
-    <div className={styles.exchange}>
+    <div {...props} className={cn(styles.exchange, props.className)}>
       <div className={styles.header}>
         <span className={styles.title}>exchange</span>
         <div className={styles.coins}>

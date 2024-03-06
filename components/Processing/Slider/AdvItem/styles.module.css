@@ -1,7 +1,7 @@
 .advItem {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
 }
 
 .title {
@@ -11,11 +11,12 @@
 }
 
 .text {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--black);
 }
 
 .descr {
-  max-width: 520px;
+  max-width: 540px;
+  font-size: 16px;
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import cn from "classnames";
 
-const EasyApi = () => {
+interface Props extends React.HTMLProps<HTMLDivElement> {}
+const EasyApi = ({ ...props }: Props) => {
   return (
-    <div className={styles.easyApi}>
+    <div {...props} className={cn(styles.easyApi, props.className)}>
       <div className={styles.textContent}>
         <div className={styles.title}>Easy API integration</div>
         <div className={styles.bottomText}>
