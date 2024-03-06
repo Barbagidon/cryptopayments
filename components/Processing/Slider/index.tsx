@@ -13,9 +13,9 @@ const Slider = () => {
     <SectionWrap className={styles.slider}>
       <div className={styles.content}>
         {/* <CryptoPayments /> */}
-        <Exchange />
+        {/* <Exchange /> */}
         {/* <EasyApi /> */}
-        {/* <Merchant /> */}
+        <Merchant />
       </div>
     </SectionWrap>
   );

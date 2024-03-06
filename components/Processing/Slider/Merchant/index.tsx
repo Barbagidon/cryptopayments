@@ -6,52 +6,53 @@ import cn from "classnames";
 
 const config = [
   "Permission levels for your team",
-  "Complete all data that you need in one form",
-  "Two-factor authentication",
   "Deposit, withdraw and payout",
+  "Complete all data that you need in one form",
+
   "Transaction export",
+  "Two-factor authentication",
 ];
 
 interface Props extends React.HTMLProps<HTMLDivElement> {}
 const Merchant = ({ className, ...props }: Props) => {
   return (
     <div {...props} className={cn(styles.merchant, className)}>
-      <div className={styles.header}>
-        <div className={styles.leftText}>
+      <div className={styles.content}>
+        <div className={styles.header}>
           <div className={styles.title}>Merchant Account</div>
           <div className={styles.subTitle}>Just try it yourself.</div>
         </div>
-        <div className={styles.rightText}>
+
+        <div className={styles.text}>
           You can easily track each transaction and verify all data in your
           account. Our designers made this process simple.
         </div>
-      </div>
-      <div className={styles.content}>
+
         <div className={styles.list}>
           {config.map((item, i) => {
             return (
               <Fragment key={i}>
                 <AdvItem
+                  className={styles.advItem}
                   item={{
                     title: item,
                   }}
                 />
-                {i !== config.length - 1 && <div className={styles.divider} />}
               </Fragment>
             );
           })}
         </div>
-        <Image
-          className={styles.image}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/settingsPhone.png"}
-          alt={"merchant account"}
-          unoptimized
-          quality={100}
-        />
       </div>
+      <Image
+        className={styles.image}
+        sizes="100vw"
+        width={0}
+        height={0}
+        src={"/processing/settingsPhone.png"}
+        alt={"merchant account"}
+        unoptimized
+        quality={100}
+      />
     </div>
   );
 };
