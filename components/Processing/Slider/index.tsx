@@ -12,10 +12,10 @@ const Slider = () => {
   return (
     <SectionWrap className={styles.slider}>
       <div className={styles.content}>
-        <CryptoPayments />
+        {/* <CryptoPayments /> */}
         <Exchange />
-        <EasyApi />
-        <Merchant />
+        {/* <EasyApi /> */}
+        {/* <Merchant /> */}
       </div>
     </SectionWrap>
   );
