@@ -16,8 +16,9 @@ const HalfCircle = ({ className }: Props) => {
       className={className}
       initial={{ rotate: 0, translateX: "-50%" }}
       whileInView={{ rotate: 110 }}
+      viewport={{ amount: 0.8, once: true }}
       transition={{
-        duration: 0.7,
+        duration: 0.9,
       }}
     >
       <path
