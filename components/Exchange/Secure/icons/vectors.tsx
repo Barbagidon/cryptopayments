@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 
 interface Props {
@@ -6,7 +9,7 @@ interface Props {
 
 const Vectors = ({ className }: Props) => {
   return (
-    <svg
+    <motion.svg
       width="929"
       height="273"
       viewBox="0 0 929 273"
@@ -39,8 +42,8 @@ const Vectors = ({ className }: Props) => {
           y2="142.455"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#8421F7" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#8421F7" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_326_24089"
@@ -50,8 +53,8 @@ const Vectors = ({ className }: Props) => {
           y2="85.8895"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#8421F7" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#8421F7" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_326_24089"
@@ -61,8 +64,8 @@ const Vectors = ({ className }: Props) => {
           y2="378.279"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#8421F7" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#8421F7" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_326_24089"
@@ -72,11 +75,11 @@ const Vectors = ({ className }: Props) => {
           y2="273.599"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#8421F7" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#8421F7" />
         </linearGradient>
       </defs>
-    </svg>
+    </motion.svg>
   );
 };
 

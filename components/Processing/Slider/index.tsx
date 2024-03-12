@@ -11,14 +11,19 @@ import { motion, useScroll } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import SlideBackings from "./SlideBackings";
 
 const Slider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const [transition, setTransition] = useState(0);
 
-  const slides = [CryptoPayments, Exchange, EasyApi, Merchant];
+  const slides = [
+    CryptoPayments,
+    CryptoPayments,
+    CryptoPayments,
+    CryptoPayments,
+  ];
 
   const { scrollYProgress } = useScroll({ target: scrollRef });
 
@@ -43,14 +48,15 @@ const Slider = () => {
     };
   }, [scrollYProgress]);
 
-  const transitionValue = scrollRef.current
-    ? transition * scrollRef.current.offsetWidth
+  const transitionValue = containerRef.current
+    ? transition * containerRef.current.clientWidth
     : 0;
 
   return (
     <motion.div ref={scrollRef} className={styles.sliderContainer}>
       <SectionWrap className={styles.slider}>
         <motion.div
+          ref={containerRef}
           animate={{
             x: transitionValue,
           }}
@@ -72,7 +78,6 @@ const Slider = () => {
                 key={i}
               >
                 <Slide />
-                <SlideBackings slideNum={i} />
               </motion.div>
             );
           })}

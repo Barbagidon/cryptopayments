@@ -4,21 +4,18 @@ interface Props {
   className?: string;
 }
 
-const CheckedIcon = ({ className }: Props) => {
+const LittleCheckedIcon = ({ className }: Props) => {
   return (
     <svg
-      style={{
-        minWidth: 32,
-      }}
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
+      width="24"
+      height="25"
+      viewBox="0 0 24 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
       <path
-        d="M4 17.2857L10.8571 24.1429L28 7"
+        d="M3 13.4643L8.14286 18.6071L21 5.75"
         stroke="#5603A9"
         strokeWidth="4"
         strokeLinecap="round"
@@ -28,4 +25,4 @@ const CheckedIcon = ({ className }: Props) => {
   );
 };
 
-export default CheckedIcon;
+export default LittleCheckedIcon;

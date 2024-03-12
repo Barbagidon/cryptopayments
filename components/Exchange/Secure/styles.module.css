@@ -1,6 +1,9 @@
 .secure {
   background: var(--purple-light-4);
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
 }
 
 .content {
@@ -8,6 +11,8 @@
   width: 100%;
   position: relative;
   display: flex;
+  justify-content: space-between;
+  z-index: 1;
 }
 
 .textContent {
@@ -17,6 +22,7 @@
   max-width: 375px;
   width: 100%;
   margin-top: 100px;
+  position: relative;
 }
 
 .title {
@@ -108,4 +114,139 @@
   left: 50%;
   z-index: 0;
   transform: translateX(-50%) rotate(0deg);
+}
+
+.mobileVectors {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: 1130px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .text {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 299px;
+  }
+
+  .secure {
+    padding-left: 40px;
+  }
+
+  .circle {
+    left: -20px;
+    top: -40px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .cardHeader {
+    font-size: 24px;
+  }
+
+  .list {
+    margin-top: 62px;
+    padding-bottom: 62px;
+  }
+  .cardBlock {
+    padding: 185px 50px 100px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardHeader {
+    padding-bottom: 24px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .cardBlock {
+    padding: 190px 24px 83px 24px;
+    max-width: unset;
+  }
+
+  .secure {
+    padding-left: 0;
+  }
+
+  .textContent {
+    max-width: unset;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+    margin-top: 0;
+    padding: 60px 24px 54px 24px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .text {
+    max-width: 415px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  .circle {
+    width: 52px;
+    height: 52px;
+    top: -24px;
+  }
+
+  .vectors {
+    display: none;
+  }
+
+  .mobileVectors {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .cardBlock {
+    padding: 165px 16px 60px 16px;
+    max-width: unset;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .titleText {
+    z-index: 2;
+  }
+
+  .text {
+    max-width: 343px;
+  }
+
+  .list {
+    margin-top: 24px;
+    padding-bottom: 0;
+  }
+
+  .card {
+    padding-bottom: 56px;
+  }
+
+  .halfCircle {
+    top: 30px;
+  }
+
+  .circle {
+    z-index: 1;
+  }
 }

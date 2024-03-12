@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./styles.module.css";
 import SectionWrap from "@/components/ui/SectionWrap";
@@ -6,6 +8,8 @@ import AdvItem from "@/components/ui/AdvItem";
 import Lamp from "./icons/lamp";
 import Vectors from "./icons/vectors";
 import HalfCircle from "./icons/halfCircle";
+import Image from "next/image";
+import MobileVectors from "./icons/mobileVectors";
 
 const config = [
   {
@@ -19,7 +23,7 @@ const config = [
 
 const Secure = () => {
   return (
-    <SectionWrap className={styles.secure}>
+    <div className={styles.secure}>
       <div className={styles.content}>
         <div className={styles.textContent}>
           <h2 className={styles.title}>
@@ -30,6 +34,7 @@ const Secure = () => {
             An extremly important aspect of cryptocurrency services and
             solutions is the secure storage of funds
           </span>
+          <MobileVectors className={styles.mobileVectors} />
         </div>
         <div className={styles.cardBlock}>
           <div className={styles.card}>
@@ -43,11 +48,12 @@ const Secure = () => {
             </div>
             <Lamp className={styles.lamp} />
           </div>
+
           <HalfCircle className={styles.halfCircle} />
         </div>
       </div>
       <Vectors className={styles.vectors} />
-    </SectionWrap>
+    </div>
   );
 };
 
