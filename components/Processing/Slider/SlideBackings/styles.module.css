@@ -1,0 +1,42 @@
+.slideBackings {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.backing {
+  border-radius: 0px 0px 32px 32px;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+}
+
+.top {
+  background: var(--purple-light-3);
+  max-width: 1180px;
+  bottom: -16px;
+  z-index: 3;
+}
+
+.middle {
+  background: var(--purple-light-2);
+  max-width: 1136px;
+  bottom: -32px;
+  z-index: 2;
+}
+
+.bottom {
+  background: var(--purple-light-1);
+  max-width: 1080px;
+  bottom: -48px;
+  z-index: 1;
+}

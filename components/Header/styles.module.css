@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .logoLink {
@@ -41,7 +43,8 @@
   font-weight: 600;
   color: var(--black);
   text-transform: uppercase;
-  /* transition: all 0.3s; */
+  width: 141px;
+  text-align: center;
 }
 
 .loginLink:hover {

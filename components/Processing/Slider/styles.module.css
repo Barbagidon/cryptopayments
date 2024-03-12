@@ -1,21 +1,35 @@
+.sliderContainer {
+  height: 800vh;
+  position: relative;
+  width: 100%;
+}
+
 .slider {
   background: url("/processing/building.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 120px;
-  padding-bottom: 206px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 
 .content {
-  max-width: 1240px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   position: relative;
+  display: flex;
 }
 
-.absolute {
-  position: absolute;
+.sliderWrap {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }

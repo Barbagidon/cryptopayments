@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .sectionWrap {
@@ -217,7 +218,6 @@
 }
 
 @media (max-width: 472px) {
-  
   .sectionWrap {
     padding-bottom: 213px;
     padding-top: 72px;

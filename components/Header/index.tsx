@@ -31,11 +31,11 @@ const Header = () => {
 
           <div className={styles.links}>
             <div className={styles.btnLinks}>
-              <Link className={styles.loginLink} href={"#"}>
-                login
-              </Link>
               <Link className={styles.joinLink} href={"#"}>
                 join now
+              </Link>
+              <Link className={styles.loginLink} href={"#"}>
+                login
               </Link>
             </div>
             <button
@@ -46,8 +46,8 @@ const Header = () => {
             </button>
           </div>
         </div>
+        <MobileMenu showMenu={showMenu} closeMenuHanlder={closeMenuHanlder} />
       </header>
-      <MobileMenu showMenu={showMenu} closeMenuHanlder={closeMenuHanlder} />
       <AnimatePresence>
         {showMenu && (
           <motion.div
