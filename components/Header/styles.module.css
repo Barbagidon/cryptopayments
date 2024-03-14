@@ -2,12 +2,11 @@
   border-bottom: 2px solid var(--white-50);
   background: var(--white-30);
   backdrop-filter: blur(8px);
-  padding: 24px 40px;
+  padding: 24px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 5;
 }
 
 .logoLink {
@@ -89,22 +88,38 @@
   z-index: 3;
 }
 
+@media (max-width: 1280px) {
+  .header {
+    padding: 24px 80px;
+  }
+}
+
 @media (max-width: 1024px) {
   .mobileMenuBtn {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  .header {
+    padding: 24px 40px;
+  }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .btnLinks {
     display: none;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 640px) {
   .header {
     padding: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 16px;
   }
 }

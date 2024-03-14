@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 const Exchange = () => {
   return (
     <main className={styles.exchange}>
+      <Header className={styles.header} />
       <Transactions />
       <Secure />
       <GetStartedSection />

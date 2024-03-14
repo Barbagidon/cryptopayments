@@ -36,4 +36,6 @@
   position: relative;
   height: 100%;
   align-items: center;
+  max-height: 643px;
+  overflow: hidden;
 }

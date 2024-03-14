@@ -8,8 +8,13 @@ import Link from "next/link";
 import MobileBtnIcon from "./icons/mobileBtnIcon";
 import MobileMenu from "./MobileMenu";
 import { AnimatePresence, motion } from "framer-motion";
+import cn from "classnames";
 
-const Header = () => {
+interface Props {
+  className?: string;
+}
+
+const Header = ({ className }: Props) => {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
@@ -22,32 +27,34 @@ const Header = () => {
 
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.headerContent}>
-          <Link className={styles.logoLink} href={"/"}>
-            <LogoIcon />
-          </Link>
-          <Navigation />
+      <div className={className}>
+        <header className={cn(styles.header)}>
+          <div className={styles.headerContent}>
+            <Link className={styles.logoLink} href={"/"}>
+              <LogoIcon />
+            </Link>
+            <Navigation />
 
-          <div className={styles.links}>
-            <div className={styles.btnLinks}>
-              <Link className={styles.joinLink} href={"#"}>
-                join now
-              </Link>
-              <Link className={styles.loginLink} href={"#"}>
-                login
-              </Link>
+            <div className={styles.links}>
+              <div className={styles.btnLinks}>
+                <Link className={styles.joinLink} href={"#"}>
+                  join now
+                </Link>
+                <Link className={styles.loginLink} href={"#"}>
+                  login
+                </Link>
+              </div>
+              <button
+                onClick={() => setShowMenu((prev) => !prev)}
+                className={styles.mobileMenuBtn}
+              >
+                <MobileBtnIcon />
+              </button>
             </div>
-            <button
-              onClick={() => setShowMenu((prev) => !prev)}
-              className={styles.mobileMenuBtn}
-            >
-              <MobileBtnIcon />
-            </button>
           </div>
-        </div>
-        <MobileMenu showMenu={showMenu} closeMenuHanlder={closeMenuHanlder} />
-      </header>
+          <MobileMenu showMenu={showMenu} closeMenuHanlder={closeMenuHanlder} />
+        </header>
+      </div>
       <AnimatePresence>
         {showMenu && (
           <motion.div

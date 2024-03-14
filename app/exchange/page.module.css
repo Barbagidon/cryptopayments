@@ -5,3 +5,11 @@
   margin: 0 auto;
   max-width: 1920px;
 }
+
+.header {
+  position: fixed;
+  width: 100vw;
+  max-width: 1920px;
+  top: 0;
+  z-index: 5;
+}
