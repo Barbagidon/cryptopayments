@@ -18,12 +18,7 @@ const Slider = () => {
 
   const [transition, setTransition] = useState(0);
 
-  const slides = [
-    CryptoPayments,
-    CryptoPayments,
-    CryptoPayments,
-    CryptoPayments,
-  ];
+  const slides = [CryptoPayments, Exchange, EasyApi, Merchant];
 
   const { scrollYProgress } = useScroll({ target: scrollRef });
 

@@ -50,6 +50,7 @@ const CryptoPayments = ({ ...props }: Props) => {
                     titleClassName={styles.advItemTitle}
                     mobile
                     item={item}
+                    iconClassName={styles.advIcon}
                   />
                   {i < 2 && <div className={styles.divider} />}
                 </Fragment>
@@ -85,17 +86,7 @@ const CryptoPayments = ({ ...props }: Props) => {
           sizes="100vw"
           width={0}
           height={0}
-          src={"/processing/btcPhone544.png"}
-          alt={"btc phone"}
-          unoptimized
-          quality={100}
-        />
-        <Image
-          className={styles.image311}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/btcPhone311.png"}
+          src={"/processing/btcPhoneMob.png"}
           alt={"btc phone"}
           unoptimized
           quality={100}

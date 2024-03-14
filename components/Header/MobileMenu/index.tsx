@@ -25,7 +25,7 @@ const MobileMenu = ({ closeMenuHanlder, showMenu }: Props) => {
           <CloseIcon />
         </button>
       </div>
-      <LinksList />
+      <LinksList closeMenuHanlder={closeMenuHanlder} />
 
       <div className={styles.btnLinks}>
         <Link className={styles.joinLink} href={"#"}>

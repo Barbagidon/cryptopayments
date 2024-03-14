@@ -2,7 +2,6 @@
 
 import React from "react";
 import styles from "./styles.module.css";
-import SectionWrap from "@/components/ui/SectionWrap";
 import Circle from "./icons/circle";
 import AdvItem from "@/components/ui/AdvItem";
 import Lamp from "./icons/lamp";

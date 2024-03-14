@@ -1,14 +1,23 @@
 .exchange {
-  padding: 28px 32px 28px 32px;
+  max-width: 1240px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.contentWrap {
+  display: contents;
+  position: relative;
+  z-index: 4;
+  padding: 28px;
   border-radius: 32px;
   border: 4px solid var(--yellow);
   background: var(--white);
-  max-width: 1240px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 4;
+  gap: 24px;
+  height: 100%;
 }
 
 .header {
@@ -41,14 +50,14 @@
     10px 22px 14px 0px rgba(173, 164, 67, 0.05),
     17px 39px 17px 0px rgba(173, 164, 67, 0.01),
     27px 60px 19px 0px rgba(173, 164, 67, 0);
-  padding: 12px 24px;
+  padding: 11px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
   color: black;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 24px;
   font-weight: 500;
   text-transform: uppercase;
   max-width: 181px;
@@ -81,4 +90,147 @@
   width: 100%;
   max-width: 576px;
   height: auto;
+}
+
+.imageTablet {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+.imageMob {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+.mobTitle {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1280px) {
+  .image {
+    max-width: 516px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .contentWrap {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 40px;
+    padding-bottom: 16px;
+    border-bottom-width: 2px;
+  }
+
+  .imageTablet {
+    display: block;
+    max-width: 436px;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .iconWrap {
+    max-width: 134px;
+  }
+  .advIcon {
+    width: 24px;
+    height: 24px;
+    min-width: unset !important;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .exchange {
+    max-width: 592px;
+  }
+
+  .contentWrap {
+    flex-direction: column;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .mobTitle {
+    display: flex;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--purple-light-4);
+  }
+
+  .pcCoins {
+    display: none;
+  }
+
+  .iconWrap {
+    max-width: 122px;
+  }
+
+  .usdtIcon {
+    max-width: 134px;
+  }
+
+  .text {
+    font-size: 24px;
+  }
+
+  .imageMob {
+    display: block;
+    /* margin-top: 117px; */
+  }
+
+  .imageTablet {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentWrap {
+    padding: 12px;
+  }
+
+  .content {
+    gap: 0;
+  }
+
+  .mobTitle {
+    font-size: 28px;
+    padding-bottom: 24px;
+  }
+
+  .coins {
+    gap: 11px;
+  }
+
+  .iconWrap {
+    padding: 11px 17px;
+    max-width: 93px;
+    font-size: 16px;
+    line-height: 18px;
+    gap: 8px;
+  }
+
+  .usdtIcon {
+    max-width: 103px;
+  }
+
+  .text {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .advItem {
+    margin-top: 32px;
+  }
 }

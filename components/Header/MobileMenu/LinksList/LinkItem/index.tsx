@@ -8,13 +8,14 @@ interface Props {
     linkText: string;
     link: string;
   };
+  closeMenuHanlder: () => void;
 }
 
-const LinkItem = ({ linkData }: Props) => {
+const LinkItem = ({ linkData, closeMenuHanlder }: Props) => {
   const { link, linkText } = linkData;
 
   return (
-    <Link href={link} className={styles.linkItem}>
+    <Link onClick={closeMenuHanlder} href={link} className={styles.linkItem}>
       {linkText}
       <Arrow />
     </Link>
