@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { slides } from "..";
 import CryptoPayments from "../CryptoPayments";
+import Pagination from "../Pagination";
 
 const MobileSlider = () => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -47,6 +48,7 @@ const MobileSlider = () => {
             </SwiperSlide>
           );
         })}
+        <Pagination />
       </Swiper>
     </div>
   );

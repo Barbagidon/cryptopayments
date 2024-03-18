@@ -8,6 +8,7 @@ import cn from "classnames";
 import SlideBackings from "../SlideBackings";
 import { useSwiper } from "swiper/react";
 import { motion } from "framer-motion";
+import SlidePagination from "../SlidePagination";
 
 const config = [
   {
@@ -87,6 +88,8 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
           unoptimized
           quality={100}
         />
+
+        <SlidePagination slideNum={0} />
       </div>
       <SlideBackings slideNum={0} />
     </motion.div>

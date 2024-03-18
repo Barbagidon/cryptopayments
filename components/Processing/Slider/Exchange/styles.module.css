@@ -6,7 +6,6 @@
   background: var(--white-50, rgba(252, 250, 255, 0.5));
   backdrop-filter: blur(12px);
   border-radius: 32px;
-
   transition: all 0.3s;
 }
 
@@ -148,6 +147,7 @@
     flex-direction: column;
     padding: 12px;
     gap: 88px;
+    border-width: 2px;
   }
 
   .content {
@@ -196,5 +196,16 @@
 
   .advDescr {
     line-height: 22px;
+  }
+}
+
+@media (max-width: 470px) {
+  .contentWrap {
+    gap: 0;
+    padding-bottom: 8px;
+  }
+
+  .imageMob {
+    margin-top: 78px;
   }
 }

@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import AdvItem from "../AdvItem";
 import Image from "next/image";
 import cn from "classnames";
+import SlidePagination from "../SlidePagination";
 
 const config = [
   "Permission levels for your team",
@@ -13,46 +14,73 @@ const config = [
   "Two-factor authentication",
 ];
 
-interface Props extends React.HTMLProps<HTMLDivElement> {}
-const Merchant = ({ className, ...props }: Props) => {
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  activeSlide?: boolean;
+}
+const Merchant = ({ activeSlide, className, ...props }: Props) => {
   return (
-    <div {...props} className={cn(styles.merchant, className)}>
-      <div className={styles.content}>
-        <div className={styles.header}>
-          <div className={styles.title}>Merchant Account</div>
-          <div className={styles.subTitle}>Just try it yourself.</div>
+    <div
+      {...props}
+      className={cn(styles.merchant, className, {
+        [styles.inActive]: !activeSlide,
+      })}
+    >
+      <div className={styles.contentWrap}>
+        <div className={styles.content}>
+          <div className={styles.header}>
+            <div className={styles.title}>Merchant Account</div>
+            <div className={styles.subTitle}>Just try it yourself.</div>
+          </div>
+
+          <div className={styles.text}>
+            You can easily track each transaction and verify all data in your
+            account. Our designers made this process simple.
+          </div>
+
+          <div className={styles.list}>
+            {config.map((item, i) => {
+              return (
+                <Fragment key={i}>
+                  <AdvItem
+                    className={styles.advItem}
+                    titleTextClassName={styles.advText}
+                    iconClassName={styles.advIcon}
+                    item={{
+                      title: item,
+                    }}
+                  />
+                  {i !== config.length - 1 && (
+                    <div className={styles.divider} />
+                  )}
+                </Fragment>
+              );
+            })}
+          </div>
         </div>
 
-        <div className={styles.text}>
-          You can easily track each transaction and verify all data in your
-          account. Our designers made this process simple.
-        </div>
+        <Image
+          className={styles.image}
+          sizes="100vw"
+          width={0}
+          height={0}
+          src={"/processing/settingsPhone.png"}
+          alt={"merchant account"}
+          unoptimized
+          quality={100}
+        />
 
-        <div className={styles.list}>
-          {config.map((item, i) => {
-            return (
-              <Fragment key={i}>
-                <AdvItem
-                  className={styles.advItem}
-                  item={{
-                    title: item,
-                  }}
-                />
-              </Fragment>
-            );
-          })}
-        </div>
+        <Image
+          className={styles.imageMob}
+          sizes="100vw"
+          width={0}
+          height={0}
+          src={"/processing/settingsPhoneMob.png"}
+          alt={"merchant account"}
+          unoptimized
+          quality={100}
+        />
+        <SlidePagination slideNum={3} />
       </div>
-      <Image
-        className={styles.image}
-        sizes="100vw"
-        width={0}
-        height={0}
-        src={"/processing/settingsPhone.png"}
-        alt={"merchant account"}
-        unoptimized
-        quality={100}
-      />
     </div>
   );
 };

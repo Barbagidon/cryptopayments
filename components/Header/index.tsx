@@ -9,6 +9,7 @@ import MobileBtnIcon from "./icons/mobileBtnIcon";
 import MobileMenu from "./MobileMenu";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
+import MobileLogo from "./icons/mobileLogo";
 
 interface Props {
   className?: string;
@@ -31,7 +32,8 @@ const Header = ({ className }: Props) => {
         <header className={cn(styles.header)}>
           <div className={styles.headerContent}>
             <Link className={styles.logoLink} href={"/"}>
-              <LogoIcon />
+              <LogoIcon className={styles.logo} />
+              <MobileLogo className={styles.mobileLogo} />
             </Link>
             <Navigation />
 

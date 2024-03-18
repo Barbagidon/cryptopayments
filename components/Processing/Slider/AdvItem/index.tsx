@@ -15,6 +15,7 @@ interface Props {
   titleClassName?: string;
   mobile?: boolean;
   iconClassName?: string;
+  titleTextClassName?: string;
 }
 
 const AdvItem = ({
@@ -23,6 +24,7 @@ const AdvItem = ({
   className,
   titleClassName,
   iconClassName,
+  titleTextClassName,
 }: Props) => {
   const { descr, title } = item;
   return (
@@ -30,7 +32,7 @@ const AdvItem = ({
       <div className={cn(styles.title, titleClassName)}>
         <CheckedIcon className={cn(styles.icon, iconClassName)} />
 
-        <span className={cn(styles.text)}>{title}</span>
+        <span className={cn(styles.text, titleTextClassName)}>{title}</span>
       </div>
       {descr && <div className={cn(styles.descr, descrClassName)}>{descr}</div>}
     </div>

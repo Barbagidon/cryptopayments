@@ -8,6 +8,7 @@ import AdvItem from "../AdvItem";
 import Image from "next/image";
 import cn from "classnames";
 import SlideBackings from "../SlideBackings";
+import SlidePagination from "../SlidePagination";
 
 const icons = [
   {
@@ -92,6 +93,7 @@ const Exchange = ({ activeSlide, ...props }: Props) => {
           unoptimized
           quality={100}
         />
+        <SlidePagination slideNum={1} />
       </div>
       <SlideBackings slideNum={1} />
     </div>

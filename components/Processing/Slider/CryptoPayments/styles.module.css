@@ -167,11 +167,15 @@
   .advList {
     gap: 8px;
   }
+}
 
-  /* .inActiveSlideBg {
-    border-radius: 24px 0px 0px 24px;
-    border: 2px solid var(--grad-events, #ddcdee);
-    background: var(--white-50, rgba(252, 250, 255, 0.5));
-    backdrop-filter: blur(12px);
-  } */
+@media (max-width: 470px) {
+  .contentWrap {
+    gap: 0;
+    padding-bottom: 8px;
+  }
+
+  .imageMob {
+    margin-top: 23px;
+  }
 }

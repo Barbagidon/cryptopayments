@@ -3,11 +3,19 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import cn from "classnames";
 import SlideBackings from "../SlideBackings";
+import SlidePagination from "../SlidePagination";
 
-interface Props extends React.HTMLProps<HTMLDivElement> {}
-const EasyApi = ({ ...props }: Props) => {
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  activeSlide: boolean;
+}
+const EasyApi = ({ activeSlide, ...props }: Props) => {
   return (
-    <div {...props} className={cn(styles.easyApi, props.className)}>
+    <div
+      {...props}
+      className={cn(styles.easyApi, props.className, {
+        [styles.inActive]: !activeSlide,
+      })}
+    >
       <div className={styles.content}>
         <div className={styles.textContent}>
           <div className={styles.title}>
@@ -19,7 +27,7 @@ const EasyApi = ({ ...props }: Props) => {
             your clients in a highly sophisticated and detailed way.
           </div>
         </div>
-        <div className={styles.divider} />
+
         <Image
           className={styles.image}
           sizes="100vw"
@@ -31,17 +39,6 @@ const EasyApi = ({ ...props }: Props) => {
           quality={100}
         />
         <Image
-          className={styles.imageTablet}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/easyApiTablet.png"}
-          alt={"easy api"}
-          unoptimized
-          quality={100}
-        />
-
-        <Image
           className={styles.imageMob}
           sizes="100vw"
           width={0}
@@ -51,17 +48,7 @@ const EasyApi = ({ ...props }: Props) => {
           unoptimized
           quality={100}
         />
-
-        <Image
-          className={styles.imageLittle}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/easyApiLittle.png"}
-          alt={"easy api"}
-          unoptimized
-          quality={100}
-        />
+        <SlidePagination slideNum={2} />
       </div>
       <SlideBackings slideNum={2} />
     </div>

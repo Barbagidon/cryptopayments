@@ -11,7 +11,7 @@ import { motion, useMotionValue, useScroll } from "framer-motion";
 
 import MobileSlider from "./MobileSlider";
 
-export const slides = [CryptoPayments, Exchange, CryptoPayments, Exchange];
+export const slides = [CryptoPayments, Exchange, EasyApi, Merchant];
 
 const Slider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -81,7 +81,7 @@ const Slider = () => {
           </motion.div>
         </SectionWrap>
       }
-      {<MobileSlider />}
+      <MobileSlider />
     </motion.div>
   );
 };
