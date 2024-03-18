@@ -33,7 +33,7 @@ interface Props extends React.HTMLProps<HTMLDivElement> {
 
 const CryptoPayments = ({ activeSlide, ...props }: Props) => {
   return (
-    <motion.div
+    <div
       className={cn(styles.cryptoPayments, props.className, {
         [styles.inActive]: !activeSlide,
       })}
@@ -74,7 +74,6 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
           height={0}
           src={"/processing/btcPhone.png"}
           alt={"btc phone"}
-          unoptimized
           quality={100}
         />
 
@@ -85,14 +84,13 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
           height={0}
           src={"/processing/btcPhoneMob.png"}
           alt={"btc phone"}
-          unoptimized
           quality={100}
         />
 
         <SlidePagination slideNum={0} />
       </div>
       <SlideBackings slideNum={0} />
-    </motion.div>
+    </div>
   );
 };
 

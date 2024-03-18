@@ -11,16 +11,18 @@ import { motion, useMotionValue, useScroll } from "framer-motion";
 
 import MobileSlider from "./MobileSlider";
 
-export const slides = [CryptoPayments, Exchange, EasyApi, Merchant];
+export const slides = [
+  CryptoPayments,
+  CryptoPayments,
+  CryptoPayments,
+  CryptoPayments,
+];
 
 const Slider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [transition, setTransition] = useState(0);
-
-  const dragX = useMotionValue(0);
-
   const { scrollYProgress } = useScroll({ target: scrollRef });
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const Slider = () => {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollYProgress, dragX]);
+  }, [scrollYProgress]);
 
   const transitionValue = containerRef.current
     ? transition * containerRef.current.clientWidth
@@ -54,6 +56,10 @@ const Slider = () => {
         <SectionWrap className={styles.slider}>
           <motion.div
             ref={containerRef}
+            // style={{
+            //   x: transitionValue,
+            //   transition: "all 0.3s",
+            // }}
             animate={{
               x: transitionValue,
             }}

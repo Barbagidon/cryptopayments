@@ -91,8 +91,8 @@ const MobileLogo = ({ className }: Props) => {
           y2="20.711"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#5603A9" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#5603A9" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1146_7292"
@@ -102,8 +102,8 @@ const MobileLogo = ({ className }: Props) => {
           y2="13.5146"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="5.32779e-09" stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#5603A9" />
+          <stop offset="5.32779e-09" stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#5603A9" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_1146_7292"
@@ -113,8 +113,8 @@ const MobileLogo = ({ className }: Props) => {
           y2="22.4991"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#5603A9" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#5603A9" />
         </linearGradient>
       </defs>
     </svg>

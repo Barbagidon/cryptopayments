@@ -14,7 +14,7 @@ const CenterBtmBlur = ({ className }: Props) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g clip-path="url(#clip0_3001_13551)">
+      <g clipPath="url(#clip0_3001_13551)">
         <g filter="url(#filter0_f_3001_13551)">
           <ellipse
             cx="589"
