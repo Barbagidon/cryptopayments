@@ -6,11 +6,11 @@ import TopLeftBlur from "./icons/topLeftBlur";
 import BottomRightBlur from "./icons/bottomRightBlur";
 import CenterBtmBlur from "./icons/centerBtmBlur";
 import Image from "next/image";
+import LineIcon from "./icons/lineIcon";
 
 const Transactions = () => {
   return (
     <section className={styles.transactions}>
-      
       <div className={styles.content}>
         <div className={styles.mainContent}>
           <h1 className={styles.title}>
@@ -32,12 +32,8 @@ const Transactions = () => {
       {/* <TopLeftBlur className={styles.topLeftBlur} />
       <BottomRightBlur className={styles.bottomRightBlur} />
       <CenterBtmBlur className={styles.centerBtmBlur} /> */}
-      {/* <Image
-        alt="macbook"
-        width={676}
-        height={470}
-        src={"/exchange/macbook.png"}
-      /> */}
+      <div className={styles.macBook} />
+      <LineIcon className={styles.line} />
     </section>
   );
 };

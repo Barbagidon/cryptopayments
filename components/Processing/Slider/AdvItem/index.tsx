@@ -28,7 +28,7 @@ const AdvItem = ({
   return (
     <div className={cn(styles.advItem, className)}>
       <div className={cn(styles.title, titleClassName)}>
-        <CheckedIcon className={iconClassName} />
+        <CheckedIcon className={cn(styles.icon, iconClassName)} />
 
         <span className={cn(styles.text)}>{title}</span>
       </div>

@@ -1,16 +1,17 @@
 "use client";
 
 import SectionWrap from "@/components/ui/SectionWrap";
-import React, { useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import styles from "./styles.module.css";
 import CryptoPayments from "./CryptoPayments";
 import Exchange from "./Exchange";
 import EasyApi from "./EasyApi";
 import Merchant from "./Merchant";
-import { motion, useScroll } from "framer-motion";
+import { motion, useMotionValue, useScroll } from "framer-motion";
 
-import "swiper/css";
-import "swiper/css/pagination";
+import MobileSlider from "./MobileSlider";
+
+export const slides = [CryptoPayments, Exchange, CryptoPayments, Exchange];
 
 const Slider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -18,7 +19,7 @@ const Slider = () => {
 
   const [transition, setTransition] = useState(0);
 
-  const slides = [CryptoPayments, Exchange, EasyApi, Merchant];
+  const dragX = useMotionValue(0);
 
   const { scrollYProgress } = useScroll({ target: scrollRef });
 
@@ -41,7 +42,7 @@ const Slider = () => {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollYProgress]);
+  }, [scrollYProgress, dragX]);
 
   const transitionValue = containerRef.current
     ? transition * containerRef.current.clientWidth
@@ -49,35 +50,38 @@ const Slider = () => {
 
   return (
     <motion.div ref={scrollRef} className={styles.sliderContainer}>
-      <SectionWrap className={styles.slider}>
-        <motion.div
-          ref={containerRef}
-          animate={{
-            x: transitionValue,
-          }}
-          transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 100,
-          }}
-          className={styles.content}
-        >
-          {slides.map((Slide, i) => {
-            return (
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ root: scrollRef, amount: 0.5 }}
-                exit={{ opacity: 0 }}
-                className={styles.sliderWrap}
-                key={i}
-              >
-                <Slide />
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </SectionWrap>
+      {
+        <SectionWrap className={styles.slider}>
+          <motion.div
+            ref={containerRef}
+            animate={{
+              x: transitionValue,
+            }}
+            transition={{
+              type: "spring",
+              damping: 20,
+              stiffness: 100,
+            }}
+            className={styles.content}
+          >
+            {slides.map((Slide, i) => {
+              return (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ root: scrollRef, amount: 0.5 }}
+                  exit={{ opacity: 0 }}
+                  className={styles.sliderWrap}
+                  key={i}
+                >
+                  <Slide activeSlide={true} />
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </SectionWrap>
+      }
+      {<MobileSlider />}
     </motion.div>
   );
 };

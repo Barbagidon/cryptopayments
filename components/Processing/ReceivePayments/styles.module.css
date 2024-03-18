@@ -7,7 +7,7 @@
 }
 
 .sectionWrap {
-  padding-top: 104px;
+  padding-top: 208px;
   padding-bottom: 263px;
   position: relative;
   display: flex;
@@ -77,23 +77,23 @@
 
 .ellipse {
   position: absolute;
-  top: 47px;
-  right: 220px;
+  top: 145px;
+  right: 197px;
   width: 720px;
   height: 720px;
 }
 
 .usdtIcon {
   position: absolute;
-  right: 236px;
-  top: 131px;
+  right: 204px;
+  top: 237px;
 }
 
 .btcIcon {
-  top: 274px;
+  top: 384px;
   position: absolute;
   width: 198px;
-  right: 142px;
+  right: 115px;
 }
 
 .ethIcon {
@@ -118,7 +118,7 @@
 
   .ethIcon {
     right: 21px;
-    bottom: 113px;
+    bottom: 124px;
   }
 }
 
@@ -137,37 +137,37 @@
   }
 
   .ellipse {
-    right: 100px;
-    top: 35px;
+    right: 84px;
+    top: 148px;
   }
 
   .usdtIcon {
     width: 164px;
     height: 156px;
-    right: 131px;
-    top: 99px;
+    right: 97px;
+    top: 202px;
   }
 
   .btcIcon {
     width: 150px;
-    top: 188px;
+    top: 306px;
     right: 53px;
   }
 
   .ethIcon {
     width: 150px;
-    bottom: 300px;
+    bottom: 330px;
   }
 }
 
 @media (max-width: 850px) {
-  .ellipse {
-    top: 20px;
+  .usdtIcon {
+    right: 160px;
+    top: 137px;
   }
 
-  .usdtIcon {
-    right: 143px;
-    top: 21px;
+  .ethIcon {
+    right: 41px;
   }
 }
 
@@ -196,8 +196,8 @@
   }
 
   .usdtIcon {
-    right: 42px;
-    top: 174px;
+    right: 63px;
+    top: 296px;
     width: 103px;
   }
 
@@ -207,8 +207,8 @@
   }
 
   .btcIcon {
-    top: 228px;
-    right: 19px;
+    top: 337px;
+    right: 41px;
     width: 93px;
   }
 
@@ -220,14 +220,22 @@
 @media (max-width: 472px) {
   .sectionWrap {
     padding-bottom: 213px;
-    padding-top: 72px;
+    padding-top: 158px;
   }
 
   .titleText {
     max-width: 325px;
   }
 
-  .ellipse {
-    right: 65px;
+  .usdtIcon {
+    top: 260px;
+  }
+
+  .ethIcon {
+    bottom: 247px;
+  }
+
+  .btcIcon {
+    top: 365px;
   }
 }

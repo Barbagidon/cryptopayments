@@ -7,9 +7,6 @@ interface Props {
 const CheckedIcon = ({ className }: Props) => {
   return (
     <svg
-      style={{
-        minWidth: 32,
-      }}
       width="32"
       height="32"
       viewBox="0 0 32 32"

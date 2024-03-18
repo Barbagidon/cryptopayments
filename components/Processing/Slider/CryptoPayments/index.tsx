@@ -6,6 +6,8 @@ import React, { Fragment } from "react";
 import AdvItem from "../AdvItem";
 import cn from "classnames";
 import SlideBackings from "../SlideBackings";
+import { useSwiper } from "swiper/react";
+import { motion } from "framer-motion";
 
 const config = [
   {
@@ -24,22 +26,27 @@ const config = [
   },
 ];
 
-interface Props extends React.HTMLProps<HTMLDivElement> {}
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  activeSlide: boolean;
+}
 
-const CryptoPayments = ({ ...props }: Props) => {
+const CryptoPayments = ({ activeSlide, ...props }: Props) => {
   return (
-    <div {...props} className={cn(styles.cryptoPayments, props.className)}>
-      <div className={styles.contentWrap}>
+    <motion.div
+      className={cn(styles.cryptoPayments, props.className, {
+        [styles.inActive]: !activeSlide,
+      })}
+    >
+      <div className={cn(styles.contentWrap)}>
         <div className={styles.content}>
           <span className={styles.title}>
             <span className={styles.titleText}>Crypto payments</span>
-            <span className={styles.mobSubTitle}>
+
+            <span className={styles.subTitle}>
               Send and receive payments in 10 virtual currencies 24/7
             </span>
           </span>
-          <span className={styles.subTitle}>
-            Send and receive payments in 10 virtual currencies 24/7
-          </span>
+
           <div className={styles.advList}>
             {config.map((item, i) => {
               return (
@@ -71,18 +78,7 @@ const CryptoPayments = ({ ...props }: Props) => {
         />
 
         <Image
-          className={styles.imageTablet}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/btcPhoneTablet.png"}
-          alt={"btc phone"}
-          unoptimized
-          quality={100}
-        />
-
-        <Image
-          className={styles.image544}
+          className={styles.imageMob}
           sizes="100vw"
           width={0}
           height={0}
@@ -93,7 +89,7 @@ const CryptoPayments = ({ ...props }: Props) => {
         />
       </div>
       <SlideBackings slideNum={0} />
-    </div>
+    </motion.div>
   );
 };
 

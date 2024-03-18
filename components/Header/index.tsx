@@ -27,7 +27,7 @@ const Header = ({ className }: Props) => {
 
   return (
     <>
-      <div className={className}>
+      <div className={styles.headerWrap}>
         <header className={cn(styles.header)}>
           <div className={styles.headerContent}>
             <Link className={styles.logoLink} href={"/"}>

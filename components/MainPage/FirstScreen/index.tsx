@@ -5,11 +5,12 @@ import Image from "next/image";
 
 import StartedBtnBg from "./icons/startedBtnBg";
 import StartedBtn from "@/components/ui/StartedBtn";
+import SectionWrap from "@/components/ui/SectionWrap";
 
 const FirstScreen = () => {
   return (
-    <section className={styles.firstScreen}>
-      <Header />
+    <SectionWrap className={styles.firstScreen}>
+      {/* <Header /> */}
       <div className={styles.content}>
         <div className={styles.topContent}>
           <h1 className={styles.title}>
@@ -37,7 +38,7 @@ const FirstScreen = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrap>
   );
 };
 

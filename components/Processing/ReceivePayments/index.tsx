@@ -15,7 +15,6 @@ import BtcIcon from "./icons/btcIcon";
 const ReceivePayments = () => {
   return (
     <section className={styles.receivePayments}>
-      <Header />
       <SectionWrap tag="div" className={styles.sectionWrap}>
         <div className={styles.content}>
           <h1 className={styles.title}>

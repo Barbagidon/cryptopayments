@@ -1,3 +1,11 @@
+.headerWrap {
+  position: fixed;
+  width: 100vw;
+  max-width: 1920px;
+  top: 0;
+  z-index: 5;
+}
+
 .header {
   border-bottom: 2px solid var(--white-50);
   background: var(--white-30);

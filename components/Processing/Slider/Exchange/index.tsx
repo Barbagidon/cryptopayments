@@ -23,16 +23,22 @@ const icons = [
     icon: <UsdtIcon />,
   },
 ];
-interface Props extends React.HTMLProps<HTMLDivElement> {}
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  activeSlide: boolean;
+}
 
-const Exchange = ({ ...props }: Props) => {
+const Exchange = ({ activeSlide, ...props }: Props) => {
   return (
-    <div {...props} className={cn(styles.exchange, props.className)}>
+    <div
+      {...props}
+      className={cn(styles.exchange, props.className, {
+        [styles.inActive]: !activeSlide,
+      })}
+    >
       <div className={styles.contentWrap}>
         <div className={styles.content}>
-          <div className={styles.title}>exchange</div>
-          <div className={styles.mobTitle}>
-            exchange
+          <div className={styles.title}>
+            <span className={styles.titleText}>exchange</span>
             <div className={cn(styles.coins)}>
               {icons.map((item, i) => {
                 return (
@@ -48,15 +54,6 @@ const Exchange = ({ ...props }: Props) => {
               })}
             </div>
           </div>
-          <div className={cn(styles.coins, styles.pcCoins)}>
-            {icons.map((item, i) => {
-              return (
-                <div key={i} className={styles.iconWrap}>
-                  {item.icon} {item.title}
-                </div>
-              );
-            })}
-          </div>
 
           <div className={styles.text}>
             Instant exchange between crypto and fiat currencies at the best
@@ -66,6 +63,7 @@ const Exchange = ({ ...props }: Props) => {
           <AdvItem
             className={styles.advItem}
             iconClassName={styles.advIcon}
+            descrClassName={styles.advDescr}
             item={{
               descr:
                 "Receive the best exchange rates in your CryptoPayments merchant account at any given time.",
@@ -79,28 +77,20 @@ const Exchange = ({ ...props }: Props) => {
           width={0}
           height={0}
           src={"/processing/topUp.png"}
-          alt={"btc phone"}
+          alt={"btc wallet"}
           unoptimized
           quality={100}
         />
 
         <Image
-          className={styles.imageTablet}
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={"/processing/topUpTablet.png"}
-          alt={"btc phone"}
-          unoptimized
-        />
-        <Image
           className={styles.imageMob}
           sizes="100vw"
           width={0}
           height={0}
-          src={"/processing/topUpMobile.png"}
-          alt={"btc phone"}
+          src={"/processing/topUpMob.png"}
+          alt={"btc wallet"}
           unoptimized
+          quality={100}
         />
       </div>
       <SlideBackings slideNum={1} />

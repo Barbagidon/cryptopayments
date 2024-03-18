@@ -29,6 +29,10 @@
   display: none;
 }
 
+.icon {
+  min-width: 32px;
+}
+
 @media (max-width: 600px) {
   .checkedIcon {
     display: none;
