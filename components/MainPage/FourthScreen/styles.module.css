@@ -62,6 +62,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   overflow: hidden;
   z-index: 1;
 }
@@ -90,7 +91,6 @@
 }
 
 .coinsIcon {
-  margin-top: auto;
   width: 100%;
   height: auto;
 }
