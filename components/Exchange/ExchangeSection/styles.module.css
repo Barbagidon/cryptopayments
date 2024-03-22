@@ -1,0 +1,38 @@
+.exchangeSection {
+  background: var(--white);
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: center;
+}
+
+.titleText {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--black);
+}
+
+.subTitle {
+  color: var(--black-light-1);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.cardList {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}

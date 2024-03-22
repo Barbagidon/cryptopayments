@@ -55,6 +55,7 @@
   width: 100%;
   padding: 205px 0 135px 0;
   background: url("/exchange/secure.png");
+  transform: translate3d(0, 0, 0);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

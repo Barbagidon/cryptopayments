@@ -10,7 +10,6 @@ import MobileMenu from "./MobileMenu";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 import MobileLogo from "./icons/mobileLogo";
-import Image from "next/image";
 
 interface Props {
   className?: string;
@@ -58,17 +57,16 @@ const Header = ({ className }: Props) => {
           <MobileMenu showMenu={showMenu} closeMenuHanlder={closeMenuHanlder} />
         </header>
       </div>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {showMenu && (
-          // <motion.div
-          //   initial={{ opacity: 0 }}
-          //   animate={{ opacity: 1 }}
-          //   exit={{ opacity: 0 }}
-          //   className={styles.blur}
-          // />
-          <Image className={styles.blur} alt="blur" fill src={"/blur.png"} />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={styles.blur}
+          />
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </>
   );
 };
