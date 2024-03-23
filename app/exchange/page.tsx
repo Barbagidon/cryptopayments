@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import GetStartedSection from "@/components/MainPage/GetStartedSection";
 import Transactions from "@/components/Exchange/Transactions";
 import ExchangeSection from "@/components/Exchange/ExchangeSection";
+import Choose from "@/components/Exchange/Choose";
 
 const Exchange = () => {
   return (
@@ -12,6 +13,7 @@ const Exchange = () => {
       <Transactions />
       <ExchangeSection />
       <Secure />
+      <Choose />
       <GetStartedSection />
       <Footer />
     </main>
