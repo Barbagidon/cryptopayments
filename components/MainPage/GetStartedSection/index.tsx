@@ -16,7 +16,7 @@ const GetStartedSection = () => {
           </h2>
         </div>
         <div className={styles.btnWrap}>
-          <StartedBtn />
+          <StartedBtn>Start now</StartedBtn>
           <RoundText className={styles.roundText} />
         </div>
       </div>
