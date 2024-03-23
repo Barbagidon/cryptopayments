@@ -15,9 +15,9 @@ body {
   align-items: center;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 button {
   cursor: pointer;

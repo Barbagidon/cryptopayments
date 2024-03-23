@@ -1,6 +1,5 @@
 .card {
   max-width: 397px;
-  width: 100%;
   width: calc(100% / 3);
   padding: 24px;
   position: relative;
@@ -15,10 +14,6 @@
   transition: box-shadow 0.3s;
 }
 
-.card:hover {
-  box-shadow: 13px -16px 5px var(--yellow);
-}
-
 .purpleBg {
   width: 96px;
   height: 100%;
@@ -26,12 +21,6 @@
   right: 0;
   position: absolute;
   background: var(--purple-light-4);
-}
-
-.pcArrow {
-  align-self: flex-end;
-  position: relative;
-  z-index: 1;
 }
 
 .cardContent {
@@ -63,64 +52,39 @@
   line-height: 140%;
 }
 
-.mobileArrow {
-  display: none;
-}
-
 @media (max-width: 1160px) {
-  .cardContent {
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 930px) {
-  .card {
-    width: 100%;
-    max-width: none;
-  }
-  .cardContent {
-    margin-top: 0;
-    gap: 16px;
-  }
-  .pcArrow {
-    display: none;
-  }
-
-  .mobileArrow {
-    display: block;
-  }
-
   .cardTitle {
-    display: block;
-    width: 100%;
-    max-width: unset;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .title {
-    align-self: flex-end;
-  }
-
-  .divider {
-    width: calc(100% - 96px);
+    font-size: 32px;
   }
 }
 
-@media (max-width: 645px) {
+@media (max-width: 920px) {
+  .card,
+  .cardTitle,
+  .descr {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
   .card {
-    padding: 18px;
+    padding: 23px;
+    min-height: 207px;
+  }
+
+  .cardContent {
+    gap: 16px;
   }
 
   .cardTitle {
     font-size: 24px;
-  }
-
-  .title {
-    max-width: 150px;
+    max-width: 172px;
   }
 
   .descr {
     font-size: 16px;
+    max-width: 295px;
+    width: 100%;
   }
 }
