@@ -17,7 +17,7 @@ const MobilePurpleArrow = ({ className }: Props) => {
       <path
         d="M402.834 61.8887L430.001 36.3065L434.571 74.328"
         stroke="#5603A9"
-        stroke-width="2.26835"
+        strokeWidth="2.26835"
         stroke-linecap="round"
       />
       <path

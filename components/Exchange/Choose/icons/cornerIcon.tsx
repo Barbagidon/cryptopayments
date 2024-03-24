@@ -14,7 +14,7 @@ const CornerIcon = ({ className }: Props) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path d="M5 126V5H126" stroke="#F8E32B" stroke-width="10" />
+      <path d="M5 126V5H126" stroke="#F8E32B" strokeWidth="10" />
     </svg>
   );
 };

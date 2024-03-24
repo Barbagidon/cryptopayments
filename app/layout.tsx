@@ -20,6 +20,8 @@ export default function RootLayout({
       <body
         style={{
           overflowX: "hidden",
+          display: "flex",
+          flexDirection: "column",
         }}
         className={interTight.className}
       >

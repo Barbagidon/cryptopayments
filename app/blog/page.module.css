@@ -1,0 +1,15 @@
+.blog {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding-top: 160px;
+  background: var(--white);
+  flex-grow: 1;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+}

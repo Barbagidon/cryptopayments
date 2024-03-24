@@ -17,7 +17,7 @@ const LineIcon = ({ className }: Props) => {
       <path
         d="M1961 2H1096C1068.39 2 1046 24.3858 1046 52V439H907.164H-44.5"
         stroke="#F8E32B"
-        stroke-width="4"
+        strokeWidth="4"
       />
     </svg>
   );
