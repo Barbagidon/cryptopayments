@@ -32,14 +32,14 @@ a {
   text-decoration: none;
 }
 
-/* .hideScroll {
+.hideScroll {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .hideScroll::-webkit-scrollbar {
   display: none;
-} */
+}
 
 :root {
   --white-50: rgba(252, 250, 255, 0.5);

@@ -15,6 +15,7 @@ export const slides = [CryptoPayments, Exchange, EasyApi, Merchant];
 
 const Slider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [transition, setTransition] = useState(0);

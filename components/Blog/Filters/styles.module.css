@@ -12,6 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .filterItem {
@@ -28,4 +31,16 @@
 
 .filterItem:hover {
   border-color: var(--purple-main);
+}
+
+@media (max-width: 700px) {
+  .filters {
+    padding: 16px;
+  }
+
+  .filterItem {
+    padding: 11px 18px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
