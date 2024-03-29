@@ -31,8 +31,8 @@ const Article = ({ articleData, pageId }: Props) => {
         height={380}
         src={articleData.image}
         className={styles.image}
-        unoptimized
         sizes="100vw"
+        priority
       />
 
       <div className={styles.textContent}>
