@@ -66,6 +66,10 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  .cardList {
+    padding-bottom: 60px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -77,11 +81,20 @@
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  .cardList {
+    padding-bottom: 56px;
+  }
 }
 
 @media (max-width: 552px) {
   .blog {
     padding-top: 126px;
+  }
+
+  
+  .cardList {
+    padding-bottom: 48px;
   }
 
   .blogSection {
