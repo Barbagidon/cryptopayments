@@ -15,7 +15,6 @@ const Exchange = () => {
       <Secure />
       <Choose />
       <GetStartedSection />
-      <Footer />
     </main>
   );
 };

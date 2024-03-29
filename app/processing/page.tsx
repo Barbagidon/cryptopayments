@@ -13,7 +13,6 @@ const Processing = () => {
       <AdvList />
       <Integrate />
       <Slider />
-      <Footer />
     </main>
   );
 };

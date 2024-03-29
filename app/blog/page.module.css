@@ -7,6 +7,7 @@
   padding-top: 160px;
   background: var(--white);
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .blogSection {
@@ -84,6 +85,7 @@
 
   .cardList {
     padding-bottom: 56px;
+    margin-top: 32px;
   }
 }
 
@@ -92,9 +94,9 @@
     padding-top: 126px;
   }
 
-  
   .cardList {
     padding-bottom: 48px;
+    margin-top: 24px;
   }
 
   .blogSection {

@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "./styles.module.css";
 import SectionWrap from "@/components/ui/SectionWrap";
 import StartedBtn from "@/components/ui/StartedBtn";
 import React from "react";
@@ -11,6 +10,7 @@ import Lottie from "lottie-react";
 import UsdtIcon from "./icons/usdtIcon";
 import EthIcon from "./icons/ethIcon";
 import BtcIcon from "./icons/btcIcon";
+import styles from "./styles.module.css";
 
 const ReceivePayments = () => {
   return (
