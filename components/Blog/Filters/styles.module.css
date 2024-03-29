@@ -17,6 +17,13 @@
   z-index: 1;
 }
 
+.filtersWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
 .filterItem {
   padding: 16px 24px;
   max-width: 223px;
@@ -42,5 +49,16 @@
     padding: 11px 18px;
     font-size: 16px;
     line-height: 22px;
+  }
+}
+
+@media (max-width: 567px) {
+  .filters {
+    overflow-x: auto;
+  }
+
+  .filtersWrap {
+    min-width: 567px;
+    gap: 8px;
   }
 }

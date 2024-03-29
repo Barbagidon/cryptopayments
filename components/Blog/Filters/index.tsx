@@ -6,20 +6,8 @@ const filters = ["All", "Events", "News", "Explainers", "Articles"];
 
 const Filters = () => {
   return (
-    <div
-      style={{
-        overflowX: "auto",
-      }}
-      className={cn(styles.filters, "hideScroll")}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          minWidth: 630,
-          gap: 16,
-        }}
-      >
+    <div className={cn(styles.filters, "hideScroll")}>
+      <div className={styles.filtersWrap}>
         {filters.map((filter, i) => {
           return (
             <div key={i} className={styles.filterItem}>

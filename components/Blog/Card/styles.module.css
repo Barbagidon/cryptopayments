@@ -95,6 +95,11 @@
 @media (max-width: 1280px) {
   .textInfo {
     font-size: 20px;
+    min-height: 172px;
+  }
+
+  .info {
+    margin-top: 102px;
   }
 
   .linkBtn {
@@ -106,6 +111,10 @@
     width: 64px;
     height: 64px;
   }
+
+  .cardImage {
+    min-height: 110px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -113,5 +122,42 @@
     width: calc(100% / 2 - 12px);
     max-width: unset;
     max-width: 460px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 8px;
+  }
+  .info {
+    margin-top: 80px;
+  }
+
+  .cardImage {
+    min-height: 88px;
+  }
+
+  .textInfo {
+    min-height: 208px;
+  }
+}
+
+@media (max-width: 552px) {
+  .card {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .info {
+    margin-top: 97px;
+  }
+
+  .cardImage {
+    min-height: 105px;
+  }
+
+  .textInfo {
+    min-height: 174px;
+    font-size: 18px;
   }
 }

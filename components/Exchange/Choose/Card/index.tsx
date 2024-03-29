@@ -17,7 +17,11 @@ const Card = ({ className, data, rightText }: Props) => {
 
   return (
     <div className={cn(styles.card, className)}>
-      <div className={cn(styles.text, { [styles.rightText]: rightText })}>
+      <div
+        className={cn(styles.text, {
+          [styles.rightText]: rightText,
+        })}
+      >
         <span className={styles.title}>{title}</span>
         <span className={styles.descr}>{descr}</span>
       </div>

@@ -69,13 +69,21 @@
 }
 
 @media (max-width: 640px) {
+  .blog {
+    padding-top: 168px;
+  }
+
   .blogSection {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 552px) {
+  .blog {
+    padding-top: 126px;
+  }
+
   .blogSection {
     padding-left: 16px;
     padding-right: 16px;
