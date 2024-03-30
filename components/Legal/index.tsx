@@ -8,12 +8,15 @@ interface Props {
   data: {
     title: string;
     date: string;
+    mainDescr?: string;
     list: IFaqItem[];
   };
 }
 
 const Legal = ({ data }: Props) => {
-  const { date, list, title } = data;
+  const { date, list, title, mainDescr } = data;
+
+  const showDescr = mainDescr && mainDescr.length > 0;
 
   return (
     <SectionWrap tag="main" className={styles.legal}>
@@ -23,14 +26,7 @@ const Legal = ({ data }: Props) => {
           <span className={styles.date}>Last Update: {date}</span>
         </div>
 
-        {/* <div className={styles.descr}>
-          Transactions with Cryptocurrencies involve various risks, including
-          the risk of money laundering and terrorist financing. For this reason,
-          Cryptopayments has implemented Anti-Money Laundering and Counter
-          Terrorist Financing Compliance Guidelines (‘Guidelines’) and
-          undertakes measures for the prevention of Money Laundering and
-          Terrorist Financing.
-        </div> */}
+        {showDescr && <div className={styles.descr}>{mainDescr}</div>}
 
         <div className={styles.mainInfo}>
           <FaqList dangerousHtml data={list} />

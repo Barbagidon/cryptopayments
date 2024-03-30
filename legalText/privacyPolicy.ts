@@ -1,7 +1,7 @@
 export const privacyPolicy = {
   title: "Privacy Policy",
   date: "Apr 5, 2023",
-
+  mainDescr: "",
   list: [
     {
       title: "Introduction",
@@ -121,7 +121,7 @@ export const privacyPolicy = {
     },
     {
       title: "Cookies",
-      descr: `<a href="/cookies">Our Cookies Policy is available on the Website</a>`,
+      descr: `<a href="/cookiesPolicy">Our Cookies Policy is available on the Website</a>`,
     },
 
     {
