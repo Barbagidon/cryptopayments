@@ -23,6 +23,7 @@ export default function RootLayout({
           overflowX: "hidden",
           display: "flex",
           flexDirection: "column",
+          position: "relative",
         }}
         className={interTight.className}
       >
