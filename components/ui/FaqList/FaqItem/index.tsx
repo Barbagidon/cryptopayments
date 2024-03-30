@@ -8,9 +8,10 @@ import cn from "classnames";
 interface Props {
   className?: string;
   data: IFaqItem;
+  dangerousHtml?: boolean;
 }
 
-const FaqItem = ({ data, className }: Props) => {
+const FaqItem = ({ data, className, dangerousHtml }: Props) => {
   const { title, descr } = data;
 
   const [showText, setShowText] = useState(false);
@@ -44,7 +45,16 @@ const FaqItem = ({ data, className }: Props) => {
             }}
             className={styles.textWrap}
           >
-            <div className={styles.textContent}> {descr}</div>
+            {!dangerousHtml && (
+              <div className={styles.textContent}> {descr}</div>
+            )}
+
+            {dangerousHtml && (
+              <div
+                dangerouslySetInnerHTML={{ __html: descr }}
+                className={styles.textContent}
+              />
+            )}
           </motion.div>
         )}
       </AnimatePresence>
