@@ -4,6 +4,30 @@ export const amlPolicy = {
   mainDescr: "",
   list: [
     {
+      title: `List of required documents for legal entities: 
+    `,
+      descr: `
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span style=";">The KYC process typically involves verifying the company&rsquo;s legal existence, ownership structure, and the identities of its directors, beneficial owners.&nbsp;</span></p>
+    <ol type="1" style="margin:0pt; padding-left:0pt;">
+        <li style="margin-left:32pt; margin-bottom:8pt; text-align:justify; line-height:108%; padding-left:4pt; ; font-size:12pt; font-weight:bold;">Certificate of incorporation/registration</li>
+    </ol>
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span style=";">This document proves that the company has been officially registered with the relevant government authority.</span></p>
+    <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+        <li style="margin-left:32pt; margin-bottom:8pt; text-align:justify; line-height:108%; padding-left:4pt; ; font-size:12pt; font-weight:bold;">Memorandum &amp; Articles of Association were signed by the company&rsquo;s director</li>
+    </ol>
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span style=";">These documents outline the company&apos;s constitution, rules, and regulations governing its internal affairs.</span></p>
+    <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+        <li style="margin-left:32pt; margin-bottom:8pt; text-align:justify; line-height:108%; padding-left:4pt; ; font-size:12pt; font-weight:bold;">Certificate of Incumbency</li>
+    </ol>
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span style=";">This document typically includes details about the current directors, officers, and shareholders of the company. It is often used to confirm the individuals authorized to act on behalf of the company.</span></p>
+    <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+        <li style="margin-left:32pt; margin-bottom:8pt; text-align:justify; line-height:108%; padding-left:4pt; ; font-size:12pt; font-weight:bold;">Certificate of Good Standing</li>
+    </ol>
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span style=";">This certificate attests that the company is in compliance with all statutory requirements and is authorised to conduct business. It may also be known as a Certificate of Existence or Certificate of Status.</span></p>
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span style=";">Any documents submitted must be in English, or if in another language, they must be accompanied by a notarized translation. For EU/EFTA/Switzerland registration, apostilles may not be necessary. Additionally, registration documents should not exceed a 12-month age limit.</span></p>
+    <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><strong><span style=";">*Countries not party to the Hague Convention will be required to provide documents notarized with an English translation.</span></strong></p>`,
+    },
+    {
       title: "Transaction Monitoring",
       descr:
         "Cryptopayments employ robust transaction monitoring systems to detect and report suspicious activities. This includes monitoring transactions for unusual patterns, large or rapid transfers of funds, and transactions involving high-risk jurisdictions. Additionally, our compliance team conducts manual reviews of flagged transactions to assess their legitimacy. This may involve contacting customers for additional information or documentation to support the transaction.",
