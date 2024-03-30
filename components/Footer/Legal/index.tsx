@@ -2,20 +2,9 @@ import React from "react";
 import styles from "./styles.module.css";
 import FooterTitle from "../FooterTitle";
 import Link from "next/link";
+import { leftLinks, rightLinks } from "./links";
 
 const Legal = () => {
-  const leftLinks = [
-    "Privacy Policy",
-    "Terms of Service",
-    "Risk Disclaimer",
-    "Fees and Limits",
-  ];
-  const rightLinks = [
-    "Complaints policy",
-    "Cookies Policy",
-    "AML Policy",
-    "FAQ",
-  ];
   return (
     <div className={styles.legal}>
       <FooterTitle>Legal</FooterTitle>
@@ -24,8 +13,8 @@ const Legal = () => {
           {leftLinks.map((item, i) => {
             return (
               <li key={i}>
-                <Link href={"#"} className={styles.link}>
-                  {item}
+                <Link href={item.href} className={styles.link}>
+                  {item.title}
                 </Link>
               </li>
             );
@@ -35,8 +24,8 @@ const Legal = () => {
           {rightLinks.map((item, i) => {
             return (
               <li key={i}>
-                <Link href={"#"} className={styles.link}>
-                  {item}
+                <Link href={item.href} className={styles.link}>
+                  {item.title}
                 </Link>
               </li>
             );

@@ -18,7 +18,6 @@ export default function Home() {
       <Faq />
       <MeetSection />
       <GetStartedSection />
-      <Footer />
     </main>
   );
 }

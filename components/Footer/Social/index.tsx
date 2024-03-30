@@ -32,16 +32,29 @@ const Social = () => {
         <Arrow className={styles.arrow} />
       </div>
       <div className={styles.iconsLinks}>
-        <Link className={styles.link} href={"#"}>
+        <Link
+          className={styles.link}
+          href={
+            "https://www.instagram.com/crypto_payments?igsh=MXh6Y3EydXhwaDV2aA=="
+          }
+        >
           <Inst />
         </Link>
-        <Link className={styles.link} href={"#"}>
+        <Link
+          className={styles.link}
+          href={
+            "https://www.facebook.com/profile.php?id=61555951127771&mibextid=LQQJ4d"
+          }
+        >
           <Face />
         </Link>
-        <Link className={styles.link} href={"#"}>
+        <Link className={styles.link} href={"@Cryptopayments_B2B"}>
           <Tlg />
         </Link>
-        <Link className={styles.link} href={"#"}>
+        <Link
+          className={styles.link}
+          href={"https://www.linkedin.com/company/cryptopayments-com/"}
+        >
           <Linked />
         </Link>
       </div>

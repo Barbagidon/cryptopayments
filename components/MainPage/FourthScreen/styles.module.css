@@ -23,6 +23,7 @@
   flex-direction: column;
   gap: 135px;
   flex-shrink: 0;
+  align-items: flex-start;
 }
 
 .title,

@@ -36,6 +36,9 @@
   height: 54px;
   color: var(--black);
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrowBtn {
