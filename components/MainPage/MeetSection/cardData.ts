@@ -9,7 +9,7 @@ export const cardData = [
   {
     title: "Casino Beats (SBC)",
     city: "InterContinental Malta",
-    date: " 21 – 23 May 2024",
+    date: " 21-23 May 2024",
     link: "https://sbcevents.com/casinobeats-summit/ ",
     image: "/meetCards/casinoBeats.png",
   },

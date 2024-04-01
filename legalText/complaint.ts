@@ -1,5 +1,5 @@
 export const complaint = {
-  title: `Complaint Policy of Cryptopayments`,
+  title: `Complaint Policy`,
   date: "Apr 5, 2023",
   mainDescr: `
   
@@ -18,9 +18,7 @@ export const complaint = {
 <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:150%; font-size:12pt;"><span ;">If the complaint does not comply with the requirements and the shortcomings have not been eliminated, Cryptopayments will not investigate the complaint and will return it to you. Such circumstances do not prevent you from contacting us regarding the complaint repeatedly after the identified shortcomings of the complaint are eliminated.</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:150%; font-size:12pt;"><span ;">&nbsp;</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:150%; font-size:12pt;"><span ;">We will handle your complaint and submit the response as soon as possible, but no later than within 15 (fifteen) business days following the day of the receipt of the complaint. In the event beyond our control, we will not be able to submit the response within the specified term, we will submit the interim response to you communicating the reasons of the delay and the term for submission of final response. In all cases, the final response to you will not exceed 35 (thirty-five) business days.</span></p>
-<p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:150%; font-size:12pt;"><a name="_heading_h.gjdgxs"></a><span ;">&nbsp;</span></p>
-<p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:150%; font-size:12pt;"><span ;">&nbsp;</span></p>
-<p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:28pt;"><strong><span ;">&nbsp;</span></strong></p>
+
   `,
   list: [],
 };
