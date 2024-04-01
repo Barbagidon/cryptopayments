@@ -5,18 +5,18 @@ import Link from "next/link";
 
 interface Props {
   linkData: {
-    linkText: string;
-    link: string;
+    title: string;
+    href: string;
   };
   closeMenuHanlder: () => void;
 }
 
 const LinkItem = ({ linkData, closeMenuHanlder }: Props) => {
-  const { link, linkText } = linkData;
+  const { href, title } = linkData;
 
   return (
-    <Link onClick={closeMenuHanlder} href={link} className={styles.linkItem}>
-      {linkText}
+    <Link onClick={closeMenuHanlder} href={href} className={styles.linkItem}>
+      {title}
       <Arrow />
     </Link>
   );

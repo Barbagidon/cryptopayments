@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import LinkItem from "./LinkItem";
 import { links } from "./links";
+import { navLinks } from "../../navLinks";
 
 interface Props {
   closeMenuHanlder: () => void;
@@ -10,7 +11,7 @@ interface Props {
 const LinksList = ({ closeMenuHanlder }: Props) => {
   return (
     <div className={styles.linksList}>
-      {links.map((item, key) => {
+      {navLinks.map((item, key) => {
         return (
           <LinkItem
             closeMenuHanlder={closeMenuHanlder}

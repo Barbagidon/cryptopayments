@@ -15,7 +15,10 @@ const Products = () => {
         <Link href={"/exchange"} className={styles.link}>
           Exchange & Wallets
         </Link>
-        <Link href={"/not-found"} className={styles.link}>
+        <Link
+          href={"https://app.cryptopayments.com/swagger/"}
+          className={styles.link}
+        >
           For developers
         </Link>
       </div>
