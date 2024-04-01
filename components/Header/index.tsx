@@ -35,10 +35,16 @@ const Header = () => {
 
             <div className={styles.links}>
               <div className={styles.btnLinks}>
-                <Link className={styles.joinLink} href={"#"}>
+                <Link
+                  className={styles.joinLink}
+                  href={"https://app.cryptopayments.com/cabinet/cregister"}
+                >
                   join now
                 </Link>
-                <Link className={styles.loginLink} href={"#"}>
+                <Link
+                  className={styles.loginLink}
+                  href={"https://app.cryptopayments.com/cabinet/login"}
+                >
                   login
                 </Link>
               </div>
