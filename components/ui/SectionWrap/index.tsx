@@ -1,18 +1,26 @@
 import React, { ReactNode } from "react";
-import cn from "classnames";
 import styles from "./styles.module.css";
+import cn from "classnames";
 
 interface Props {
   className?: string;
   children: ReactNode;
   tag?: string;
+  sticky?: boolean;
 }
 
-const SectionWrap = ({ className, children, tag = "section" }: Props) => {
+const SectionWrap = ({
+  className,
+  children,
+  sticky,
+  tag = "section",
+}: Props) => {
   const CustomTag = tag as keyof JSX.IntrinsicElements;
 
   return (
-    <CustomTag className={cn(styles.sectionWrap, className)}>
+    <CustomTag
+      className={cn(styles.sectionWrap, className, { [styles.sticky]: sticky })}
+    >
       {children}
     </CustomTag>
   );

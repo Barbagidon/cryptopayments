@@ -76,6 +76,7 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
           alt={"btc phone"}
           quality={100}
           unoptimized
+          priority
         />
 
         <Image

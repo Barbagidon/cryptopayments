@@ -67,6 +67,7 @@ const Merchant = ({ activeSlide, className, ...props }: Props) => {
           alt={"merchant account"}
           unoptimized
           quality={100}
+          priority
         />
 
         <Image
@@ -78,6 +79,7 @@ const Merchant = ({ activeSlide, className, ...props }: Props) => {
           alt={"merchant account"}
           unoptimized
           quality={100}
+          priority
         />
         <SlidePagination slideNum={3} />
       </div>

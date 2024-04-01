@@ -80,6 +80,7 @@ const Exchange = ({ activeSlide, ...props }: Props) => {
           src={"/processing/topUp.png"}
           alt={"btc wallet"}
           unoptimized
+          priority
           quality={100}
         />
 
@@ -92,6 +93,7 @@ const Exchange = ({ activeSlide, ...props }: Props) => {
           alt={"btc wallet"}
           unoptimized
           quality={100}
+          priority
         />
         <SlidePagination slideNum={1} />
       </div>

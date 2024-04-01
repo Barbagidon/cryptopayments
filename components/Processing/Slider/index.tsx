@@ -2,12 +2,13 @@
 
 import SectionWrap from "@/components/ui/SectionWrap";
 import React, { use, useEffect, useRef, useState } from "react";
-import styles from "./styles.module.css";
+
 import CryptoPayments from "./CryptoPayments";
 import Exchange from "./Exchange";
 import EasyApi from "./EasyApi";
 import Merchant from "./Merchant";
 import { motion, useMotionValue, useScroll } from "framer-motion";
+import styles from "./styles.module.css";
 
 import MobileSlider from "./MobileSlider";
 
@@ -49,7 +50,7 @@ const Slider = () => {
   return (
     <motion.div ref={scrollRef} className={styles.sliderContainer}>
       {
-        <SectionWrap className={styles.slider}>
+        <SectionWrap sticky className={styles.slider}>
           <motion.div
             ref={containerRef}
             animate={{ x: transitionValue }}

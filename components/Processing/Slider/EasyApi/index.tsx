@@ -37,6 +37,7 @@ const EasyApi = ({ activeSlide, ...props }: Props) => {
           alt={"easy api"}
           quality={100}
           unoptimized
+          priority
         />
         <Image
           className={styles.imageMob}
@@ -47,6 +48,7 @@ const EasyApi = ({ activeSlide, ...props }: Props) => {
           alt={"easy api"}
           quality={100}
           unoptimized
+          priority
         />
         <SlidePagination slideNum={2} />
       </div>
