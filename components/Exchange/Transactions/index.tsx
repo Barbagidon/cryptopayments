@@ -26,6 +26,8 @@ const Transactions = () => {
             alt="macbook"
             src={"/exchange/macbookMob.png"}
             className={styles.macbookMob}
+            unoptimized
+            quality={100}
           />
           <div className={styles.btnContent}>
             <span className={styles.btnText}>

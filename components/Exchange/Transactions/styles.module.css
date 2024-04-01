@@ -94,7 +94,7 @@
   height: 100%;
 
   background: url("/exchange/bigMac.png");
-  background-size: auto;
+  background-size: 808px 514px;
   background-repeat: no-repeat;
   background-position: 990px 215px;
   z-index: 1;
@@ -129,7 +129,7 @@
   .macBook {
     width: 1340px;
     background: url("/exchange/macbook.png");
-    background-size: auto;
+    background-size: 679px 514px;
     background-repeat: no-repeat;
     background-position: right 215px;
   }
@@ -173,7 +173,7 @@
 
   .macBook {
     background: url("/exchange/macbookTablet.png");
-    background-size: auto;
+    background-size: 515px 470px;
     background-repeat: no-repeat;
     background-position: 482px 215px;
   }
