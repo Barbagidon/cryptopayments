@@ -17,6 +17,7 @@ const Legal = ({ data }: Props) => {
   const { date, list, title, mainDescr } = data;
 
   const showDescr = mainDescr && mainDescr.length > 0;
+  const showAccordeon = list.length > 0;
 
   return (
     <SectionWrap tag="main" className={styles.legal}>
@@ -26,11 +27,17 @@ const Legal = ({ data }: Props) => {
           <span className={styles.date}>Last Update: {date}</span>
         </div>
 
-        {showDescr && <div className={styles.descr}>{mainDescr}</div>}
-
-        <div className={styles.mainInfo}>
-          <FaqList dangerousHtml data={list} />
-        </div>
+        {showDescr && (
+          <div
+            dangerouslySetInnerHTML={{ __html: mainDescr }}
+            className={styles.descr}
+          />
+        )}
+        {showAccordeon && (
+          <div className={styles.mainInfo}>
+            <FaqList dangerousHtml data={list} />
+          </div>
+        )}
       </div>
     </SectionWrap>
   );
