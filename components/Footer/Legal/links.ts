@@ -5,7 +5,7 @@ export const leftLinks = [
   },
   { title: "Terms of Service", href: "termsOfService" },
 
-  { title: "Risk Disclaimer", href: "#" },
+  { title: "Risk Disclaimer", href: "riskDisclaimer" },
 
   { title: "Fees and Limits", href: "#" },
 ];
