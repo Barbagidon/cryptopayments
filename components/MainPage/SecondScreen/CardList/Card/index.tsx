@@ -1,17 +1,19 @@
 import React from "react";
 import styles from "./styles.module.css";
 import Arrow from "./icons/arrow";
+import Link from "next/link";
 
 interface Props {
   cardData: {
     title: string;
     descr: string;
+    link: string;
   };
 }
 
 const Card = ({ cardData }: Props) => {
   return (
-    <div className={styles.card}>
+    <Link className={styles.card} href={cardData.link}>
       <div className={styles.purpleBg} />
       <div className={styles.pcArrow}>
         <Arrow />
@@ -28,7 +30,7 @@ const Card = ({ cardData }: Props) => {
         <div className={styles.divider} />
         <span className={styles.descr}>{cardData.descr}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 
