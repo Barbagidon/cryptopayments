@@ -3,10 +3,12 @@ export const articlesConfig: {
     title: string;
     html: string;
     image: string;
+    date: string;
   };
 } = {
   "1": {
     title: "Cryptocurrency: Transforming Business Solutions ",
+    date: "13 February 2024",
     html: `<p>Cryptocurrency is revolutionizing business operations worldwide. By embracing cryptocurrency, businesses can optimize their operations, reduce costs, and unlock new opportunities in today's digital economy. Here's how:</p>
   <br>
 
@@ -32,6 +34,8 @@ export const articlesConfig: {
   "2": {
     title:
       "Implementation Challenges of Cryptocurrency for Business: Overcoming Hurdles in Adoption",
+
+    date: "28 March 2024",
     html: `<p><strong>Cryptocurrency</strong> has emerged as a disruptive force in the business world, promising efficiency, security, and innovation. However, the implementation of cryptocurrency in business operations comes with its set of challenges. Understanding and addressing these challenges is crucial for businesses.</p>
 <br/>
     <ol>
@@ -66,6 +70,7 @@ export const articlesConfig: {
 
   "3": {
     title: "Crypto Trends to Watch in 2024: Shaping the Future",
+    date: "1 April 2024",
     html: `<p>The cryptocurrency landscape is ever-evolving, and as we venture into 2024, exciting developments and trends are on the horizon. From advancements in blockchain technology to regulatory shifts and mainstream adoption, the coming year promises to be a pivotal period for the crypto industry. In this article, we'll explore the key crypto trends that are poised to shape the future, offering insights into the potential opportunities and challenges that lie ahead.</p>
 <br/>
     <ol>

@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const DateBage = () => {
-  return <div className={styles.dateBage}>16th August 2022</div>;
+interface Props {
+  date: string;
+}
+
+const DateBage = ({ date }: Props) => {
+  return <div className={styles.dateBage}>{date}</div>;
 };
 
 export default DateBage;

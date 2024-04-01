@@ -10,6 +10,7 @@ interface Props {
     title: string;
     html: string;
     image: string;
+    date: string;
   };
   pageId: string;
 }
@@ -20,7 +21,7 @@ const Article = ({ articleData, pageId }: Props) => {
       <div className={styles.header}>
         <div className={styles.bageDate}>
           <CaterogyBage />
-          <DateBage />
+          <DateBage date={articleData.date} />
         </div>
         <NavBtns pageId={pageId} className={styles.navBtns} />
       </div>
