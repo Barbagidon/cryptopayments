@@ -13,7 +13,7 @@ export const leftLinks = [
 export const rightLinks = [
   {
     title: "Complaints policy",
-    href: "#",
+    href: "complaint",
   },
 
   { title: "Cookies Policy", href: "cookiesPolicy" },
