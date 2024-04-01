@@ -11,11 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 import MobileLogo from "./icons/mobileLogo";
 
-interface Props {
-  className?: string;
-}
-
-const Header = ({ className }: Props) => {
+const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
