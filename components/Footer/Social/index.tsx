@@ -12,25 +12,21 @@ import Linked from "./icons/linked";
 const Social = () => {
   return (
     <div className={styles.social}>
-      <div className={styles.supportBlock}>
-        <FooterTitle>Support:</FooterTitle>
-        <Link
-          className={styles.link}
-          prefetch={false}
-          href={"mailto:support@cryptopayments.com"}
-        >
-          support@cryptopayments.com
-        </Link>
-        <div className={styles.logo}>
-          <Image
-            src={"/footerSocialBg.png"}
-            alt="'logo"
-            width={74}
-            height={74}
-          />
+      <Link prefetch={false} href={"mailto:support@cryptopayments.com"}>
+        <div className={styles.supportBlock}>
+          <FooterTitle>Support:</FooterTitle>
+          <span className={styles.link}>support@cryptopayments.com</span>
+          <div className={styles.logo}>
+            <Image
+              src={"/footerSocialBg.png"}
+              alt="'logo"
+              width={74}
+              height={74}
+            />
+          </div>
+          <Arrow className={styles.arrow} />
         </div>
-        <Arrow className={styles.arrow} />
-      </div>
+      </Link>
       <div className={styles.iconsLinks}>
         <Link
           className={styles.link}
@@ -48,7 +44,7 @@ const Social = () => {
         >
           <Face />
         </Link>
-        <Link className={styles.link} href={"@Cryptopayments_B2B"}>
+        <Link className={styles.link} href={"https://t.me/Cryptopayments_B2B"}>
           <Tlg />
         </Link>
         <Link
