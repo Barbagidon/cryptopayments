@@ -7,17 +7,24 @@
   z-index: 1;
 }
 
+.link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 16px;
   border-bottom: 2px solid #ddcdee;
+  flex-grow: 1;
 }
 
 .title {
   font-size: 32px;
   font-weight: 500;
-  max-width: 280px;
+  max-width: 270px;
 }
 
 .info {
@@ -45,18 +52,23 @@
   color: var(--black-light-1);
   font-size: 18px;
   font-weight: 400;
-  margin-top: 8px;
+  margin-top: 31px;
 }
 
 .image {
   margin-top: 16px;
   width: 100%;
   height: auto;
+  max-height: 120px;
+  min-height: 120px;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
 @media (max-width: 1200px) {
   .title {
     font-size: 24px;
+    max-width: 190px;
   }
 
   .date {
@@ -85,7 +97,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 560px) {
   .card {
     padding: 16px;
   }
