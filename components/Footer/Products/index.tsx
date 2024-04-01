@@ -9,13 +9,13 @@ const Products = () => {
       <FooterTitle>Products</FooterTitle>
 
       <div className={styles.list}>
-        <Link href={"#"} className={styles.link}>
+        <Link href={"/processing"} className={styles.link}>
           Processing
         </Link>
-        <Link href={"#"} className={styles.link}>
+        <Link href={"/exchange"} className={styles.link}>
           Exchange & Wallets
         </Link>
-        <Link href={"#"} className={styles.link}>
+        <Link href={"/not-found"} className={styles.link}>
           For developers
         </Link>
       </div>
