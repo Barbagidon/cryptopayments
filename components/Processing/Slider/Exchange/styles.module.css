@@ -4,7 +4,7 @@
   position: relative;
   height: 100%;
   background: var(--white-50, rgba(252, 250, 255, 0.5));
-  backdrop-filter: blur(12px);
+
   border-radius: 32px;
   transition: all 0.3s;
 }

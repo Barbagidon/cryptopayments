@@ -75,6 +75,7 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
           src={"/processing/btcPhone.png"}
           alt={"btc phone"}
           quality={100}
+          unoptimized
         />
 
         <Image
@@ -85,6 +86,7 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
           src={"/processing/btcPhoneMob.png"}
           alt={"btc phone"}
           quality={100}
+          unoptimized
         />
 
         <SlidePagination slideNum={0} />

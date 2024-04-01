@@ -45,7 +45,7 @@
   border-radius: 50px;
   border: 1px solid var(--black);
   background: var(--white-10);
-  backdrop-filter: blur(4px);
+
   font-size: 16px;
   font-weight: 600;
   color: var(--black);

@@ -1,8 +1,21 @@
 export const amlPolicy = {
   title: `AML POLICY CRYPTOPAYMENTS`,
   date: "Apr 5, 2023",
-  mainDescr: "",
+  mainDescr: `Cryptopayments is committed to maintaining the highest standards of integrity and compliance with applicable laws and regulations. This Anti-Money Laundering (AML) Policy outlines our commitment to preventing and detecting any attempts to use our platform for money laundering or other illicit activities.
+  Our Anti-Money Laundering/Counter-Terrorist Financing (AML/CTF) Policy encompasses the following key aspects: `,
   list: [
+    {
+      title: "Customer Due Diligence (CDD)",
+      descr: `
+        
+       <p><strong>Know Your Customer (KYC) Procedures</strong>: Cryptopayments conduct thorough KYC procedures for all customers to verify their identity and assess the risk associated with their transactions. This includes collecting identification documents, verifying the authenticity of the information provided, and screening customers against relevant sanctions lists and watchlists.</p> 
+
+        <br/>
+<strong>Enhanced Due Diligence (EDD): </strong>In cases where customers pose a higher risk, Cryptopayments conduct enhanced due diligence measures to gather additional information and mitigate the associated risks. We will conduct screening for politically exposed persons and implement appropriate risk-based measures.
+
+        `,
+    },
+
     {
       title: `List of required documents for legal entities: 
     `,

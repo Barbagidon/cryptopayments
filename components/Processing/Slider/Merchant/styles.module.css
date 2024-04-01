@@ -1,13 +1,9 @@
 .merchant {
   border-radius: 32px;
-
   max-width: 768px;
   width: 100%;
-
   z-index: 4;
   background: var(--white-50, rgba(252, 250, 255, 0.5));
-  backdrop-filter: blur(12px);
-
   transition: all 0.3s;
 }
 

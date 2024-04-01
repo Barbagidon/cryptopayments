@@ -52,9 +52,7 @@ const Slider = () => {
         <SectionWrap className={styles.slider}>
           <motion.div
             ref={containerRef}
-            animate={{
-              x: transitionValue,
-            }}
+            animate={{ x: transitionValue }}
             transition={{
               type: "spring",
               damping: 20,
