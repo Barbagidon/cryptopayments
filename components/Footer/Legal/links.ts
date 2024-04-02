@@ -7,7 +7,7 @@ export const leftLinks = [
 
   { title: "Risk Disclaimer", href: "riskDisclaimer" },
 
-  { title: "Fees and Limits", href: "#" },
+  { title: "Fees and Limits", href: "feesAndLimits" },
 ];
 
 export const rightLinks = [
@@ -18,5 +18,5 @@ export const rightLinks = [
 
   { title: "Cookies Policy", href: "cookiesPolicy" },
   { title: "AML Policy", href: "amlPolicy" },
-  { title: "FAQ", href: "/#faq" },
+  { title: "FAQ", href: "#" },
 ];
