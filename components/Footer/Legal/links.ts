@@ -18,5 +18,5 @@ export const rightLinks = [
 
   { title: "Cookies Policy", href: "cookiesPolicy" },
   { title: "AML Policy", href: "amlPolicy" },
-  { title: "FAQ", href: "#" },
+  { title: "FAQ", href: "/#faq" },
 ];

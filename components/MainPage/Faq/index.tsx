@@ -9,9 +9,10 @@ import Link from "next/link";
 const Faq = () => {
   return (
     <section className={styles.faq}>
-      <div className={styles.content}>
+      <div id="faq" className={styles.content}>
         <div className={styles.header}>
           <h2 className={styles.title}>FAQ</h2>
+
           <span className={styles.subTitle}>
             Everything you need to know about the product
           </span>
