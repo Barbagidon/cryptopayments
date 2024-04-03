@@ -18,7 +18,7 @@ const Faq = () => {
           </span>
         </div>
 
-        <FaqList dangerousHtml className={styles.faqList} data={config} />
+        <FaqList className={styles.faqList} data={config} />
 
         <div className={styles.showMore}>
           <span className={styles.showMoreText}>

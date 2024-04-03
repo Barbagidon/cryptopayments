@@ -8,10 +8,9 @@ import cn from "classnames";
 interface Props {
   className?: string;
   data: IFaqItem;
-  dangerousHtml?: boolean;
 }
 
-const FaqItem = ({ data, className, dangerousHtml }: Props) => {
+const FaqItem = ({ data, className }: Props) => {
   const { title, descr } = data;
 
   const [showText, setShowText] = useState(false);
@@ -23,6 +22,7 @@ const FaqItem = ({ data, className, dangerousHtml }: Props) => {
       >
         <span className={styles.title}>{title}</span>
         <div
+          id={title}
           className={cn(styles.arrowWrap, {
             [styles.rotatedArrow]: showText,
           })}
