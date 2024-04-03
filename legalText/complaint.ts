@@ -1,7 +1,9 @@
-export const complaint = {
-  title: `Complaint Policy`,
+import { ILegalPageData } from "@/components/Legal/types";
+
+export const complaint: ILegalPageData = {
+  pageTitle: `Complaint Policy`,
   date: "Apr 5, 2023",
-  mainDescr: `
+  pageDescr: `
   
   <p style="margin-top:0pt; margin-bottom:8pt; line-height:108%; font-size:12pt;"><strong><span ;">IF YOU ARE UNSATISFIED WITH OUR SERVICES</span></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:108%; font-size:12pt;"><span ;">In such an event, you are of the opinion that your rights and/or interests related to the services provided by us have been violated, you can submit the complaint to us. You must submit the complaint within 3 (three) months from the date when you became or should have become aware about the violation of your rights and/or interests protected by the law.</span></p>
@@ -20,5 +22,5 @@ export const complaint = {
 <p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:150%; font-size:12pt;"><span ;">We will handle your complaint and submit the response as soon as possible, but no later than within 15 (fifteen) business days following the day of the receipt of the complaint. In the event beyond our control, we will not be able to submit the response within the specified term, we will submit the interim response to you communicating the reasons of the delay and the term for submission of final response. In all cases, the final response to you will not exceed 35 (thirty-five) business days.</span></p>
 
   `,
-  list: [],
+  accordeonContent: [],
 };
