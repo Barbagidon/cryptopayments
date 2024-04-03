@@ -18,7 +18,11 @@ const FaqList = ({ className, data }: Props) => {
 
   return (
     <ul className={cn(styles.faqList, className)}>
-      {showTitle && <h2 className={styles.accordeonHeader}>{accordTitle}</h2>}
+      {showTitle && (
+        <li>
+          <h2 className={styles.accordeonHeader}>{accordTitle}</h2>
+        </li>
+      )}
       {accordItems.map((item, i) => {
         return <FaqItem key={i} data={item} />;
       })}
