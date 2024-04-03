@@ -48,7 +48,7 @@
 
 .mainInfo {
   width: 100%;
-  padding: 40px 40px 56px 40px;
+  padding: 0px 40px 56px 40px;
   background: var(--white);
   margin-top: 60px;
 }

@@ -45,16 +45,10 @@ const FaqItem = ({ data, className, dangerousHtml }: Props) => {
             }}
             className={styles.textWrap}
           >
-            {!dangerousHtml && (
-              <div className={styles.textContent}> {descr}</div>
-            )}
-
-            {dangerousHtml && (
-              <div
-                dangerouslySetInnerHTML={{ __html: descr }}
-                className={styles.textContent}
-              />
-            )}
+            <div
+              dangerouslySetInnerHTML={{ __html: descr }}
+              className={styles.textContent}
+            />
           </motion.div>
         )}
       </AnimatePresence>

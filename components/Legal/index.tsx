@@ -2,40 +2,38 @@ import React from "react";
 import styles from "./styles.module.css";
 import SectionWrap from "../ui/SectionWrap";
 import FaqList from "../ui/FaqList";
-import { IFaqItem } from "../ui/FaqList/types";
+
+import { ILegalPageData } from "./types";
 
 interface Props {
-  data: {
-    title: string;
-    date: string;
-    mainDescr?: string;
-    list: IFaqItem[];
-  };
+  data: ILegalPageData;
 }
 
 const Legal = ({ data }: Props) => {
-  const { date, list, title, mainDescr } = data;
+  const { date, pageTitle, pageDescr, accordeonContent } = data;
 
-  const showDescr = mainDescr && mainDescr.length > 0;
-  const showAccordeon = list.length > 0;
+  const showDescr = pageDescr && pageDescr.length > 0;
+  const showAccordeon = accordeonContent.length > 0;
 
   return (
     <SectionWrap tag="main" className={styles.legal}>
       <div className={styles.content}>
         <div className={styles.header}>
-          <h1 className={styles.title}>{title}</h1>
+          <h1 className={styles.title}>{pageTitle}</h1>
           <span className={styles.date}>Last Update: {date}</span>
         </div>
 
         {showDescr && (
           <div
-            dangerouslySetInnerHTML={{ __html: mainDescr }}
+            dangerouslySetInnerHTML={{ __html: pageDescr }}
             className={styles.descr}
           />
         )}
         {showAccordeon && (
           <div className={styles.mainInfo}>
-            <FaqList dangerousHtml data={list} />
+            {accordeonContent.map((item, i) => {
+              return <FaqList key={i} data={item} />;
+            })}
           </div>
         )}
       </div>

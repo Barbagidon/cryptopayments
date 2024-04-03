@@ -4,11 +4,14 @@
   flex-direction: column;
   width: 100%;
   gap: 32px;
+  padding-top: 40px;
 }
 
-.listItem {
+.accordeonHeader {
   padding-bottom: 40px;
   border-bottom: 2px solid var(--gray);
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .header {

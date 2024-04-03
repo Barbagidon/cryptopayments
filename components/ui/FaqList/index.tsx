@@ -3,22 +3,24 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./styles.module.css";
-import Arrow from "./icons/arrow";
-import { AnimatePresence, motion } from "framer-motion";
-import { IFaqItem } from "./types";
 import FaqItem from "./FaqItem";
+import { IAccordeonData } from "@/components/Legal/types";
 
 interface Props {
   className?: string;
-  data: IFaqItem[];
-  dangerousHtml?: boolean;
+  data: IAccordeonData;
 }
 
-const FaqList = ({ className, data, dangerousHtml }: Props) => {
+const FaqList = ({ className, data }: Props) => {
+  const { accordItems, accordTitle } = data;
+
+  const showTitle = accordTitle.length > 0;
+
   return (
     <ul className={cn(styles.faqList, className)}>
-      {data.map((item, i) => {
-        return <FaqItem dangerousHtml={dangerousHtml} key={i} data={item} />;
+      {showTitle && <h2 className={styles.accordeonHeader}>{accordTitle}</h2>}
+      {accordItems.map((item, i) => {
+        return <FaqItem key={i} data={item} />;
       })}
     </ul>
   );
