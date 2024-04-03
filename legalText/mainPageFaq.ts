@@ -1,4 +1,4 @@
-export const cookiesPolicy = {
+export const mainPageFaq = {
   title: "Faq",
   date: "Apr 5, 2023",
   mainDescr: `This Website automatically collects only data necessary for creating cookies in the User’s browser. The user automatically agrees with using cookies upon using the Website. Some of the purposes for which cookies are used may also require the User’s consent. Whenever consent is given, it can be freely withdrawn at any time following the instructions provided in this Cookies policy.
