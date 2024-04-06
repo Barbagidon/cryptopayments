@@ -3,7 +3,6 @@ import styles from "./styles.module.css";
 import StartedBtn from "@/components/ui/StartedBtn";
 import Image from "next/image";
 import Bg from "./icons/bg";
-import CoinsIcon from "./icons/coins";
 
 const FourthScreen = () => {
   return (
@@ -27,7 +26,15 @@ const FourthScreen = () => {
             </div>
           </div>
 
-          <CoinsIcon className={styles.coinsIcon} />
+          <Image
+            width={0}
+            height={0}
+            className={styles.coinsImg}
+            priority
+            unoptimized
+            src={"/coins.png"}
+            alt="coin image"
+          />
         </div>
         <div className={styles.lineBg}>
           <Bg />
