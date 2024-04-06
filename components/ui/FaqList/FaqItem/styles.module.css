@@ -25,6 +25,10 @@
   transition: all 0.3s;
 }
 
+.arrow {
+  transition: all 0.3s;
+}
+
 .rotatedArrow {
   transform: rotate(80deg);
 }

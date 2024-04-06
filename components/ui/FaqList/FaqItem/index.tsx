@@ -21,13 +21,12 @@ const FaqItem = ({ data, className }: Props) => {
         className={styles.header}
       >
         <span className={styles.title}>{title}</span>
-        <div
-          id={title}
-          className={cn(styles.arrowWrap, {
-            [styles.rotatedArrow]: showText,
-          })}
-        >
-          <Arrow />
+        <div id={title} className={cn(styles.arrowWrap)}>
+          <Arrow
+            className={cn(styles.arrow, {
+              [styles.rotatedArrow]: showText,
+            })}
+          />
         </div>
       </div>
 
