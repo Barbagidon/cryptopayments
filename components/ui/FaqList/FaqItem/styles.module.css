@@ -33,7 +33,7 @@
   transform: rotate(80deg);
 }
 
-.rotatedArrow svg path {
+.rotatedArrow path {
   stroke: var(--purple-main);
 }
 
