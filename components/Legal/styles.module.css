@@ -44,6 +44,7 @@
   line-height: 140%;
   color: var(--black);
   margin-top: 32px;
+  white-space: pre-wrap;
 }
 
 .mainInfo {

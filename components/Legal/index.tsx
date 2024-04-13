@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import SectionWrap from "../ui/SectionWrap";
 import { ILegalPageData } from "./types";
 import LegalAccord from "./LegalAccord";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
   data: ILegalPageData;
@@ -23,10 +24,7 @@ const Legal = ({ data }: Props) => {
         </div>
 
         {showDescr && (
-          <div
-            dangerouslySetInnerHTML={{ __html: pageDescr }}
-            className={styles.descr}
-          />
+          <ReactMarkdown className={styles.descr}>{pageDescr}</ReactMarkdown>
         )}
         {showAccordeon && (
           <div className={styles.mainInfo}>
