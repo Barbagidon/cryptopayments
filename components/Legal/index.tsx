@@ -4,13 +4,14 @@ import SectionWrap from "../ui/SectionWrap";
 import FaqList from "../ui/FaqList";
 
 import { ILegalPageData } from "./types";
+import LegalAccord from "./LegalAccord";
 
 interface Props {
   data: ILegalPageData;
 }
 
 const Legal = ({ data }: Props) => {
-  const { date, pageTitle, pageDescr, accordeonContent } = data;
+  const { date, pageTitle, pageDescr, Accordeon: accordeonContent } = data;
 
   const showDescr = pageDescr && pageDescr.length > 0;
   const showAccordeon = accordeonContent.length > 0;
@@ -31,9 +32,7 @@ const Legal = ({ data }: Props) => {
         )}
         {showAccordeon && (
           <div className={styles.mainInfo}>
-            {accordeonContent.map((item, i) => {
-              return <FaqList key={i} data={item} />;
-            })}
+            <LegalAccord data={accordeonContent} />
           </div>
         )}
       </div>
