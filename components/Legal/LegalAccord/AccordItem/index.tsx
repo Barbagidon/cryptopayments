@@ -4,6 +4,7 @@ import Arrow from "../icons/arrow";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 import { IAccordItem } from "./types";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
   className?: string;
@@ -44,10 +45,7 @@ const AccordItem = ({ data, className }: Props) => {
             }}
             className={styles.textWrap}
           >
-            <div
-              dangerouslySetInnerHTML={{ __html: descr }}
-              className={styles.textContent}
-            />
+            <ReactMarkdown>{descr}</ReactMarkdown>
           </motion.div>
         )}
       </AnimatePresence>

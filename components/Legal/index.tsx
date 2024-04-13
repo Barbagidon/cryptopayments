@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
 import SectionWrap from "../ui/SectionWrap";
-import FaqList from "../ui/FaqList";
-
 import { ILegalPageData } from "./types";
 import LegalAccord from "./LegalAccord";
 

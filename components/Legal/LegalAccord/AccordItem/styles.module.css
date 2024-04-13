@@ -39,6 +39,7 @@
 
 .textWrap {
   overflow: hidden;
+  white-space: pre-wrap;
 }
 
 .textContent {
