@@ -5,8 +5,8 @@ interface AccordItem {
 }
 
 export interface IAccordeonData {
-  accordTitle: string;
-  accordItems: AccordItem[];
+  title: string;
+  AccordeonItems: AccordItem[];
 }
 
 export interface ILegalPageData {
@@ -15,6 +15,6 @@ export interface ILegalPageData {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  pageDescr: string;
-  Accordeon: AccordItem[];
+  pageDescr: string | null;
+  accordeonContent: IAccordeonData[];
 }

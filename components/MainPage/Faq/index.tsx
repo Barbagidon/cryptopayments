@@ -1,10 +1,13 @@
+"use client";
+
 import React from "react";
 import styles from "./styles.module.css";
-import FaqList from "@/components/ui/FaqList";
 import { config } from "./config";
 import BigCircle from "@/components/ui/BigCircle";
 import Arrow from "./icons/arrow";
 import Link from "next/link";
+import FaqList from "@/components/FaqList";
+import FaqItem from "@/components/FaqList/FaqItem";
 
 const Faq = () => {
   return (
@@ -18,7 +21,11 @@ const Faq = () => {
           </span>
         </div>
 
-        <FaqList className={styles.faqList} data={config} />
+        <ul className={styles.faqList}>
+          {config.map((item, i) => {
+            return <FaqItem data={item} key={i} />;
+          })}
+        </ul>
 
         <div className={styles.showMore}>
           <span className={styles.showMoreText}>

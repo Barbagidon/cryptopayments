@@ -4,6 +4,8 @@ import Arrow from "../icons/arrow";
 import { IFaqItem } from "../types";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
+import ReactMarkdown from "react-markdown";
+import { animVariants } from "./animVariants";
 
 interface Props {
   className?: string;
@@ -33,21 +35,15 @@ const FaqItem = ({ data, className }: Props) => {
       <AnimatePresence>
         {showText && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-            }}
+            variants={animVariants}
+            initial={"initial"}
+            animate={"animate"}
+            exit={"initial"}
             className={styles.textWrap}
           >
-            <div
-              dangerouslySetInnerHTML={{ __html: descr }}
-              className={styles.textContent}
-            />
+            <ReactMarkdown className={styles.textContent}>
+              {descr}
+            </ReactMarkdown>
           </motion.div>
         )}
       </AnimatePresence>
