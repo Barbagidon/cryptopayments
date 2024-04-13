@@ -1,6 +1,5 @@
 import { getLegalPage } from "@/actions/getLegalPage";
 import Legal from "@/components/Legal";
-import { privacyPolicy } from "@/legalText/privacyPolicy";
 
 import React from "react";
 
