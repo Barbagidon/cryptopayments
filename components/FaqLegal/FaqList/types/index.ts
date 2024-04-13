@@ -1,4 +1,4 @@
-export interface IAccordItem {
+export interface IFaqItem {
   title: string;
   descr: string;
   id: number;

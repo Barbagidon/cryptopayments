@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import SectionWrap from "../ui/SectionWrap";
 import { ILegalPageData } from "./types";
 import ReactMarkdown from "react-markdown";
-import FaqList from "../FaqList";
+import FaqList from "./FaqList";
 
 interface Props {
   data: ILegalPageData;

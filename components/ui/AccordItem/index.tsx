@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import Arrow from "../icons/arrow";
+
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
-import { IAccordItem } from "./types";
 import ReactMarkdown from "react-markdown";
+import { animVariants } from "./animVariants";
+import Arrow from "./icons/arrow";
+import { IAccordItem } from "./types";
 
 interface Props {
   className?: string;
@@ -34,18 +36,15 @@ const AccordItem = ({ data, className }: Props) => {
       <AnimatePresence>
         {showText && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-            }}
+            variants={animVariants}
+            initial={"initial"}
+            animate={"animate"}
+            exit={"initial"}
             className={styles.textWrap}
           >
-            <ReactMarkdown>{descr}</ReactMarkdown>
+            <ReactMarkdown className={styles.textContent}>
+              {descr}
+            </ReactMarkdown>
           </motion.div>
         )}
       </AnimatePresence>

@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./styles.module.css";
-import FaqItem from "./FaqItem";
 import { IAccordeonData } from "@/components/FaqLegal/types";
+import AccordItem from "../ui/AccordItem";
 
 interface Props {
   className?: string;
@@ -24,7 +24,7 @@ const FaqList = ({ className, data }: Props) => {
         </li>
       )}
       {AccordeonItems.map((item, i) => {
-        return <FaqItem key={i} data={item} />;
+        return <AccordItem key={i} data={item} />;
       })}
     </ul>
   );

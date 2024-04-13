@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./styles.module.css";
-import FaqItem from "./AccordItem";
-import { IAccordeonData } from "@/components/Legal/types";
-import AccordItem from "./AccordItem";
-import { IAccordItem } from "./AccordItem/types";
+import AccordItem from "@/components/ui/AccordItem";
+import { IAccordItem } from "@/components/ui/AccordItem/types";
 
 interface Props {
   className?: string;

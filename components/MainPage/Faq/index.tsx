@@ -6,8 +6,7 @@ import { config } from "./config";
 import BigCircle from "@/components/ui/BigCircle";
 import Arrow from "./icons/arrow";
 import Link from "next/link";
-import FaqList from "@/components/FaqList";
-import FaqItem from "@/components/FaqList/FaqItem";
+import AccordItem from "@/components/ui/AccordItem";
 
 const Faq = () => {
   return (
@@ -23,7 +22,7 @@ const Faq = () => {
 
         <ul className={styles.faqList}>
           {config.map((item, i) => {
-            return <FaqItem data={item} key={i} />;
+            return <AccordItem data={item} key={i} />;
           })}
         </ul>
 
