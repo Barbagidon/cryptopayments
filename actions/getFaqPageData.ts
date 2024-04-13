@@ -6,7 +6,6 @@ export const getFaqPageData = async () => {
 
     const pageData = await result.json();
 
-    console.log(pageData);
     return pageData.data.attributes;
   } catch (error) {
     return;
