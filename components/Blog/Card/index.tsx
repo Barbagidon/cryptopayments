@@ -5,14 +5,15 @@ import ArrowIcon from "./icons/arrowIcon";
 import CaterogyBage from "../CategoryBage";
 import DateBage from "../DateBage";
 import Link from "next/link";
-import { IArticle } from "../types";
+import { IArticle, IBlogFilters } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
 
 interface Props {
   cardData: IArticle;
+  currentFilter: IBlogFilters;
 }
 
-const Card = ({ cardData }: Props) => {
+const Card = ({ cardData, currentFilter }: Props) => {
   const {
     id,
     attributes: { img, type, title, date },
@@ -20,8 +21,12 @@ const Card = ({ cardData }: Props) => {
 
   const imgSrc = img.data[0].attributes.url;
 
+  const cardHref = currentFilter
+    ? `/blog/${id}?filter=${currentFilter}`
+    : `/blog/${id}`;
+
   return (
-    <Link className={styles.card} href={`/blog/${id}`}>
+    <Link className={styles.card} href={cardHref}>
       <div>
         <div className={styles.info}>
           <div className={styles.header}>

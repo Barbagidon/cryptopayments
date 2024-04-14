@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./styles.module.css";
 import { IAccordeonData } from "@/components/FaqLegal/types";
-import AccordItem from "../ui/AccordItem";
+import AccordItem from "@/components/ui/AccordItem";
 
 interface Props {
   className?: string;

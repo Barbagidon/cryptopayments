@@ -25,7 +25,13 @@ const Blog = async ({ searchParams }: Props) => {
           <div className={styles.cardList}>
             {showCards &&
               articlesData.map((card, i) => {
-                return <Card cardData={card} key={i} />;
+                return (
+                  <Card
+                    currentFilter={searchParams.filter}
+                    cardData={card}
+                    key={i}
+                  />
+                );
               })}
           </div>
           {showCards && <CircleIcon className={styles.circleIcon} />}

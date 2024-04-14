@@ -4,16 +4,17 @@ import CaterogyBage from "../CategoryBage";
 import DateBage from "../DateBage";
 import NavBtns from "./NavBtns";
 import Image from "next/image";
-import { IArticle } from "../types";
+import { IArticle, IBlogFilters } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
 import ReactMarkdown from "react-markdown";
 
 interface Props {
   articleData: IArticle;
   pageId: string;
+  curFilter: IBlogFilters;
 }
 
-const Article = ({ articleData, pageId }: Props) => {
+const Article = ({ articleData, pageId, curFilter }: Props) => {
   const {
     attributes: { type, date, img, title, text },
   } = articleData;
@@ -27,7 +28,11 @@ const Article = ({ articleData, pageId }: Props) => {
           <CaterogyBage category={type} />
           <DateBage date={date} />
         </div>
-        {/* <NavBtns pageId={pageId} className={styles.navBtns} /> */}
+        <NavBtns
+          curFilter={curFilter}
+          pageId={pageId}
+          className={styles.navBtns}
+        />
       </div>
       <Image
         quality={100}
