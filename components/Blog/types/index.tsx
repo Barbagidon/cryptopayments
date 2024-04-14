@@ -11,7 +11,7 @@ interface ImageFormat {
   sizeInBytes: number;
 }
 
-interface Image {
+interface IBlogImage {
   id: number;
   attributes: {
     name: string;
@@ -50,7 +50,7 @@ export interface IArticle {
     updatedAt: string;
     publishedAt: string;
     img: {
-      data: Image[];
+      data: IBlogImage[];
     };
   };
 }
