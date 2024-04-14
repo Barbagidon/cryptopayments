@@ -58,3 +58,10 @@ export interface IArticle {
 export interface IArticleData {
   data: IArticle[];
 }
+
+export type IBlogFilters =
+  | "Events"
+  | "News"
+  | "Explainers"
+  | "Articles"
+  | undefined;

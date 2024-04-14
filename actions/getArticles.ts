@@ -1,8 +1,13 @@
-import { IArticle } from "@/components/Blog/types";
+import { IArticle, IBlogFilters } from "@/components/Blog/types";
+import { getArticlesUrl } from "@/components/Blog/utils/getArticlesUrl";
 
-export const getArticles = async (): Promise<IArticle[] | undefined> => {
+export const getArticles = async (
+  filter: IBlogFilters
+): Promise<IArticle[] | undefined> => {
+  const url = getArticlesUrl(filter);
+
   try {
-    const result = await fetch(`${process.env.API_URL}posts?populate=*&sort[0]=date:desc`, {
+    const result = await fetch(url, {
       cache: "no-store",
     });
 
