@@ -13,7 +13,7 @@ interface Props {
 const Card = ({ cardData }: Props) => {
   const { date, place, name, link, img } = cardData;
 
-  const imgLink = process.env.ADMIN_URL + img.data.attributes.url;
+  const imgLink = process.env.CMS_URL + img.data.attributes.url;
 
   return (
     <li className={styles.card}>

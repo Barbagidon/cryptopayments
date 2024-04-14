@@ -8,15 +8,19 @@ import YellowGearIcon from "@/components/Blog/icons/yellowGearIcon";
 import TriangleIcon from "@/components/Blog/icons/triangleIcon";
 import CircleIcon from "@/components/Blog/icons/circleIcon";
 import { cardsConfig } from "@/components/Blog/cardsConfig";
+import { getArticles } from "@/actions/getArticles";
 
 interface Props {
   searchParams: { filter: string };
 }
 
-const Blog = ({ searchParams }: Props) => {
-  const showCards =
-    searchParams.filter === undefined || searchParams.filter === "articles";
+const Blog = async ({ searchParams }: Props) => {
+  const articlesData = await getArticles();
 
+  // const showCards =
+  //   searchParams.filter === undefined || searchParams.filter === "articles";
+
+  const showCards = articlesData && articlesData?.length > 0;
   return (
     <main className={styles.blog}>
       <section className={styles.blogSection}>
@@ -25,7 +29,7 @@ const Blog = ({ searchParams }: Props) => {
 
           <div className={styles.cardList}>
             {showCards &&
-              cardsConfig.map((card, i) => {
+              articlesData.map((card, i) => {
                 return <Card cardData={card} key={i} />;
               })}
           </div>

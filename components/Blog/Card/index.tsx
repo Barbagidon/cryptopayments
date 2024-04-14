@@ -5,25 +5,27 @@ import ArrowIcon from "./icons/arrowIcon";
 import CaterogyBage from "../CategoryBage";
 import DateBage from "../DateBage";
 import Link from "next/link";
+import { IArticle } from "../types";
+import { getImageSrc } from "@/utils/getImageSrc";
 
 interface Props {
-  cardData: {
-    title: string;
-    image: string;
-    id: number;
-    date: string;
-  };
+  cardData: IArticle;
 }
 
 const Card = ({ cardData }: Props) => {
-  const { id, image, title, date } = cardData;
+  const {
+    id,
+    attributes: { img, type, title, date },
+  } = cardData;
+
+  const imgSrc = img.data[0].attributes.url;
 
   return (
     <Link className={styles.card} href={`/blog/${id}`}>
       <div>
         <div className={styles.info}>
           <div className={styles.header}>
-            <CaterogyBage />
+            <CaterogyBage category={type} />
             <DateBage date={date} />
           </div>
 
@@ -35,7 +37,7 @@ const Card = ({ cardData }: Props) => {
           height={122}
           sizes="100vw"
           alt={"card image"}
-          src={image}
+          src={getImageSrc(imgSrc)}
           priority
         />
         <div className={styles.linkBtn}>
