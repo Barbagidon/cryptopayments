@@ -20,7 +20,7 @@ const Blog = async ({ searchParams }: Props) => {
     <main className={styles.blog}>
       <section className={styles.blogSection}>
         <div className={styles.content}>
-          <Filters />
+          <Filters currentFilter={searchParams.filter} />
 
           <div className={styles.cardList}>
             {showCards &&
