@@ -36,6 +36,7 @@ const Card = ({ cardData, currentFilter }: Props) => {
 
           <div className={styles.textInfo}>{title}</div>
         </div>
+
         <Image
           className={styles.cardImage}
           width={397}
