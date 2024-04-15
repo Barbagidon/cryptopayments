@@ -147,6 +147,7 @@
 
   .coinsBlock {
     padding-top: 40px;
+    justify-content: space-between;
   }
   .coinsHeader {
     display: flex;
