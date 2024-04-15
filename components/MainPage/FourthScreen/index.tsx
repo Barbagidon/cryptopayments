@@ -9,10 +9,12 @@ const FourthScreen = () => {
     <section className={styles.fourthScreen}>
       <div className={styles.content}>
         <div className={styles.topContent}>
-          <h2 className={styles.title}>Multicurrency support</h2>
-          <div className={styles.descr}>
-            Say Goodbye to traditional payment barriers and Hello to the future
-            of commerce with Crypto Payments for your Business.
+          <div className={styles.topText}>
+            <h2 className={styles.title}>Multicurrency support</h2>
+            <div className={styles.descr}>
+              Say Goodbye to traditional payment barriers and Hello to the
+              future of commerce with Crypto Payments for your Business.
+            </div>
           </div>
 
           <StartedBtn className={styles.startedBtn} />

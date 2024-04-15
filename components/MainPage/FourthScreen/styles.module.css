@@ -24,6 +24,9 @@
   gap: 135px;
   flex-shrink: 0;
   align-items: flex-start;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 381px;
 }
 
 .title,
@@ -38,13 +41,17 @@
   z-index: 2;
 }
 
+.title {
+  position: static;
+}
+
 .descr,
 .coinsDescr {
   font-size: 18px;
   font-weight: 400;
   max-width: 381px;
   width: 100%;
-  margin-top: 201px;
+  /* margin-top: 201px; */
 }
 
 .coinsBlock {
@@ -96,6 +103,14 @@
   height: auto;
 }
 
+.topText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  top: 100px;
+}
+
 @media (max-width: 1200px) {
   .fourthScreen {
     padding: 0px 40px 221px 40px;
@@ -103,10 +118,6 @@
 }
 
 @media (max-width: 1024px) {
-  .content {
-    gap: 178px;
-  }
-
   .title {
     font-size: 48px;
     top: 60px;
@@ -117,11 +128,9 @@
   }
 
   .descr {
-    position: absolute;
     width: 609px;
     max-width: unset;
     margin-top: 0;
-    top: 141px;
     z-index: 2;
   }
 }
