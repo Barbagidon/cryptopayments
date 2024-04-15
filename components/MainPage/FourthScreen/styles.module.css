@@ -143,6 +143,10 @@
     padding: 0px 24px 168px 24px;
   }
 
+  .topContent {
+    align-items: center;
+  }
+
   .content {
     gap: 0px;
     flex-direction: column-reverse;
