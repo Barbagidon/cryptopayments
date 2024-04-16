@@ -1,32 +1,48 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import styles from "./styles.module.css";
-import Header from "@/components/Header";
 import Image from "next/image";
 
 import StartedBtnBg from "./icons/startedBtnBg";
 import StartedBtn from "@/components/ui/StartedBtn";
 import SectionWrap from "@/components/ui/SectionWrap";
 
+import cn from "classnames";
+import { useInView } from "framer-motion";
+
 const FirstScreen = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef);
+
   return (
     <SectionWrap className={styles.firstScreen}>
-      {/* <Header /> */}
-      <div className={styles.content}>
+      <div ref={containerRef} className={styles.content}>
         <div className={styles.topContent}>
-          <h1 className={styles.title}>
+          <h1
+            className={cn(styles.title, {
+              [styles.pcAnimTitle]: isInView,
+            })}
+          >
             Crypto Payments for your{" "}
             <span className={styles.business}>Business</span>
           </h1>
           <Image
             width={400}
             height={400}
-            className={styles.image}
+            sizes="100vw"
+            className={cn(styles.image, {
+              [styles.pcAnimImage]: isInView,
+            })}
             src={"/mainPage/firstScreenCircles.png"}
             alt="crypto payment ecosystem"
-            layout="responsive"
           />
         </div>
-        <div className={styles.bottomContent}>
+        <div
+          className={cn(styles.bottomContent, {
+            [styles.pcAnimBottomContent]: isInView,
+          })}
+        >
           <div className={styles.startedContent}>
             <StartedBtn className={styles.startedBtnWrap} />
             <div className={styles.startedBtnBgWrap}>
