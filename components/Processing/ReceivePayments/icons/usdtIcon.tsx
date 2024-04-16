@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 interface Props {
@@ -13,6 +14,13 @@ const UsdtIcon = ({ className }: Props) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      // initial={{
+      //   y: -1000,
+      // }}
+      // animate={{
+      //   y: [-1000, 0, -40, 0],
+      // }}
+      // transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <g filter="url(#filter0_dddd_326_11717)">
         <rect

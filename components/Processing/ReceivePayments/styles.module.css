@@ -34,6 +34,12 @@
   gap: 24px;
   position: relative;
   z-index: 2;
+  transform: translateX(-300%);
+  transition: transform 1s;
+}
+
+.titleAnim {
+  transform: translateX(0);
 }
 
 .titleText {
@@ -57,6 +63,12 @@
   gap: 24px;
   align-items: center;
   position: relative;
+  transform: translateY(400%);
+}
+
+.animBtnContent {
+  transform: translateY(0);
+  transition: transform 0.8s;
 }
 
 .btnText {
@@ -87,6 +99,7 @@
   position: absolute;
   right: 204px;
   top: 237px;
+  transform: translateY(-2000px);
 }
 
 .btcIcon {
@@ -94,6 +107,7 @@
   position: absolute;
   width: 198px;
   right: 115px;
+  transform: translateY(-2000px);
 }
 
 .ethIcon {
@@ -101,6 +115,32 @@
   right: 123px;
   bottom: 130px;
   position: absolute;
+  transform: translateY(-2000px);
+}
+
+.animIcon {
+  animation: jumpAnimation 0.8s ease-in-out 0.8s forwards;
+}
+
+@keyframes jumpAnimation {
+  0% {
+    transform: translateY(-1000px);
+  }
+  40% {
+    transform: translateY(60px);
+  }
+
+  65% {
+    transform: translateY(-40px);
+  }
+
+  85% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1280px) {
