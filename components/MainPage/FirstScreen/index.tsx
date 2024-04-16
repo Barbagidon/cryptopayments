@@ -13,7 +13,7 @@ import { useInView } from "framer-motion";
 
 const FirstScreen = () => {
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef);
+  const isInView = useInView(containerRef, { once: true });
 
   return (
     <SectionWrap className={styles.firstScreen}>

@@ -15,7 +15,7 @@ import cn from "classnames";
 
 const ReceivePayments = () => {
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef);
+  const isInView = useInView(containerRef, { once: true });
   return (
     <section ref={containerRef} className={styles.receivePayments}>
       <SectionWrap tag="div" className={styles.sectionWrap}>
