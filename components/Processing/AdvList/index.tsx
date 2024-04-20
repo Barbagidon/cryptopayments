@@ -26,7 +26,7 @@ const config = [
 ];
 
 const AdvList = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
     amount: 0.5,

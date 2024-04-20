@@ -14,7 +14,7 @@ import { useInView } from "framer-motion";
 import cn from "classnames";
 
 const ReceivePayments = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
   return (
     <section ref={containerRef} className={styles.receivePayments}>

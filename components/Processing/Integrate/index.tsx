@@ -1,11 +1,13 @@
+"use client";
 import SectionWrap from "@/components/ui/SectionWrap";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import IntegrateCard from "./IntegrateCard";
 import CircleBg from "./icons/circleBg";
 import TriangeIcon from "./icons/triangeIcon";
 import CircleText from "./icons/circleText";
 import UsdtIcon from "./icons/usdtIcon";
+import { useInView } from "framer-motion";
 
 const cardConfig = [
   {
@@ -26,9 +28,15 @@ const cardConfig = [
 ];
 
 const Integrate = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, {
+    once: true,
+    amount: 0.5,
+  });
+
   return (
     <SectionWrap className={styles.integrate}>
-      <div className={styles.content}>
+      <div ref={containerRef} className={styles.content}>
         <div className={styles.titleWrap}>
           <h2>
             <span className={styles.titleText}>Integrate</span>

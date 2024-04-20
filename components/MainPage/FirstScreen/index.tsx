@@ -12,7 +12,7 @@ import cn from "classnames";
 import { useInView } from "framer-motion";
 
 const FirstScreen = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
 
   return (
