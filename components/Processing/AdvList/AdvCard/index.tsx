@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import cn from "classnames";
 
 interface Props {
   cardData: {
@@ -7,13 +8,15 @@ interface Props {
     descr: string;
     num: number;
   };
+
+  className?: string;
 }
 
-const AdvCard = ({ cardData }: Props) => {
+const AdvCard = ({ cardData, className }: Props) => {
   const { descr, num, title } = cardData;
 
   return (
-    <div className={styles.advCard}>
+    <div className={cn(styles.advCard, className)}>
       <div className={styles.number}>
         <span>0{num}</span> <span>—</span>
       </div>

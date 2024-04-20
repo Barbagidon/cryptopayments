@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.animWrap {
+  width: calc(100% / 3);
+  flex-grow: 1;
+}
+
 .advList {
   display: flex;
   justify-content: space-between;
@@ -12,11 +17,43 @@
   position: absolute;
   width: 100%;
   top: -125px;
+  transform: translateY(1000px);
+  transition: transform 0.5s;
+}
+
+.animAdvList {
+  animation: jumpAnimation 1s ease-in-out forwards;
+}
+
+@keyframes jumpAnimation {
+  0% {
+    transform: translateY(1000px);
+  }
+  40% {
+    transform: translateY(-60px);
+  }
+
+  65% {
+    transform: translateY(40px);
+  }
+
+  85% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 930px) {
   .advList {
     flex-direction: column;
+    transform: translateY(0);
+  }
+
+  .animAdvList {
+    animation: unset;
   }
 
   .content {
