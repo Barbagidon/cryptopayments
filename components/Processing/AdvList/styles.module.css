@@ -53,17 +53,17 @@
   }
 
   .animWrap:nth-child(1) {
-    bottom: -526px;
+    transform: translateY(526px);
   }
   .animWrap:nth-child(2) {
-    bottom: -357px;
+    transform: translateY(357px);
   }
   .animWrap:nth-child(3) {
-    bottom: -189px;
+    transform: translateY(189px);
   }
 
   .animWrap.showAnim {
-    bottom: 0;
+    transform: translateY(0);
   }
 
   .animAdvList {
