@@ -6,7 +6,7 @@ import DateBage from "../DateBage";
 import Link from "next/link";
 import { IArticle, IBlogFilters } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
-import ImageWithBlur from "@/components/ui/ImageWithBlur/imageBlur";
+import Image from "next/image";
 
 interface Props {
   cardData: IArticle;
@@ -36,7 +36,7 @@ const Card = ({ cardData, currentFilter }: Props) => {
 
           <div className={styles.textInfo}>{title}</div>
         </div>
-        <ImageWithBlur
+        <Image
           className={styles.cardImage}
           width={397}
           height={122}

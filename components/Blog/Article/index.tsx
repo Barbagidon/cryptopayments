@@ -36,7 +36,18 @@ const Article = ({ articleData, pageId, curFilter }: Props) => {
         />
       </div>
 
-      <ImageWithBlur
+      {/* <ImageWithBlur
+        quality={100}
+        alt={"article image"}
+        width={1240}
+        height={380}
+        src={imgSrc}
+        className={styles.image}
+        sizes="100vw"
+        priority
+      /> */}
+
+      <Image
         quality={100}
         alt={"article image"}
         width={1240}
