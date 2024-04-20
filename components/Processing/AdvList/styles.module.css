@@ -6,8 +6,24 @@
 }
 
 .animWrap {
-  width: calc(100% / 3);
-  flex-grow: 1;
+  /* width: calc(100% / 3); */
+  width: 100%;
+  position: relative;
+  transition: all 0.7s ease-in-out;
+}
+
+.animWrap:nth-child(1) {
+  bottom: -526px;
+}
+.animWrap:nth-child(2) {
+  bottom: -357px;
+}
+.animWrap:nth-child(3) {
+  bottom: -189px;
+}
+
+.animWrap.showAnim {
+  bottom: 0;
 }
 
 .advList {

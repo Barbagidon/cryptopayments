@@ -54,14 +54,14 @@ const AdvList = () => {
           })} */}
 
           <motion.div
-            className={styles.animWrap}
-            style={{
-              position: "relative",
-              bottom: -526,
-            }}
-            animate={{
-              bottom: isInView ? 0 : -526,
-            }}
+            className={cn(styles.animWrap, { [styles.showAnim]: isInView })}
+            // style={{
+            //   position: "relative",
+            //   bottom: -526,
+            // }}
+            // animate={{
+            //   bottom: isInView ? 0 : -526,
+            // }}
             // initial={{
             //   bottom: -526,
             // }}
@@ -78,17 +78,17 @@ const AdvList = () => {
             />
           </motion.div>
           <motion.div
-            className={styles.animWrap}
-            style={{
-              position: "relative",
-              bottom: -357,
-            }}
+            className={cn(styles.animWrap, { [styles.showAnim]: isInView })}
+            // style={{
+            //   position: "relative",
+            //   bottom: -357,
+            // }}
             // initial={{ bottom: -357 }}
             // whileInView={{
             //   bottom: 0,
             // }}
 
-            animate={{ bottom: isInView ? 0 : -357 }}
+            // animate={{ bottom: isInView ? 0 : -357 }}
             transition={transition}
           >
             <AdvCard
@@ -99,14 +99,14 @@ const AdvList = () => {
             />
           </motion.div>
           <motion.div
-            className={styles.animWrap}
-            style={{
-              position: "relative",
-              bottom: -189,
-            }}
-            animate={{
-              bottom: isInView ? 0 : -189,
-            }}
+            className={cn(styles.animWrap, { [styles.showAnim]: isInView })}
+            // style={{
+            //   position: "relative",
+            //   bottom: -189,
+            // }}
+            // animate={{
+            //   bottom: isInView ? 0 : -189,
+            // }}
             // initial={{
             //   bottom: -189,
             // }}
