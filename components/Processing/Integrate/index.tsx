@@ -1,6 +1,6 @@
 "use client";
 import SectionWrap from "@/components/ui/SectionWrap";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./styles.module.css";
 import IntegrateCard from "./IntegrateCard";
 import CircleBg from "./icons/circleBg";
@@ -8,6 +8,7 @@ import TriangeIcon from "./icons/triangeIcon";
 import CircleText from "./icons/circleText";
 import UsdtIcon from "./icons/usdtIcon";
 import { useInView } from "framer-motion";
+import cn from "classnames";
 
 const cardConfig = [
   {
@@ -31,28 +32,59 @@ const Integrate = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
-    amount: 0.5,
+    amount: 0.15,
   });
+
+  const [visibleCardNum, setVisibleCardNum] = useState(0);
+
+  const setCardHandler = () => {
+    if (visibleCardNum === cardConfig.length - 1) return;
+    setVisibleCardNum((prev) => prev + 1);
+  };
 
   return (
     <SectionWrap className={styles.integrate}>
       <div ref={containerRef} className={styles.content}>
-        <div className={styles.titleWrap}>
+        <div className={cn(styles.titleWrap, { [styles.titleAnim]: isInView })}>
           <h2>
             <span className={styles.titleText}>Integrate</span>
             <TriangeIcon className={styles.triangleIcon} />
           </h2>
         </div>
-        <span className={styles.subTitle}>how you prefer</span>
+        <span className={cn(styles.subTitle, { [styles.titleAnim]: isInView })}>
+          how you prefer
+        </span>
         <div className={styles.cardList}>
           {cardConfig.map((card, i) => {
-            return <IntegrateCard card={card} key={i} />;
+            return (
+              <IntegrateCard
+                onClick={setCardHandler}
+                className={cn(styles.integrateCard, {
+                  [styles.visibleCard]: visibleCardNum >= i,
+                })}
+                card={card}
+                key={i}
+              />
+            );
           })}
         </div>
-        <CircleText className={styles.circleText} />
-        <UsdtIcon className={styles.usdtIcon} />
+        <CircleText
+          className={cn(styles.circleText, {
+            [styles.circleTextAnim]:
+              isInView && visibleCardNum !== cardConfig.length - 1,
+            [styles.circleTextAnim1]: visibleCardNum === 1,
+          })}
+        />
+        <UsdtIcon
+          className={cn(styles.usdtIcon, { [styles.usdtIconAnim]: isInView })}
+        />
       </div>
-      <CircleBg className={styles.circleBg} />
+      <CircleBg
+        className={cn(styles.circleBg, {
+          [styles.cifcleBgAnim1]: visibleCardNum === 1,
+          [styles.circleBgAnim2]: visibleCardNum === 2,
+        })}
+      />
     </SectionWrap>
   );
 };

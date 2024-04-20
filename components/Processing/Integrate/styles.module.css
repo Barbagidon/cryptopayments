@@ -27,14 +27,27 @@
 
 .circleBg {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -385px;
+  top: 20px;
+  transition: all 0.65s;
+  transform-origin: 43% 40%;
+}
+
+.cifcleBgAnim1 {
+  transform: rotate(-30deg);
+}
+
+.circleBgAnim2 {
+  transform: rotate(-72deg);
 }
 
 .titleWrap {
   position: absolute;
   left: -4px;
   top: -60px;
+  transform: translateX(-1000px);
+  transition: transform 0.7s;
+  z-index: 2;
 }
 
 .titleText {
@@ -62,6 +75,12 @@
   left: 25px;
   top: 95px;
   z-index: 2;
+  transform: translateX(-1000px);
+  transition: transform 0.7s;
+}
+
+.titleAnim {
+  transform: translateX(0);
 }
 
 .circleText {
@@ -69,12 +88,37 @@
   right: -20px;
   top: -130px;
   z-index: 2;
+  transform: rotate(0deg);
+  transition: transform 0.65s;
+}
+
+.circleTextAnim {
+  transform: rotate(180deg);
+}
+
+.circleTextAnim1 {
+  transform: rotate(90deg);
 }
 
 .usdtIcon {
   position: absolute;
   right: 39%;
   top: -26%;
+  transform: translateY(-200px);
+  transition: transform 0.5s;
+}
+
+.usdtIconAnim {
+  transform: translateY(0);
+}
+
+.integrateCard {
+  transform: translateY(-2000px);
+  transition: transform 0.65s;
+}
+
+.visibleCard {
+  transform: translateY(0);
 }
 
 @media (max-width: 1100px) {
@@ -98,8 +142,7 @@
   }
 
   .circleBg {
-    width: 427px;
-    right: -39px;
+    width: 885px;
     top: -68px;
   }
 
@@ -132,8 +175,8 @@
   }
 
   .circleBg {
-    width: 355px;
-    right: -115px;
+    width: 750px;
+    top: 100px;
   }
   .circleText {
     width: 180px;
