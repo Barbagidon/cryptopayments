@@ -70,8 +70,8 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
         <Image
           className={styles.image}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={300}
+          height={452}
           src={"/processing/btcPhone.png"}
           alt={"btc phone"}
           quality={100}
@@ -82,8 +82,8 @@ const CryptoPayments = ({ activeSlide, ...props }: Props) => {
         <Image
           className={styles.imageMob}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={311}
+          height={200}
           src={"/processing/btcPhoneMob.png"}
           alt={"btc phone"}
           quality={100}

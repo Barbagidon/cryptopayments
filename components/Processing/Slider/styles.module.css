@@ -38,7 +38,7 @@
 }
 
 @media (max-width: 820px) {
-  .slider {
+  .slider.slider {
     display: none;
   }
 

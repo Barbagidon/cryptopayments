@@ -49,35 +49,34 @@ const Slider = () => {
 
   return (
     <motion.div ref={scrollRef} className={styles.sliderContainer}>
-      {
-        <SectionWrap sticky className={styles.slider}>
-          <motion.div
-            ref={containerRef}
-            animate={{ x: transitionValue }}
-            transition={{
-              type: "spring",
-              damping: 20,
-              stiffness: 100,
-            }}
-            className={styles.content}
-          >
-            {slides.map((Slide, i) => {
-              return (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ root: scrollRef, amount: 0.5 }}
-                  exit={{ opacity: 0 }}
-                  className={styles.sliderWrap}
-                  key={i}
-                >
-                  <Slide activeSlide={true} />
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </SectionWrap>
-      }
+      <SectionWrap sticky className={styles.slider}>
+        <motion.div
+          ref={containerRef}
+          animate={{ x: transitionValue }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 100,
+          }}
+          className={styles.content}
+        >
+          {slides.map((Slide, i) => {
+            return (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ root: scrollRef, amount: 0.5 }}
+                exit={{ opacity: 0 }}
+                className={styles.sliderWrap}
+                key={i}
+              >
+                <Slide activeSlide={true} />
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </SectionWrap>
+
       <MobileSlider />
     </motion.div>
   );

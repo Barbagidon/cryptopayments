@@ -61,8 +61,8 @@ const Merchant = ({ activeSlide, className, ...props }: Props) => {
         <Image
           className={styles.image}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={300}
+          height={452}
           src={"/processing/settingsPhone.png"}
           alt={"merchant account"}
           unoptimized
@@ -73,8 +73,8 @@ const Merchant = ({ activeSlide, className, ...props }: Props) => {
         <Image
           className={styles.imageMob}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={311}
+          height={200}
           src={"/processing/settingsPhoneMob.png"}
           alt={"merchant account"}
           unoptimized

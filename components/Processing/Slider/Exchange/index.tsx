@@ -75,8 +75,8 @@ const Exchange = ({ activeSlide, ...props }: Props) => {
         <Image
           className={styles.image}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={300}
+          height={452}
           src={"/processing/topUp.png"}
           alt={"btc wallet"}
           unoptimized
@@ -87,8 +87,8 @@ const Exchange = ({ activeSlide, ...props }: Props) => {
         <Image
           className={styles.imageMob}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={311}
+          height={200}
           src={"/processing/topUpMob.png"}
           alt={"btc wallet"}
           unoptimized

@@ -31,8 +31,8 @@ const EasyApi = ({ activeSlide, ...props }: Props) => {
         <Image
           className={styles.image}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={300}
+          height={452}
           src={"/processing/easyApi.png"}
           alt={"easy api"}
           quality={100}
@@ -42,8 +42,8 @@ const EasyApi = ({ activeSlide, ...props }: Props) => {
         <Image
           className={styles.imageMob}
           sizes="100vw"
-          width={0}
-          height={0}
+          width={311}
+          height={200}
           src={"/processing/easyApiMob.png"}
           alt={"easy api"}
           quality={100}
