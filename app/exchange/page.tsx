@@ -6,16 +6,17 @@ import GetStartedSection from "@/components/MainPage/GetStartedSection";
 import Transactions from "@/components/Exchange/Transactions";
 import ExchangeSection from "@/components/Exchange/ExchangeSection";
 import Choose from "@/components/Exchange/Choose";
+import AnimWrap from "@/components/ui/AnimWrap";
 
 const Exchange = () => {
   return (
-    <main className={styles.exchange}>
+    <AnimWrap className={styles.exchange}>
       <Transactions />
       <ExchangeSection />
       <Secure />
       <Choose />
       <GetStartedSection />
-    </main>
+    </AnimWrap>
   );
 };
 

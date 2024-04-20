@@ -5,15 +5,16 @@ import Footer from "@/components/Footer";
 import AdvList from "@/components/Processing/AdvList";
 import Integrate from "@/components/Processing/Integrate";
 import Slider from "@/components/Processing/Slider";
+import AnimWrap from "@/components/ui/AnimWrap";
 
 const Processing = () => {
   return (
-    <main className={styles.processing}>
+    <AnimWrap className={styles.processing}>
       <ReceivePayments />
       <AdvList />
       <Integrate />
       <Slider />
-    </main>
+    </AnimWrap>
   );
 };
 
