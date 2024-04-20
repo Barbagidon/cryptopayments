@@ -7,6 +7,7 @@ import Image from "next/image";
 import { IArticle, IBlogFilters } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
 import ReactMarkdown from "react-markdown";
+import ImageWithBlur from "@/components/ui/ImageWithBlur/imageBlur";
 
 interface Props {
   articleData: IArticle;
@@ -34,7 +35,8 @@ const Article = ({ articleData, pageId, curFilter }: Props) => {
           className={styles.navBtns}
         />
       </div>
-      <Image
+
+      <ImageWithBlur
         quality={100}
         alt={"article image"}
         width={1240}
