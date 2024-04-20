@@ -7,7 +7,6 @@ import Faq from "@/components/MainPage/Faq";
 import MeetSection from "@/components/MainPage/MeetSection";
 import GetStartedSection from "@/components/MainPage/GetStartedSection";
 import AnimWrap from "@/components/ui/AnimWrap";
-import AnimationPresence from "@/components/ui";
 
 export default function Home() {
   return (

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.css";
-import Image from "next/image";
 import ArrowIcon from "./icons/arrowIcon";
 import CaterogyBage from "../CategoryBage";
 import DateBage from "../DateBage";
