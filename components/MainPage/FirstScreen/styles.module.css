@@ -1,6 +1,6 @@
 .firstScreen {
   width: 100%;
-  background-image: url("/mainPage/mainPageFirstScreen.png");
+  /* background-image: url("/mainPage/mainPageFirstScreen.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +16,7 @@
   width: 100%;
   align-self: center;
   position: relative;
+  z-index: 3;
 }
 
 .topContent {
@@ -125,6 +126,14 @@
   font-size: 24px;
   font-weight: 500;
   color: var(--black);
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
 }
 
 @media (max-width: 1410px) {

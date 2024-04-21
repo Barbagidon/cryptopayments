@@ -36,6 +36,7 @@ const FirstScreen = () => {
             })}
             src={"/mainPage/firstScreenCircles.png"}
             alt="crypto payment ecosystem"
+            priority
           />
         </div>
         <div
@@ -54,6 +55,16 @@ const FirstScreen = () => {
           </div>
         </div>
       </div>
+      <Image
+        className={styles.bgImage}
+        width={0}
+        height={0}
+        sizes="100vw"
+        src={"/mainPage/mainPageFirstScreen.png"}
+        alt="bg"
+        unoptimized
+        priority
+      />
     </SectionWrap>
   );
 };
