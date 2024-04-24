@@ -25,7 +25,7 @@ const Transactions = () => {
       })}
     >
       <div
-        className={cn(styles.content, { [styles.mobileContentAnim]: isInView })}
+        className={cn(styles.content, { [styles.contentBorderAnim]: isInView })}
       >
         <div className={styles.mainContent}>
           <h1 className={cn(styles.title, { [styles.titleAnim]: isInView })}>
