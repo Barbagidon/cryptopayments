@@ -20,7 +20,7 @@ const ExchangeSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
-    amount: 0.3,
+    amount: 0.5,
   });
 
   return (
@@ -31,7 +31,9 @@ const ExchangeSection = () => {
           <span className={styles.subTitle}>Crypto — fiat — crypto</span>
         </div>
 
-        <div className={styles.cardList}>
+        <div
+          className={cn(styles.cardList, { [styles.cardListAnim]: isInView })}
+        >
           {config.map((card, i) => {
             return <Card key={i} cardData={card} />;
           })}

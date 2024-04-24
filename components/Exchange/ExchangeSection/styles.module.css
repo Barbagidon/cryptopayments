@@ -48,6 +48,15 @@
   display: flex;
   justify-content: center;
   gap: 24px;
+  transform: translateY(500px);
+  transition: transform 0.65s;
+  transition-delay: 0.25s;
+  position: relative;
+  z-index: 1;
+}
+
+.cardListAnim {
+  transform: translateY(0);
 }
 
 .dashedCircleWrap {
