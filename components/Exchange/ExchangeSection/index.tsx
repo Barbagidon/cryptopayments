@@ -1,5 +1,7 @@
+"use client";
+
 import SectionWrap from "@/components/ui/SectionWrap";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import { config } from "./config";
 import Card from "./Card";
@@ -12,13 +14,19 @@ import cn from "classnames";
 import BtcIcon from "./icons/btcIcon";
 import EurIcon from "./icons/eurIcon";
 import UsdtIcon from "./icons/usdtIcon";
-import MobilePurpleArrow from "./icons/mobilePurpleArrow";
+import { useInView } from "framer-motion";
 
 const ExchangeSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, {
+    once: true,
+    amount: 0.3,
+  });
+
   return (
     <SectionWrap className={styles.exchangeSection}>
-      <div className={styles.content}>
-        <div className={styles.title}>
+      <div ref={containerRef} className={styles.content}>
+        <div className={cn(styles.title, { [styles.titleAnim]: isInView })}>
           <h2 className={styles.titleText}>EXCHANGE</h2>
           <span className={styles.subTitle}>Crypto — fiat — crypto</span>
         </div>
@@ -34,27 +42,49 @@ const ExchangeSection = () => {
       </div>
       <div className={styles.whiteCircle} />
 
-      <GearIcon className={styles.gearIcon} />
-      <div className={styles.purpleWrap}>
+      <GearIcon
+        className={cn(styles.gearIcon, { [styles.gearIconAnim]: isInView })}
+      />
+      <div
+        className={cn(styles.purpleWrap, { [styles.arrowsWrapAnim]: isInView })}
+      >
         <PurpleArrow className={styles.purpleArrow} />
 
-        <div className={cn(styles.bage, styles.usdBage)}>
+        <div
+          className={cn(styles.bage, styles.usdBage, {
+            [styles.usdBageAnim]: isInView,
+          })}
+        >
           <DollarIcon />
           USD
         </div>
 
-        <div className={cn(styles.bage, styles.eurBage)}>
+        <div
+          className={cn(styles.bage, styles.eurBage, {
+            [styles.eurBageAnim]: isInView,
+          })}
+        >
           <EurIcon />
           eur
         </div>
       </div>
-      <div className={styles.yellowWrap}>
+      <div
+        className={cn(styles.yellowWrap, { [styles.arrowsWrapAnim]: isInView })}
+      >
         <YellowArrow className={styles.yellowArrow} />
-        <div className={cn(styles.bage, styles.btcBage)}>
+        <div
+          className={cn(styles.bage, styles.btcBage, {
+            [styles.btcBageAnim]: isInView,
+          })}
+        >
           <BtcIcon />
           btc
         </div>
-        <div className={cn(styles.bage, styles.usdtBage)}>
+        <div
+          className={cn(styles.bage, styles.usdtBage, {
+            [styles.usdtBageAnim]: isInView,
+          })}
+        >
           <UsdtIcon />
           usdt
         </div>
