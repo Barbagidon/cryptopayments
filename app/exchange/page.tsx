@@ -10,13 +10,13 @@ import AnimWrap from "@/components/ui/AnimWrap";
 
 const Exchange = () => {
   return (
-    <AnimWrap className={styles.exchange}>
+    <main className={styles.exchange}>
       <Transactions />
       <ExchangeSection />
       <Secure />
       <Choose />
       <GetStartedSection />
-    </AnimWrap>
+    </main>
   );
 };
 

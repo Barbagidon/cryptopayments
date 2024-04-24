@@ -23,6 +23,12 @@
 .title {
   max-width: 705px;
   width: 100%;
+  transform: translateX(-1000px);
+  transition: transform 0.65s;
+}
+
+.titleAnim {
+  transform: translateX(0);
 }
 
 .titleText {
@@ -48,6 +54,12 @@
   flex-direction: column;
   gap: 24px;
   align-items: flex-start;
+  transform: translateY(1000px);
+  transition: transform 0.65s;
+}
+
+.btnContentAnim {
+  transform: translateY(0);
 }
 
 .btnText {
@@ -119,6 +131,11 @@
   bottom: -56%;
   left: 50%;
   transform: translateX(-50%);
+  transition: transform 0.65s;
+}
+
+.gearIconAnim {
+  transform: translateX(-50%) rotate(-180deg);
 }
 
 @media (max-width: 1440px) {
@@ -245,7 +262,7 @@
 
   .startedBtn {
     position: absolute;
-    bottom: -35px;
+    bottom: -95px;
   }
 
   .gearIcon {

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import StartedBtn from "@/components/ui/StartedBtn";
 import TopLeftBlur from "./icons/topLeftBlur";
@@ -6,13 +8,27 @@ import TopLeftBlur from "./icons/topLeftBlur";
 import Image from "next/image";
 import LineIcon from "./icons/lineIcon";
 import GearIcon from "./icons/gearIcon";
+import { useInView } from "framer-motion";
+import cn from "classnames";
 
 const Transactions = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, {
+    once: true,
+  });
+
   return (
-    <section className={styles.transactions}>
-      <div className={styles.content}>
+    <section
+      ref={containerRef}
+      className={cn(styles.transactions, {
+        [styles.transactionsMobileAnim]: isInView,
+      })}
+    >
+      <div
+        className={cn(styles.content, { [styles.mobileContentAnim]: isInView })}
+      >
         <div className={styles.mainContent}>
-          <h1 className={styles.title}>
+          <h1 className={cn(styles.title, { [styles.titleAnim]: isInView })}>
             <span className={styles.titleText}>
               Make transactions directly in your wallets
             </span>
@@ -25,11 +41,17 @@ const Transactions = () => {
             priority
             alt="macbook"
             src={"/exchange/macbookMob.png"}
-            className={styles.macbookMob}
+            className={cn(styles.macbookMob, {
+              [styles.macbookMobAnim]: isInView,
+            })}
             unoptimized
             quality={100}
           />
-          <div className={styles.btnContent}>
+          <div
+            className={cn(styles.btnContent, {
+              [styles.btnContentAnim]: isInView,
+            })}
+          >
             <span className={styles.btnText}>
               Deposit, exchange, withdraw without delays and unnecessary
               settings
@@ -41,6 +63,7 @@ const Transactions = () => {
           </div>
         </div>
       </div>
+
       <TopLeftBlur className={styles.topLeftBlur} />
 
       <div className={styles.centerBtmBlur} />
@@ -48,7 +71,9 @@ const Transactions = () => {
       <div className={styles.macBook}>
         <LineIcon className={styles.line} />
       </div>
-      <GearIcon className={styles.gearIcon} />
+      <GearIcon
+        className={cn(styles.gearIcon, { [styles.gearIconAnim]: isInView })}
+      />
     </section>
   );
 };
