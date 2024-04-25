@@ -450,6 +450,10 @@
     flex-direction: column;
   }
 
+  .gearIconAnim {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
   .content {
     gap: 179px;
   }
