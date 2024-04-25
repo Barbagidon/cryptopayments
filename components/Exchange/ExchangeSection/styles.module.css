@@ -102,12 +102,16 @@
   transition: transform 0.65s ease;
 }
 
-.purpleWrap {
+.animatePurpleWrap {
   transform: rotate(180deg);
 }
 
-.yellowWrap {
+.animateYellowWrap {
   transform: rotate(-180deg);
+}
+
+.hiddenArrow {
+  opacity: 0;
 }
 
 .arrowsWrapAnim {
@@ -349,10 +353,23 @@
     flex-direction: column;
   }
 
-  .bage {
-    padding: 11px 23px;
-    font-size: 18px;
-    line-height: normal;
+  .animWrap {
+    position: relative;
+    transition: all 1.6s ease-out;
+  }
+
+  .animWrap:nth-child(1) {
+    transform: translateY(526px);
+  }
+  .animWrap:nth-child(2) {
+    transform: translateY(357px);
+  }
+  .animWrap:nth-child(3) {
+    transform: translateY(189px);
+  }
+
+  .animWrap.showAnim {
+    transform: translateY(0);
   }
 
   .bage svg {
@@ -379,6 +396,52 @@
   .btcBage {
     top: 188px;
     left: -286px;
+  }
+
+  .usdtBageAnim,
+  .eurBageAnim,
+  .btcBageAnim,
+  .usdBageAnim {
+    animation-delay: 0;
+  }
+
+  .purpleWrap,
+  .yellowWrap {
+    transition: all 1.6s ease-out;
+  }
+
+  .bage {
+    padding: 11px 23px;
+    font-size: 18px;
+    line-height: normal;
+    transform: translateY(-1000px);
+    transition: all 1.6s ease-out;
+    opacity: 1;
+  }
+
+  .usdtBageAnim {
+    transform: translateY(0) rotate(-11.382deg);
+    animation: none;
+  }
+
+  .eurBageAnim {
+    transform: translateY(0);
+    animation: none;
+  }
+
+  .btcBageAnim {
+    transform: translateY(0) rotate(-10deg);
+    animation: none;
+  }
+
+  .usdBageAnim {
+    transform: translateY(0) rotate(14.972deg);
+    animation: none;
+  }
+
+  .title {
+    transition: transform 1.6s ease-out;
+    transition-delay: 0s;
   }
 }
 
@@ -506,9 +569,12 @@
   }
 
   .usdBage {
-    transform: rotate(-15deg);
     top: 8px;
     left: -200px;
+  }
+
+  .usdBageAnim {
+    transform: rotate(-15deg) translateY(0);
   }
 
   .btcBage {
@@ -522,9 +588,12 @@
   }
 
   .usdtBage {
-    transform: rotate(18.845deg);
     top: 89px;
     left: 92px;
+  }
+
+  .usdtBageAnim {
+    transform: rotate(18.845deg) translateY(0);
   }
 
   .dashedCircle {

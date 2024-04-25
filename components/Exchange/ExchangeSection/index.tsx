@@ -35,7 +35,15 @@ const ExchangeSection = () => {
           className={cn(styles.cardList, { [styles.cardListAnim]: isInView })}
         >
           {config.map((card, i) => {
-            return <Card key={i} cardData={card} />;
+            return (
+              <Card
+                className={cn(styles.animWrap, {
+                  [styles.showAnim]: isInView,
+                })}
+                key={i}
+                cardData={card}
+              />
+            );
           })}
         </div>
       </div>
@@ -48,9 +56,22 @@ const ExchangeSection = () => {
         className={cn(styles.gearIcon, { [styles.gearIconAnim]: isInView })}
       />
       <div
-        className={cn(styles.purpleWrap, { [styles.arrowsWrapAnim]: isInView })}
+        className={cn(styles.purpleWrap, styles.animatePurpleWrap, {
+          [styles.arrowsWrapAnim]: isInView,
+        })}
       >
         <PurpleArrow className={styles.purpleArrow} />
+      </div>
+      <div
+        className={cn(styles.yellowWrap, styles.animateYellowWrap, {
+          [styles.arrowsWrapAnim]: isInView,
+        })}
+      >
+        <YellowArrow className={styles.yellowArrow} />
+      </div>
+
+      <div className={cn(styles.purpleWrap)}>
+        <PurpleArrow className={cn(styles.purpleArrow, styles.hiddenArrow)} />
 
         <div
           className={cn(styles.bage, styles.usdBage, {
@@ -70,10 +91,8 @@ const ExchangeSection = () => {
           eur
         </div>
       </div>
-      <div
-        className={cn(styles.yellowWrap, { [styles.arrowsWrapAnim]: isInView })}
-      >
-        <YellowArrow className={styles.yellowArrow} />
+      <div className={cn(styles.yellowWrap)}>
+        <YellowArrow className={cn(styles.yellowArrow, styles.hiddenArrow)} />
         <div
           className={cn(styles.bage, styles.btcBage, {
             [styles.btcBageAnim]: isInView,
