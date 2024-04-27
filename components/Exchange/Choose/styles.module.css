@@ -47,6 +47,15 @@
   flex-direction: row-reverse;
 }
 
+.secondCard {
+  transition: transform 0.5s;
+  transform: translateX(500px);
+}
+
+.secondCardAnim {
+  transform: translateX(0);
+}
+
 .bottomRight {
   flex-direction: row-reverse;
   align-items: flex-end;

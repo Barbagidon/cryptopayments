@@ -1,5 +1,7 @@
+"use client";
+
 import cn from "classnames";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import BtcIcon from "./icons/btcIcon";
 import Card from "./Card";
@@ -9,8 +11,17 @@ import StartedBtn from "@/components/ui/StartedBtn";
 import CornerIcon from "./icons/cornerIcon";
 
 const Choose = () => {
+  const [counterCard, setCounterCard] = useState(1);
+
+  const counterCardHandler = () => {
+    setCounterCard((prev) => {
+      if (prev === 4) return prev;
+      return prev + 1;
+    });
+  };
+
   return (
-    <section className={styles.choose}>
+    <section onClick={counterCardHandler} className={styles.choose}>
       <div className={styles.content}>
         <h2 className={styles.title}>
           why cho{<BtcIcon className={styles.btcIcon} />}se Cryptopayments —
@@ -21,7 +32,9 @@ const Choose = () => {
           <Card
             rightText
             data={topRow[1]}
-            className={cn(styles.rightCard, styles.border)}
+            className={cn(styles.rightCard, styles.border, styles.secondCard, {
+              [styles.secondCardAnim]: counterCard >= 2,
+            })}
           />
         </div>
 
