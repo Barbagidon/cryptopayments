@@ -21,7 +21,11 @@ const Card = ({ cardData, cmsUrl }: Props) => {
   const imgLink = cmsUrl + img.data.attributes.url;
 
   return (
-    <li ref={containerRef} className={styles.card}>
+    <li ref={containerRef}
+      className={cn(styles.card, {
+        [styles.card_active]: isInView,
+      })}
+    >
       <Link className={styles.link} prefetch={false} href={link}>
         <div className={styles.header}>
           <span className={styles.title}>{name}</span>

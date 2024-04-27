@@ -5,6 +5,12 @@
   width: calc(100% / 3);
   position: relative;
   z-index: 1;
+  transform: translateY(50%);
+  transition: transform .8s;
+}
+
+.card_active {
+  transform: translateY(0);
 }
 
 .link {
@@ -101,6 +107,7 @@
   .card {
     padding: 16px;
   }
+
   .info {
     flex-direction: column;
     gap: 23px;

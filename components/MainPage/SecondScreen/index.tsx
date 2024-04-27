@@ -10,7 +10,7 @@ import cn from "classnames";
 
 const SecondScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true });
+  const isInView = useInView(containerRef, { once: true, amount: 0.5 });
   return (
     <section ref={containerRef} className={styles.secondScreen}>
       <div className={styles.contentWrap}>
