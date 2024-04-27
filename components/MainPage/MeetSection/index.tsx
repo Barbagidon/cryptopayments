@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./styles.module.css";
 import Card from "./Card";
-import GearIcon from "./icons/gearIcon";
 import { getEvents } from "@/actions/getEvents";
+import MeetHeader from "./MeetHeader"
+import MeetGeat from "./MeetGear"
 
 const MeetSection = async () => {
   const events = await getEvents();
@@ -11,15 +12,14 @@ const MeetSection = async () => {
   return (
     <section className={styles.meetSection}>
       <div className={styles.content}>
-        <h2 className={styles.title}>where to meet us in 2024</h2>
-
+        <MeetHeader />
         {sortedEvents && (
           <ul className={styles.cardList}>
             {sortedEvents.map((card, i) => {
               return <Card cardData={card.attributes} key={i} />;
             })}
 
-            <GearIcon className={styles.gearIcon} />
+            <MeetGeat />
           </ul>
         )}
       </div>
