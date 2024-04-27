@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
+
 import StartedBtnBg from "./icons/startedBtnBg";
 import StartedBtn from "@/components/ui/StartedBtn";
 import SectionWrap from "@/components/ui/SectionWrap";

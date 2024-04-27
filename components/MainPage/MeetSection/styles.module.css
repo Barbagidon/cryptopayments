@@ -18,6 +18,12 @@
   color: var(--purple-main);
   text-transform: uppercase;
   text-align: center;
+  transform: translateX(-200%);
+  transition: transform .8s;
+}
+
+.title_active {
+  transform: translateX(0);
 }
 
 .cardList {
@@ -33,6 +39,12 @@
   position: absolute;
   left: -45px;
   top: -63px;
+  transform: rotate(-360deg);
+  transition: transform .8s;
+}
+
+.gearIcon_active {
+  transform: rotate(0);
 }
 
 @media (max-width: 1200px) {

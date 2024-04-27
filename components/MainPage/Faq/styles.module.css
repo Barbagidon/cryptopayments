@@ -19,6 +19,12 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  transform: translateX(-200%);
+  transition: transform .8s;
+}
+
+.header_active {
+  transform: translateX(0);
 }
 
 .title {
@@ -142,4 +148,22 @@
   .showMoreText {
     flex-shrink: 1;
   }
+}
+
+.fadeInUp {
+  transform: translateY(50%);
+  transition: transform .8s;
+}
+
+.fadeInUp_active {
+  transform: translateY(0);
+}
+
+.animeBigCircle {
+  transform: rotate(180deg);
+  transition: transform .8s;
+}
+
+.animeBigCircle_active {
+  transform: rotate(0);
 }

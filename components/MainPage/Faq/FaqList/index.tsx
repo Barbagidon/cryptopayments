@@ -12,7 +12,7 @@ interface Props {
 const FaqList = ({ listData }: Props) => {
   return (
     <ul className={styles.faqList}>
-      {listData.map((item, i) => {
+      {listData && listData.map((item, i) => {
         return <AccordItem data={item} key={i} />;
       })}
     </ul>
