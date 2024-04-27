@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./styles.module.css";
 import Card from "./Card";
 import { getEvents } from "@/actions/getEvents";
-import MeetHeader from "./MeetHeader"
-import MeetGeat from "./MeetGear"
+import MeetHeader from "./MeetHeader";
+import MeetGeat from "./MeetGear";
 
 const MeetSection = async () => {
   const events = await getEvents();
@@ -16,7 +16,13 @@ const MeetSection = async () => {
         {sortedEvents && (
           <ul className={styles.cardList}>
             {sortedEvents.map((card, i) => {
-              return <Card cardData={card.attributes} key={i} />;
+              return (
+                <Card
+                  cmsUrl={process.env.CMS_URL}
+                  cardData={card.attributes}
+                  key={i}
+                />
+              );
             })}
 
             <MeetGeat />

@@ -8,18 +8,18 @@ import CalendarIcon from "./icons/calendarIcon";
 import Image from "next/image";
 import Link from "next/link";
 import { IEventAttributes } from "./types";
-import { getImageSrc } from "@/utils/getImageSrc"
 
 interface Props {
   cardData: IEventAttributes;
+  cmsUrl: string;
 }
 
-const Card = ({ cardData }: Props) => {
+const Card = ({ cardData, cmsUrl }: Props) => {
   const { date, place, name, link, img } = cardData;
   const containerRef = useRef<HTMLLIElement>(null);
   const isInView = useInView(containerRef, { once: true });
-  const imgLink = getImageSrc(img.data.attributes.url);
-  console.log(imgLink)
+  const imgLink = cmsUrl + img.data.attributes.url;
+
   return (
     <li ref={containerRef} className={styles.card}>
       <Link className={styles.link} prefetch={false} href={link}>
