@@ -159,6 +159,18 @@
   transform: translateY(0);
 }
 
+
+.animeBigCircleWrapper {
+  position: absolute;
+  right: 0;
+}
+
+@media(max-width:768px) {
+  .animeBigCircleWrapper {
+    right: inherit;
+  }
+}
+
 .animeBigCircle {
   transform: rotate(180deg);
   transition: transform .8s;
