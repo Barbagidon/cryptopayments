@@ -9,14 +9,14 @@ import cn from "classnames";
 import { useInView } from "framer-motion";
 
 
-const FaqGear = () => {
+const FaqHeader = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true });
     return (
-        <div ref={containerRef}>
+        <div className={styles.animeBigCircleWrapper} ref={containerRef}>
             <BigCircle className={cn(styles.animeBigCircle, { [styles.animeBigCircle_active]: isInView })} />
         </div>
     );
 };
 
-export default FaqGear;
+export default FaqHeader;

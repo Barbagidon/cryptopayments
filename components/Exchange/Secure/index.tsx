@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import Circle from "./icons/circle";
 import AdvItem from "@/components/ui/AdvItem";
@@ -9,6 +8,8 @@ import Vectors from "./icons/vectors";
 import HalfCircle from "./icons/halfCircle";
 import Image from "next/image";
 import MobileVectors from "./icons/mobileVectors";
+import cn from "classnames";
+import { useInView } from "framer-motion";
 
 const config = [
   {
@@ -21,19 +22,23 @@ const config = [
 ];
 
 const Secure = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: true });
+  const isInViewVector = useInView(containerRef, { once: true, amount: .1 });
+
   return (
     <div className={styles.secure}>
       <div className={styles.content}>
-        <div className={styles.textContent}>
-          <h2 className={styles.title}>
+        <div ref={containerRef} className={styles.textContent}>
+          <h2 className={cn(styles.title, { [styles.title_active]: isInView })}>
             <span className={styles.titleText}>Secure</span>
             <Circle className={styles.circle} />
           </h2>
-          <span className={styles.text}>
+          <span className={cn(styles.text, { [styles.text_active]: isInView })}>
             An extremly important aspect of cryptocurrency services and
             solutions is the secure storage of funds
           </span>
-          <MobileVectors className={styles.mobileVectors} />
+          <MobileVectors className={cn(styles.mobileVectors, { [styles.mobileVectors_active]: isInViewVector })} />
         </div>
         <div className={styles.cardBlock}>
           <div className={styles.card}>
@@ -51,7 +56,7 @@ const Secure = () => {
           <HalfCircle className={styles.halfCircle} />
         </div>
       </div>
-      <Vectors className={styles.vectors} />
+      <Vectors className={cn(styles.vectors, { [styles.vectors_active]: isInViewVector })} />
     </div>
   );
 };

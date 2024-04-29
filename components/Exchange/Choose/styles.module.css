@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.choose:hover {
+  cursor: pointer;
+}
+
 .content {
   max-width: 1240px;
   width: 100%;
@@ -47,14 +51,27 @@
   flex-direction: row-reverse;
 }
 
-.secondCard {
-  transition: transform 0.5s;
-  transform: translateX(500px);
+
+@media(min-width:615px) {
+  .secondCard {
+    transition: all 0.8s;
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  .thirdCard,
+  .fourthCard {
+    transition: all 0.8s;
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  .CardAnim {
+    transform: translate(0);
+    opacity: 1;
+  }
 }
 
-.secondCardAnim {
-  transform: translateX(0);
-}
 
 .bottomRight {
   flex-direction: row-reverse;
@@ -75,7 +92,27 @@
   left: 50%;
   transform: translate(-50%, -38%);
   top: 50%;
+  transition: all .8s;
 }
+
+.gearIcon_1 {
+  transform: translate(-50%, -38%) rotate(90deg);
+}
+
+.gearIcon_2 {
+  transform: translate(-50%, -38%) rotate(180deg);
+}
+
+.gearIcon_3 {
+  transform: translate(-50%, -38%) rotate(240deg);
+}
+
+.gearIcon_4 {
+  transform: translate(-50%, -38%) rotate(360deg);
+}
+
+
+
 .startedBtn {
   position: absolute;
   left: 50%;
@@ -155,6 +192,7 @@
   .startedBtn {
     transform: translate(-50%, 4%);
   }
+
   .cornerIcon {
     width: 80px;
     height: 80px;
@@ -197,6 +235,11 @@
     width: 300px;
     height: 300px;
     top: 52%;
+    transform: translate(-50%, -40%) rotate(0);
+  }
+
+  .gearIcon_mob {
+    transform: translate(-50%, -40%) rotate(180deg);
   }
 
   .divider {
