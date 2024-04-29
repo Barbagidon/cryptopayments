@@ -1,6 +1,6 @@
 "use client";
 import SectionWrap from "@/components/ui/SectionWrap";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import IntegrateCard from "./IntegrateCard";
 import CircleBg from "./icons/circleBg";
@@ -32,15 +32,21 @@ const Integrate = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
-    amount: 0.15,
   });
 
   const [visibleCardNum, setVisibleCardNum] = useState(0);
 
-  const setCardHandler = () => {
-    if (visibleCardNum === cardConfig.length - 1) return;
-    setVisibleCardNum((prev) => prev + 1);
-  };
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout;
+
+    if (isInView && visibleCardNum < cardConfig.length - 1) {
+      intervalId = setInterval(() => {
+        setVisibleCardNum((prev) => prev + 1);
+      }, 1000);
+    }
+
+    return () => clearInterval(intervalId);
+  }, [isInView, visibleCardNum]);
 
   return (
     <SectionWrap className={styles.integrate}>
@@ -58,7 +64,6 @@ const Integrate = () => {
           {cardConfig.map((card, i) => {
             return (
               <IntegrateCard
-                onClick={setCardHandler}
                 className={cn(styles.integrateCard, {
                   [styles.visibleCard]: visibleCardNum >= i,
                 })}
@@ -81,7 +86,7 @@ const Integrate = () => {
       </div>
       <CircleBg
         className={cn(styles.circleBg, {
-          [styles.cifcleBgAnim1]: visibleCardNum === 1,
+          [styles.circleBgAnim1]: visibleCardNum === 1,
           [styles.circleBgAnim2]: visibleCardNum === 2,
         })}
       />
@@ -90,3 +95,4 @@ const Integrate = () => {
 };
 
 export default Integrate;
+

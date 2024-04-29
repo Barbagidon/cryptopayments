@@ -13,6 +13,7 @@ import cn from "classnames";
 const FourthScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
+  const isHalfInView = useInView(containerRef, { once: true, amount: .5 });
   return (
     <section ref={containerRef} className={styles.fourthScreen}>
       <div className={styles.content}>
@@ -43,7 +44,7 @@ const FourthScreen = () => {
           <Image
             width={0}
             height={0}
-            className={cn(styles.coinsImg, { [styles.coinsImg_active]: isInView })}
+            className={cn(styles.coinsImg, { [styles.coinsImg_active]: isHalfInView })}
             priority
             unoptimized
             src={"/coins.png"}
