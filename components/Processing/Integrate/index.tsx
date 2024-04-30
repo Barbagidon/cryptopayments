@@ -32,7 +32,7 @@ const Integrate = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
-    amount: 0.7,
+    amount: 0.45,
   });
 
   const [visibleCardNum, setVisibleCardNum] = useState(0);
