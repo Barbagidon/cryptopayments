@@ -32,6 +32,7 @@ const Integrate = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
     once: true,
+    amount: 0.7,
   });
 
   const [visibleCardNum, setVisibleCardNum] = useState(0);
@@ -42,7 +43,7 @@ const Integrate = () => {
     if (isInView && visibleCardNum < cardConfig.length - 1) {
       intervalId = setInterval(() => {
         setVisibleCardNum((prev) => prev + 1);
-      }, 600);
+      }, 800);
     }
 
     return () => clearInterval(intervalId);

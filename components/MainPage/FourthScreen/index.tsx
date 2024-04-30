@@ -13,7 +13,7 @@ import cn from "classnames";
 const FourthScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
-  const isHalfInView = useInView(containerRef, { once: true, amount: .5 });
+  const isHalfInView = useInView(containerRef, { once: true, amount: .4 });
   return (
     <section ref={containerRef} className={styles.fourthScreen}>
       <div className={styles.content}>

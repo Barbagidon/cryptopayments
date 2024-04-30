@@ -5,10 +5,8 @@ import styles from "./styles.module.css";
 import Arrow from "./icons/arrow";
 import Link from "next/link";
 
-
 import { useInView } from "framer-motion";
 import cn from "classnames";
-
 
 interface Props {
   cardData: {
@@ -19,29 +17,31 @@ interface Props {
 }
 
 const Card = ({ cardData }: Props) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLAnchorElement>(null);
   const isInView = useInView(containerRef, { once: true });
   return (
-    <div ref={containerRef}>
-      <Link className={cn(styles.card, { [styles.card_active]: isInView })} href={cardData.link}>
-        <div className={styles.purpleBg} />
-        <div className={styles.pcArrow}>
-          <Arrow />
-        </div>
+    <Link
+      ref={containerRef}
+      className={cn(styles.card, { [styles.card_active]: isInView })}
+      href={cardData.link}
+    >
+      <div className={styles.purpleBg} />
+      <div className={styles.pcArrow}>
+        <Arrow />
+      </div>
 
-        <div className={styles.cardContent}>
-          <span className={styles.cardTitle}>
-            <span className={styles.title}> {cardData.title}</span>
+      <div className={styles.cardContent}>
+        <span className={styles.cardTitle}>
+          <span className={styles.title}> {cardData.title}</span>
 
-            <span className={styles.mobileArrow}>
-              <Arrow />
-            </span>
+          <span className={styles.mobileArrow}>
+            <Arrow />
           </span>
-          <div className={styles.divider} />
-          <span className={styles.descr}>{cardData.descr}</span>
-        </div>
-      </Link>
-    </div>
+        </span>
+        <div className={styles.divider} />
+        <span className={styles.descr}>{cardData.descr}</span>
+      </div>
+    </Link>
   );
 };
 
