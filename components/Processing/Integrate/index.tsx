@@ -63,7 +63,7 @@ const Integrate = () => {
         <div className={styles.cardList}>
           {cardConfig.map((card, i) => {
             return (
-              <IntegrateCard 
+              <IntegrateCard
                 className={cn(styles.integrateCard, {
                   [styles.visibleCard]: visibleCardNum >= i,
                 })}
@@ -95,4 +95,3 @@ const Integrate = () => {
 };
 
 export default Integrate;
-

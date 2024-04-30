@@ -28,7 +28,7 @@
   position: relative;
   z-index: 1;
   transform: translateX(-200%);
-  transition: all .8s;
+  transition: all 0.8s;
 }
 
 .titleWrap_active {
@@ -88,8 +88,6 @@
     font-size: 16px;
   }
 }
-
-
 
 .animeBigCircle {
   transform: rotate(-180deg);

@@ -31,7 +31,7 @@
 
 .titleWrap {
   transform: translateX(-200%);
-  transition: transform .8s;
+  transition: transform 0.8s;
   position: relative;
   z-index: 10;
 }
@@ -65,10 +65,12 @@
 }
 
 .coinsBlock {
-  background: radial-gradient(90.64% 149.26% at 50.06% 149.26%,
-      #f8e32b 0%,
-      #fcf39e 35.5%,
-      #fcfaff 79.91%);
+  background: radial-gradient(
+    90.64% 149.26% at 50.06% 149.26%,
+    #f8e32b 0%,
+    #fcf39e 35.5%,
+    #fcfaff 79.91%
+  );
   max-width: 819px;
   width: 100%;
   height: 441px;
@@ -110,7 +112,7 @@
   width: 100%;
   height: auto;
   transform: scale(1.1) translateY(-100%);
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
 .coinsImg_active {
@@ -239,7 +241,6 @@
   }
 
   .lineBg {
-    bottom: -133px;
     left: -414px;
   }
 }
