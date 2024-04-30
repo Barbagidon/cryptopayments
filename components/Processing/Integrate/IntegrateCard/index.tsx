@@ -10,14 +10,13 @@ interface Props {
   };
 
   className?: string;
-  onClick: () => void;
 }
 
-const IntegrateCard = ({ card, className, onClick }: Props) => {
+const IntegrateCard = ({ card, className }: Props) => {
   const { descr, title } = card;
 
   return (
-    <div onClick={onClick} className={cn(styles.integrateCard, className)}>
+    <div className={cn(styles.integrateCard, className)}>
       <Image
         width="0"
         height="0"

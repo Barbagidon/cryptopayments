@@ -42,7 +42,7 @@ const Integrate = () => {
     if (isInView && visibleCardNum < cardConfig.length - 1) {
       intervalId = setInterval(() => {
         setVisibleCardNum((prev) => prev + 1);
-      }, 1000);
+      }, 600);
     }
 
     return () => clearInterval(intervalId);
@@ -63,7 +63,7 @@ const Integrate = () => {
         <div className={styles.cardList}>
           {cardConfig.map((card, i) => {
             return (
-              <IntegrateCard
+              <IntegrateCard 
                 className={cn(styles.integrateCard, {
                   [styles.visibleCard]: visibleCardNum >= i,
                 })}
