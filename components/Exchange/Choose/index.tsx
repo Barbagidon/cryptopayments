@@ -1,7 +1,7 @@
 "use client";
 
 import cn from "classnames";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./styles.module.css";
 import BtcIcon from "./icons/btcIcon";
 import Card from "./Card";
@@ -16,18 +16,24 @@ const Choose = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
 
-
   const [counterCard, setCounterCard] = useState(1);
-  const counterCardHandler = () => {
-    setCounterCard((prev) => {
-      if (prev === 4) return prev;
-      return prev + 1;
-    });
 
-  };
+  useEffect(() => {
+    if (isInView) {
+      const intervalId = setInterval(() => {
+        setCounterCard((prev) => (prev === 4 ? 1 : prev + 1));
+      }, 500);
+
+      if (counterCard === 4) {
+        clearInterval(intervalId);
+      }
+
+      return () => clearInterval(intervalId);
+    }
+  }, [isInView, counterCard]);
 
   return (
-    <section onClick={counterCardHandler} className={styles.choose}>
+    <section className={styles.choose}>
       <div className={styles.content}>
         <h2 className={styles.title}>
           why cho{<BtcIcon className={styles.btcIcon} />}se Cryptopayments —
