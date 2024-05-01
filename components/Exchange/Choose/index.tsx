@@ -14,7 +14,9 @@ import { useInView } from "framer-motion";
 
 const Choose = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true });
+  const gearRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: true, amount: 0.4 });
+  const gearInView = useInView(gearRef, { once: true, amount: 0.5 });
 
   const [counterCard, setCounterCard] = useState(1);
 
@@ -22,7 +24,7 @@ const Choose = () => {
     if (isInView) {
       const intervalId = setInterval(() => {
         setCounterCard((prev) => (prev === 4 ? 1 : prev + 1));
-      }, 500);
+      }, 600);
 
       if (counterCard === 4) {
         clearInterval(intervalId);
@@ -33,15 +35,14 @@ const Choose = () => {
   }, [isInView, counterCard]);
 
   return (
-    <section className={styles.choose}>
+    <section ref={containerRef} className={styles.choose}>
       <div className={styles.content}>
         <h2 className={styles.title}>
           why cho{<BtcIcon className={styles.btcIcon} />}se Cryptopayments —
         </h2>
 
         <div className={styles.topRow}>
-          <Card className={styles.border} data={topRow[0]}
-          />
+          <Card className={styles.border} data={topRow[0]} />
           <Card
             rightText
             data={topRow[1]}
@@ -58,21 +59,23 @@ const Choose = () => {
               [styles.CardAnim]: counterCard >= 3,
             })}
           />
-          <Card rightText data={bottomRow[1]}
+          <Card
+            rightText
+            data={bottomRow[1]}
             className={cn(styles.bottomRight, styles.fourthCard, {
               [styles.CardAnim]: counterCard >= 4,
             })}
           />
         </div>
         <div className={styles.divider} />
-        <div ref={containerRef}>
+        <div ref={gearRef}>
           <GearIcon
             className={cn(styles.gearIcon, {
               [styles.gearIcon_1]: counterCard === 1,
               [styles.gearIcon_2]: counterCard === 2,
               [styles.gearIcon_3]: counterCard === 3,
               [styles.gearIcon_4]: counterCard === 4,
-              [styles.gearIcon_mob]: isInView
+              [styles.gearIcon_mob]: gearInView,
             })}
           />
         </div>
