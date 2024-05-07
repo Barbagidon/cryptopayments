@@ -7,8 +7,7 @@ import Footer from "@/components/Footer";
 const interTight = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cryptopayments",
-  description: "Cryptopayments",
+  metadataBase: new URL(process.env.CMS_URL),
 };
 
 export default function RootLayout({

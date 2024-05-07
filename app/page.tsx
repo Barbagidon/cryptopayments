@@ -7,17 +7,48 @@ import Faq from "@/components/MainPage/Faq";
 import MeetSection from "@/components/MainPage/MeetSection";
 import GetStartedSection from "@/components/MainPage/GetStartedSection";
 import AnimWrap from "@/components/ui/AnimWrap";
+import { getSeo } from "@/actions/getSeo";
+import StructuredData from "@/components/StructuredData";
 
-export default function Home() {
+export async function generateMetadata() {
+  const seoData = await getSeo(1);
+  if (seoData) {
+    const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
+      seoData;
+    return {
+      title: metaTitle,
+      description: metaDescription,
+      keywords: keywords,
+      openGraph: {
+        images: process.env.CMS_URL + metaImage.data.attributes.url,
+      },
+      alternates: {
+        canonical: canonicalURL,
+      },
+    };
+  }
+}
+
+export default async function Home() {
+  const seoData = await getSeo(1);
+
   return (
-    <AnimWrap className={styles.mainPage}>
-      <FirstScreen />
-      <SecondScreen />
-      <ThirdScreen />
-      <FourthScreen />
-      <Faq />
-      <MeetSection />
-      <GetStartedSection />
-    </AnimWrap>
+    <>
+      {seoData && (
+        <StructuredData
+          id="main page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <AnimWrap className={styles.mainPage}>
+        <FirstScreen />
+        <SecondScreen />
+        <ThirdScreen />
+        <FourthScreen />
+        <Faq />
+        <MeetSection />
+        <GetStartedSection />
+      </AnimWrap>
+    </>
   );
 }
