@@ -6,8 +6,38 @@ import Transactions from "@/components/Exchange/Transactions";
 import ExchangeSection from "@/components/Exchange/ExchangeSection";
 import Choose from "@/components/Exchange/Choose";
 import AnimWrap from "@/components/ui/AnimWrap";
+import { getSeo } from "@/actions/getSeo";
+import StructuredData from "@/components/StructuredData";
 
-const Exchange = () => {
+export async function generateMetadata() {
+  const seoData = await getSeo(3);
+  if (seoData) {
+    const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
+      seoData;
+    return {
+      title: metaTitle,
+      description: metaDescription,
+      keywords: keywords,
+      openGraph: {
+        images: process.env.CMS_URL + metaImage.data.attributes.url,
+      },
+      alternates: {
+        canonical: canonicalURL,
+      },
+    };
+  }
+}
+
+const Exchange = async () => {
+  const seoData = await getSeo(3);
+  {
+    seoData && (
+      <StructuredData
+        id="exchange page"
+        structuredData={seoData.structuredData}
+      />
+    )
+  }
   return (
     <AnimWrap className={styles.exchange}>
       <Transactions />

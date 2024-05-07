@@ -1,9 +1,38 @@
+import React from "react";
 import { getLegalPage } from "@/actions/getLegalPage";
 import Legal from "@/components/Legal";
+import { getSeo } from "@/actions/getSeo";
+import StructuredData from "@/components/StructuredData";
 
-import React from "react";
+export async function generateMetadata() {
+  const seoData = await getSeo(9);
+  if (seoData) {
+    const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
+      seoData;
+    return {
+      title: metaTitle,
+      description: metaDescription,
+      keywords: keywords,
+      openGraph: {
+        images: process.env.CMS_URL + metaImage.data.attributes.url,
+      },
+      alternates: {
+        canonical: canonicalURL,
+      },
+    };
+  }
+}
 
 const PrivacyPolicy = async () => {
+  const seoData = await getSeo(9);
+  {
+    seoData && (
+      <StructuredData
+        id="privacy page"
+        structuredData={seoData.structuredData}
+      />
+    )
+  }
   const pageIdInStrapi = 6;
   const pageData = await getLegalPage(pageIdInStrapi);
   return <Legal data={pageData} />;

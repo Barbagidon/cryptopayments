@@ -8,12 +8,43 @@ import CircleIcon from "@/components/Blog/icons/circleIcon";
 import { getArticles } from "@/actions/getArticles";
 import { IBlogFilters } from "@/components/Blog/types";
 import AnimWrap from "@/components/ui/AnimWrap";
+import { getSeo } from "@/actions/getSeo";
+import StructuredData from "@/components/StructuredData";
+
+export async function generateMetadata() {
+  const seoData = await getSeo(2);
+  if (seoData) {
+    const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
+      seoData;
+    return {
+      title: metaTitle,
+      description: metaDescription,
+      keywords: keywords,
+      openGraph: {
+        images: process.env.CMS_URL + metaImage.data.attributes.url,
+      },
+      alternates: {
+        canonical: canonicalURL,
+      },
+    };
+  }
+}
 
 interface Props {
   searchParams: { filter: IBlogFilters };
 }
 
 const Blog = async ({ searchParams }: Props) => {
+  const seoData = await getSeo(2);
+  {
+    seoData && (
+      <StructuredData
+        id="blog page"
+        structuredData={seoData.structuredData}
+      />
+    )
+  }
+
   const articlesData = await getArticles(searchParams.filter);
 
   const showCards = articlesData && articlesData?.length > 0;

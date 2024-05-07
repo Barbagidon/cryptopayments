@@ -1,7 +1,38 @@
 import { getLegalPage } from "@/actions/getLegalPage";
 import Legal from "@/components/Legal";
+import { getSeo } from "@/actions/getSeo";
+import StructuredData from "@/components/StructuredData";
+
+export async function generateMetadata() {
+  const seoData = await getSeo(5);
+  if (seoData) {
+    const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
+      seoData;
+    return {
+      title: metaTitle,
+      description: metaDescription,
+      keywords: keywords,
+      openGraph: {
+        images: process.env.CMS_URL + metaImage.data.attributes.url,
+      },
+      alternates: {
+        canonical: canonicalURL,
+      },
+    };
+  }
+}
 
 const Complaint = async () => {
+  const seoData = await getSeo(5);
+  {
+    seoData && (
+      <StructuredData
+        id="complaint page"
+        structuredData={seoData.structuredData}
+      />
+    )
+  }
+
   const pageIdInStrapi = 4;
   const pageData = await getLegalPage(pageIdInStrapi);
   return <Legal data={pageData} />;
