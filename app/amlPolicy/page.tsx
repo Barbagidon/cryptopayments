@@ -24,21 +24,19 @@ export async function generateMetadata() {
 }
 
 const AmlPolicy = async () => {
-
   const seoData = await getSeo(4);
-  {
-    seoData && (
-      <StructuredData
-        id="aml page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
 
   const pageIdInStrapi = 3;
   const pageData = await getLegalPage(pageIdInStrapi);
 
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData id="aml page" structuredData={seoData.structuredData} />
+      )}
+      <Legal data={pageData} />;
+    </>
+  );
 };
 
 export default AmlPolicy;

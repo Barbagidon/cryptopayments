@@ -9,20 +9,18 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getArticle } from "@/actions/getArticle";
 import { IBlogFilters } from "@/components/Blog/types";
-import { getSeo } from "@/actions/getSeo";
+
 import StructuredData from "@/components/StructuredData";
 
-interface Props {
+interface IMetaProps {
   params: { id: string };
-  searchParams: { filter: IBlogFilters };
 }
 
-
-export async function generateMetadata(params: any) {
-  const seoData = await getSeo(params.id);
-  if (seoData) {
+export async function generateMetadata({ params }: IMetaProps) {
+  const articleData = await getArticle(params.id);
+  if (articleData?.attributes.seo) {
     const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
-      seoData;
+      articleData.attributes.seo;
     return {
       title: metaTitle,
       description: metaDescription,
@@ -37,17 +35,13 @@ export async function generateMetadata(params: any) {
   }
 }
 
+interface Props {
+  params: { id: string };
+  searchParams: { filter: IBlogFilters };
+}
+
 const ArticlePage = async ({ params, searchParams }: Props) => {
   const articleData = await getArticle(params.id);
-  const seoData = await getSeo(Number(params.id));
-  {
-    seoData && (
-      <StructuredData
-        id="article page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
 
   if (!articleData) {
     redirect("/");
@@ -59,6 +53,13 @@ const ArticlePage = async ({ params, searchParams }: Props) => {
 
   return (
     <SectionWrap tag="main" className={styles.articlePage}>
+      {articleData.attributes.seo?.structuredData && (
+        <StructuredData
+          id="article page"
+          structuredData={articleData.attributes.seo.structuredData}
+        />
+      )}
+
       <div className={styles.content}>
         <h1 className={styles.header}>
           <Link href={blogLinkHref}>Blog</Link> <ArticleArrow />{" "}

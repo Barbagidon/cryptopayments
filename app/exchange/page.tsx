@@ -30,22 +30,23 @@ export async function generateMetadata() {
 
 const Exchange = async () => {
   const seoData = await getSeo(3);
-  {
-    seoData && (
-      <StructuredData
-        id="exchange page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   return (
-    <AnimWrap className={styles.exchange}>
-      <Transactions />
-      <ExchangeSection />
-      <Secure />
-      <Choose />
-      <GetStartedSection />
-    </AnimWrap>
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="exchange page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <AnimWrap className={styles.exchange}>
+        <Transactions />
+        <ExchangeSection />
+        <Secure />
+        <Choose />
+        <GetStartedSection />
+      </AnimWrap>
+    </>
   );
 };
 

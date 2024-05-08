@@ -38,7 +38,7 @@ interface MetaImage {
   };
 }
 
-interface IPageSEO {
+export interface IPageSEO {
   id: number;
   metaTitle: string;
   metaDescription: string;

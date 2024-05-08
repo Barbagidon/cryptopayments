@@ -1,3 +1,5 @@
+import { IPageSEO } from "@/types";
+
 interface ImageFormat {
   ext: string;
   url: string;
@@ -49,6 +51,7 @@ export interface IArticle {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
+    seo: IPageSEO | null;
     img: {
       data: IBlogImage[];
     };

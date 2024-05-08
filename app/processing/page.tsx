@@ -30,21 +30,22 @@ export async function generateMetadata() {
 
 const Processing = async () => {
   const seoData = await getSeo(10);
-  {
-    seoData && (
-      <StructuredData
-        id="processing page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   return (
-    <AnimWrap className={styles.processing}>
-      <ReceivePayments />
-      <AdvList />
-      <Integrate />
-      <Slider />
-    </AnimWrap>
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="processing page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <AnimWrap className={styles.processing}>
+        <ReceivePayments />
+        <AdvList />
+        <Integrate />
+        <Slider />
+      </AnimWrap>
+    </>
   );
 };
 

@@ -25,17 +25,20 @@ export async function generateMetadata() {
 
 const RiskDisclaimer = async () => {
   const seoData = await getSeo(11);
-  {
-    seoData && (
-      <StructuredData
-        id="risj page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   const pageIdInStrapi = 8;
   const pageData = await getLegalPage(pageIdInStrapi);
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="risj page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <Legal data={pageData} />;
+    </>
+  );
 };
 
 export default RiskDisclaimer;
