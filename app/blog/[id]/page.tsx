@@ -9,14 +9,45 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getArticle } from "@/actions/getArticle";
 import { IBlogFilters } from "@/components/Blog/types";
+import { getSeo } from "@/actions/getSeo";
+import StructuredData from "@/components/StructuredData";
 
 interface Props {
   params: { id: string };
   searchParams: { filter: IBlogFilters };
 }
 
+
+export async function generateMetadata(params: any) {
+  const seoData = await getSeo(params.id);
+  if (seoData) {
+    const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
+      seoData;
+    return {
+      title: metaTitle,
+      description: metaDescription,
+      keywords: keywords,
+      openGraph: {
+        images: process.env.CMS_URL + metaImage.data.attributes.url,
+      },
+      alternates: {
+        canonical: canonicalURL,
+      },
+    };
+  }
+}
+
 const ArticlePage = async ({ params, searchParams }: Props) => {
   const articleData = await getArticle(params.id);
+  const seoData = await getSeo(Number(params.id));
+  {
+    seoData && (
+      <StructuredData
+        id="article page"
+        structuredData={seoData.structuredData}
+      />
+    )
+  }
 
   if (!articleData) {
     redirect("/");
