@@ -25,17 +25,20 @@ export async function generateMetadata() {
 
 const FeesAndLimits = async () => {
   const seoData = await getSeo(8);
-  {
-    seoData && (
-      <StructuredData
-        id="fees page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   const pageIdInStrapi = 9;
   const pageData = await getLegalPage(pageIdInStrapi);
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="fees page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <Legal data={pageData} />;
+    </>
+  );
 };
 
 export default FeesAndLimits;

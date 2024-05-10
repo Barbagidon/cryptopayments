@@ -25,17 +25,20 @@ export async function generateMetadata() {
 
 const PrivacyPolicy = async () => {
   const seoData = await getSeo(9);
-  {
-    seoData && (
-      <StructuredData
-        id="privacy page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   const pageIdInStrapi = 6;
   const pageData = await getLegalPage(pageIdInStrapi);
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="privacy page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <Legal data={pageData} />;
+    </>
+  );
 };
 
 export default PrivacyPolicy;

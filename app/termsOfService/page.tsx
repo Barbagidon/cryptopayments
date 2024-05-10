@@ -25,17 +25,20 @@ export async function generateMetadata() {
 
 const TermsOfService = async () => {
   const seoData = await getSeo(12);
-  {
-    seoData && (
-      <StructuredData
-        id="terms page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   const pageIdInStrapi = 7;
   const pageData = await getLegalPage(pageIdInStrapi);
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="terms page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <Legal data={pageData} />;
+    </>
+  );
 };
 
 export default TermsOfService;

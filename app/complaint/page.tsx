@@ -24,18 +24,20 @@ export async function generateMetadata() {
 
 const Complaint = async () => {
   const seoData = await getSeo(5);
-  {
-    seoData && (
-      <StructuredData
-        id="complaint page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
 
   const pageIdInStrapi = 4;
   const pageData = await getLegalPage(pageIdInStrapi);
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="complaint page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <Legal data={pageData} />;
+    </>
+  );
 };
 
 export default Complaint;

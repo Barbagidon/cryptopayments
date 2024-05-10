@@ -63,6 +63,14 @@
   padding: 0 32px;
 }
 
+.text li {
+  white-space: normal;
+}
+
+.text p {
+  white-space: pre-wrap;
+}
+
 @media (max-width: 640px) {
   .textContent {
     padding: 24px 24px 32px 24px;

@@ -26,17 +26,17 @@ import React from "react";
 
 const Faq = async () => {
   const seoData = await getSeo(7);
-  {
-    seoData && (
-      <StructuredData
-        id="faq page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
+
   const faqData = await getFaqPageData();
 
-  return <FaqLegal data={faqData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData id="faq page" structuredData={seoData.structuredData} />
+      )}
+      <FaqLegal data={faqData} />;
+    </>
+  );
 };
 
 export default Faq;

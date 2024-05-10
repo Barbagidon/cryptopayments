@@ -7,6 +7,7 @@ import Image from "next/image";
 import { IArticle, IBlogFilters } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 interface Props {
   articleData: IArticle;
@@ -50,7 +51,9 @@ const Article = ({ articleData, pageId, curFilter }: Props) => {
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.divider} />
 
-        <ReactMarkdown className={styles.text}>{text}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]} className={styles.text}>
+          {text}
+        </ReactMarkdown>
       </div>
     </div>
   );

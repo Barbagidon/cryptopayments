@@ -36,46 +36,47 @@ interface Props {
 
 const Blog = async ({ searchParams }: Props) => {
   const seoData = await getSeo(2);
-  {
-    seoData && (
-      <StructuredData
-        id="blog page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
 
   const articlesData = await getArticles(searchParams.filter);
 
   const showCards = articlesData && articlesData?.length > 0;
   return (
-    <AnimWrap className={styles.blog}>
-      <section className={styles.blogSection}>
-        <div className={styles.content}>
-          <Filters currentFilter={searchParams.filter} />
-
-          <div className={styles.cardList}>
-            {showCards &&
-              articlesData.map((card, i) => {
-                return (
-                  <Card
-                    currentFilter={searchParams.filter}
-                    cardData={card}
-                    key={i}
-                  />
-                );
-              })}
-          </div>
-          {showCards && <CircleIcon className={styles.circleIcon} />}
-        </div>
-      </section>
-      {showCards && (
-        <>
-          <YellowGearIcon className={styles.gearIcon} />
-          <TriangleIcon className={styles.triangleIcon} />
-        </>
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="blog page"
+          structuredData={seoData.structuredData}
+        />
       )}
-    </AnimWrap>
+
+      <AnimWrap className={styles.blog}>
+        <section className={styles.blogSection}>
+          <div className={styles.content}>
+            <Filters currentFilter={searchParams.filter} />
+
+            <div className={styles.cardList}>
+              {showCards &&
+                articlesData.map((card, i) => {
+                  return (
+                    <Card
+                      currentFilter={searchParams.filter}
+                      cardData={card}
+                      key={i}
+                    />
+                  );
+                })}
+            </div>
+            {showCards && <CircleIcon className={styles.circleIcon} />}
+          </div>
+        </section>
+        {showCards && (
+          <>
+            <YellowGearIcon className={styles.gearIcon} />
+            <TriangleIcon className={styles.triangleIcon} />
+          </>
+        )}
+      </AnimWrap>
+    </>
   );
 };
 

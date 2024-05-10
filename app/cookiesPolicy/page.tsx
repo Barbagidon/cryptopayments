@@ -25,19 +25,21 @@ export async function generateMetadata() {
 
 const CookiesPolicy = async () => {
   const seoData = await getSeo(6);
-  {
-    seoData && (
-      <StructuredData
-        id="cookies page"
-        structuredData={seoData.structuredData}
-      />
-    )
-  }
 
   const pageIdInStrapi = 5;
   const pageData = await getLegalPage(pageIdInStrapi);
 
-  return <Legal data={pageData} />;
+  return (
+    <>
+      {seoData?.structuredData && (
+        <StructuredData
+          id="cookies page"
+          structuredData={seoData.structuredData}
+        />
+      )}
+      <Legal data={pageData} />
+    </>
+  );
 };
 
 export default CookiesPolicy;
