@@ -19,7 +19,9 @@ interface Props {
 
 
 export async function generateMetadata(params: any) {
+  console.log(params)
   const seoData = await getSeo(params.id);
+  console.log(params.id + ' ' + 'хуй')
   if (seoData) {
     const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
       seoData;
