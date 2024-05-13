@@ -21,25 +21,35 @@ const NavBtns = async ({ className, pageId, curFilter }: Props) => {
     redirect("/not-found");
   }
 
+  const hidePrevBtn = String(articlesData[0].id) === pageId;
+  const hideNextBtn =
+    String(articlesData[articlesData.length - 1].id) === pageId;
+
   return (
     <div className={cn(styles.navBtns, className)}>
-      <button className={styles.btn}>
-        {getHref("prev", pageId, articlesData, curFilter) !== pageId && (
-          <Link className={styles.link} href={getHref("prev", pageId, articlesData, curFilter)}>
+      {!hidePrevBtn && (
+        <button className={styles.btn}>
+          <Link
+            className={styles.link}
+            href={getHref("prev", pageId, articlesData, curFilter)}
+          >
             <ArrowIcon />
             Previous
           </Link>
-        )}
-      </button>
+        </button>
+      )}
 
-      <button className={cn(styles.btn, styles.nextBtn)}>
-        {getHref("next", pageId, articlesData, curFilter) !== pageId && (
-          <Link className={styles.link} href={getHref("next", pageId, articlesData, curFilter)}>
+      {!hideNextBtn && (
+        <button className={cn(styles.btn, styles.nextBtn)}>
+          <Link
+            className={styles.link}
+            href={getHref("next", pageId, articlesData, curFilter)}
+          >
             Next
             <ArrowIcon />
           </Link>
-        )}
-      </button>
+        </button>
+      )}
     </div>
   );
 };
