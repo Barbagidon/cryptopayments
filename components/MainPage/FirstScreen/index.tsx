@@ -4,13 +4,14 @@ import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
-
 import StartedBtnBg from "./icons/startedBtnBg";
 import StartedBtn from "@/components/ui/StartedBtn";
 import SectionWrap from "@/components/ui/SectionWrap";
 
 import cn from "classnames";
 import { useInView } from "framer-motion";
+import BgImage from "./BgImage";
+import CircleImage from "./CircleImage";
 
 const FirstScreen = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,16 +29,11 @@ const FirstScreen = () => {
             Crypto Payments for your{" "}
             <span className={styles.business}>Business</span>
           </h1>
-          <Image
-            width={400}
-            height={400}
-            sizes="100vw"
+
+          <CircleImage
             className={cn(styles.image, {
               [styles.pcAnimImage]: isInView,
             })}
-            src={"/mainPage/firstScreenCircles.png"}
-            alt="crypto payment ecosystem"
-            priority
           />
         </div>
         <div
@@ -56,16 +52,8 @@ const FirstScreen = () => {
           </div>
         </div>
       </div>
-      <Image
-        className={styles.bgImage}
-        width={0}
-        height={0}
-        sizes="100vw"
-        src={"/mainPage/mainPageFirstScreen.png"}
-        alt="bg"
-        unoptimized
-        priority
-      />
+
+      <BgImage className={styles.bgImage} />
     </SectionWrap>
   );
 };

@@ -62,7 +62,3 @@ a {
   --black-light-2: #777776;
   --black-light-4: #d2d2d1;
 }
-
-[data-theme="dark"] {
-  --white-30: red;
-}

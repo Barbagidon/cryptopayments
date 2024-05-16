@@ -1,3 +1,7 @@
+"use client";
+
+import { useTheme } from "@/stores/useTheme";
+import Image from "next/image";
 import React from "react";
 
 interface Props {
@@ -5,6 +9,21 @@ interface Props {
 }
 
 const LogoIcon = ({ className }: Props) => {
+  const theme = useTheme((state) => state.theme);
+
+  if (theme === "dark") {
+    return (
+      <Image
+        priority
+        quality={100}
+        width={155}
+        height={64}
+        alt="logo"
+        src={"/darkThemeLogo.png"}
+      />
+    );
+  }
+
   return (
     <svg
       width="155"

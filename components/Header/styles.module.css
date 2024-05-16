@@ -14,6 +14,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .header {
+  border-bottom: 2px solid var(--white-30, rgba(252, 250, 255, 0.3));
+  background: #1d1d1b;
 }
 
 .logoLink {
@@ -54,6 +60,12 @@
   text-align: center;
 }
 
+[data-theme="dark"] .loginLink {
+  background: transparent;
+  color: rgba(252, 250, 255, 1);
+  border: 1px solid var(--white, #fcfaff);
+}
+
 .loginLink:hover {
   border-color: var(--purple-main);
   color: var(--purple-main);
@@ -70,6 +82,11 @@
   text-transform: uppercase;
 }
 
+[data-theme="dark"] .joinLink {
+  background: var(--purple-light-4, #ddcdee);
+  color: var(--black, #1d1d1b);
+}
+
 .joinLink:hover {
   background: var(--purple-light-1);
   border-color: transparent;
@@ -82,6 +99,15 @@
   border: 2px solid var(--white-50);
   background: var(--white-50, rgba(252, 250, 255, 0.5));
   display: none;
+}
+
+[data-theme="dark"] .mobileMenuBtn {
+  background-color: transparent;
+  border: 2px solid var(--white-30, rgba(252, 250, 255, 0.3));
+}
+
+[data-theme="dark"] .mobileMenuBtn svg path {
+  stroke: #fcfaff;
 }
 
 .blur {
