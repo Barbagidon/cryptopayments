@@ -8,6 +8,11 @@
   background: var(--white);
   flex-grow: 1;
   overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .blog {
+  background: linear-gradient(180deg, #7835ba 4.5%, #1d1d1b 100%);
 }
 
 .blogSection {
@@ -34,12 +39,22 @@
   border-bottom: 2px solid var(--black-light-4);
   position: relative;
   z-index: 1;
+  transition: border-color 0.3s;
+}
+
+[data-theme="dark"] .cardList {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .gearIcon {
   position: absolute;
   left: 0;
   top: 218px;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .gearIcon path {
+  fill: #74f721;
 }
 
 .triangleIcon {
@@ -48,10 +63,18 @@
   top: 53%;
 }
 
+[data-theme="dark"] .triangleIcon path {
+  fill: #74f721;
+}
+
 .circleIcon {
   position: absolute;
   bottom: 40px;
   left: 350px;
+}
+
+[data-theme="dark"] .circleIcon path {
+  fill: #74f721;
 }
 
 @media (max-width: 1280px) {

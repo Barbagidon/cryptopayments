@@ -10,4 +10,10 @@
   border-radius: 12px;
   background: var(--white);
   max-width: 130px;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .dateBage {
+  color: var(--white, #fcfaff);
+  background: var(--white-50, rgba(252, 250, 255, 0.5));
 }
