@@ -62,7 +62,6 @@
 
 @media (max-width: 615px) {
   .card {
-    flex-direction: row-reverse;
     max-width: 370px;
   }
 
