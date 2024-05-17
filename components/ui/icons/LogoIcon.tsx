@@ -20,6 +20,7 @@ const LogoIcon = ({ className }: Props) => {
         height={64}
         alt="logo"
         src={"/darkThemeLogo.png"}
+        className={className}
       />
     );
   }
