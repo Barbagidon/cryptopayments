@@ -5,6 +5,11 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .article {
+  background: #110122;
 }
 
 .header {
@@ -13,6 +18,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .header {
+  background: #110122;
 }
 
 .bageDate {
@@ -33,12 +43,22 @@
   line-height: 32px;
   font-weight: 500;
   color: #5603a9;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .title {
+  color: white;
 }
 
 .divider {
   height: 2px;
   width: 100%;
   background: var(--black-light-4);
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .divider {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .text {
@@ -47,6 +67,11 @@
   font-weight: 500;
   line-height: 140%;
   white-space: pre-wrap;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .text {
+  color: rgba(252, 250, 255, 0.8);
 }
 
 .text a {
@@ -71,11 +96,13 @@
   white-space: pre-wrap;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .textContent {
-    padding: 24px 24px 32px 24px;
+    padding: 24px 20px 40px 20px;
   }
+}
 
+@media (max-width: 640px) {
   .text ol,
   .text ul {
     padding: 0 24px;

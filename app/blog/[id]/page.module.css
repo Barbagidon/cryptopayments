@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+[data-theme="dark"] .articlePage {
+  background: linear-gradient(180deg, #7835ba 4.5%, #1d1d1b 100%);
+}
+
 .content {
   max-width: 1240px;
   width: 100%;
@@ -21,10 +25,18 @@
   top: 218px;
 }
 
+[data-theme="dark"] .gearIcon path {
+  fill: #74f721;
+}
+
 .triangleIcon {
   position: absolute;
   right: 22px;
   top: 670px;
+}
+
+[data-theme="dark"] .triangleIcon path {
+  fill: #74f721;
 }
 
 .header {
@@ -35,6 +47,19 @@
   font-size: 16px;
   font-weight: 600px;
   text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .header {
+  color: var(--purple-light-4, #ddcdee);
+}
+
+.header svg path {
+  transition: stroke 0.3s;
+}
+
+[data-theme="dark"] .header svg path {
+  stroke: var(--purple-light-4, #ddcdee);
 }
 
 @media (max-width: 1024px) {

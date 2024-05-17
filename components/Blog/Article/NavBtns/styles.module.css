@@ -17,6 +17,19 @@
   align-items: center;
   font-weight: 600;
   text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.link svg path {
+  transition: stroke 0.3s;
+}
+
+[data-theme="dark"] .link {
+  color: #74f721;
+}
+
+[data-theme="dark"] .link svg path {
+  stroke: #74f721;
 }
 
 .nextBtn svg {
