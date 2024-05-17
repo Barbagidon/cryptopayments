@@ -14,6 +14,11 @@
   font-size: 16px;
   color: var(--purple-main);
   font-weight: 400;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .link {
+  color: var(--purple-light-4);
 }
 
 .link:hover {
