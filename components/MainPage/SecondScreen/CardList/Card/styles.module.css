@@ -12,6 +12,12 @@
   background: var(--absolut-white);
   transition: box-shadow 0.3s, transform 0.8s;
   transform: translateY(50%);
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .card {
+  background: #110122;
+  color: white;
 }
 
 .card_active {
@@ -22,9 +28,19 @@
   box-shadow: 13px -16px 5px var(--yellow);
 }
 
+[data-theme="dark"] .card:hover {
+  box-shadow: 13px -16px 5px #74f721;
+}
+
 .card:nth-child(1) {
   .purpleBg {
     background: var(--purple-light-4);
+  }
+}
+
+[data-theme="dark"] .card:nth-child(1) {
+  .purpleBg {
+    background: #7835ba;
   }
 }
 
@@ -34,9 +50,21 @@
   }
 }
 
+[data-theme="dark"] .card:nth-child(2) {
+  .purpleBg {
+    background: #340265;
+  }
+}
+
 .card:nth-child(3) {
   .purpleBg {
     background: var(--purple-light-2);
+  }
+}
+
+[data-theme="dark"] .card:nth-child(3) {
+  .purpleBg {
+    background: #220144;
   }
 }
 
@@ -52,6 +80,10 @@
   align-self: flex-end;
   position: relative;
   z-index: 1;
+}
+
+[data-theme="dark"] .pcArrow svg path {
+  stroke: white;
 }
 
 .cardContent {
@@ -76,14 +108,26 @@
   background: var(--gray);
 }
 
+[data-theme="dark"] .divider {
+  color: rgba(255, 255, 255, 0.1);
+}
+
 .descr {
   color: var(--black-light-1);
   font-size: 18px;
   font-weight: 500;
 }
 
+[data-theme="dark"] .descr {
+  color: white;
+}
+
 .mobileArrow {
   display: none;
+}
+
+[data-theme="dark"] .mobileArrow svg path {
+  stroke: white;
 }
 
 @media (max-width: 1160px) {
