@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 880px) {
+  .instructionListWrapper {
+    max-width: unset;
+  }
+
   .instructionList {
     padding: 32px 24px 40px 24px;
   }
