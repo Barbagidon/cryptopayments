@@ -7,7 +7,7 @@
   justify-content: center;
   position: absolute;
   background: var(--absolut-white);
-  top: -190px;
+  top: -200px;
   right: -13px;
   transition: background-color 0.3s;
 }

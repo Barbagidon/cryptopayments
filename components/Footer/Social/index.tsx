@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import SupportBlock from "./supportBlock";
+import SupportBlock from "./SupportBlock";
 import Link from "next/link";
 import Inst from "./icons/inst";
 import Face from "./icons/face";

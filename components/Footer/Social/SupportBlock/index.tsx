@@ -1,8 +1,8 @@
 'use client'
 import styles from "./styles.module.css"
-import FooterTitle from "../FooterTitle";
+import FooterTitle from "../../FooterTitle";
 import Image from "next/image";
-import Arrow from "./icons/arrow";
+import Arrow from "../icons/arrow";
 import { useTheme } from "@/stores/useTheme";
 
 

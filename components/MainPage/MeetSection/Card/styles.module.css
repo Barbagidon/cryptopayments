@@ -6,7 +6,21 @@
   position: relative;
   z-index: 1;
   transform: translateY(50%);
-  transition: transform .8s;
+  transition: transform .8s border-color .3s;
+  border: 2px solid transparent;
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--black);
+}
+
+.card:hover {
+  border: 2px solid var(--yellow)
+}
+
+
+[data-theme="dark"] .card:hover {
+  border: 2px solid var(--green)
 }
 
 .card_active {
@@ -25,12 +39,22 @@
   padding-bottom: 16px;
   border-bottom: 2px solid #ddcdee;
   flex-grow: 1;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .header {
+  border-color: rgba(255, 255, 255, .1);
 }
 
 .title {
   font-size: 32px;
   font-weight: 500;
   max-width: 270px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .title {
+  color: #fff;
 }
 
 .info {
@@ -42,10 +66,24 @@
   flex-direction: column;
 }
 
+[data-theme="dark"] .date,
+[data-theme="dark"] .descr {
+  color: var(--purple-light-4)
+}
+
+[data-theme="dark"] .title+svg path {
+  stroke: var(--green);
+}
+
 .calendar {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+
+[data-theme="dark"] .calendar svg path {
+  stroke: var(--purple-light-3);
 }
 
 .date {
