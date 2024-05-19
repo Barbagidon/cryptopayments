@@ -34,7 +34,7 @@ const Faq = async () => {
       {seoData?.structuredData && (
         <StructuredData id="faq page" structuredData={seoData.structuredData} />
       )}
-      <FaqLegal data={faqData} />;
+      <FaqLegal data={faqData} />
     </>
   );
 };

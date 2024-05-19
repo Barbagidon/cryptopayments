@@ -13,7 +13,7 @@ const FaqList = ({ listData }: Props) => {
   return (
     <ul className={styles.faqList}>
       {listData && listData.map((item, i) => {
-        return <AccordItem data={item} key={i} />;
+        return <AccordItem data={item} key={i} />
       })}
     </ul>
   );

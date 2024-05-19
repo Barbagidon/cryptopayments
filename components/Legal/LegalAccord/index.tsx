@@ -14,7 +14,7 @@ const LegalAccord = ({ className, data }: Props) => {
   return (
     <ul className={cn(styles.faqList, className)}>
       {data.map((item, i) => {
-        return <AccordItem key={i} data={item} />;
+        return <AccordItem key={i} data={item} />
       })}
     </ul>
   );

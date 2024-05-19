@@ -29,7 +29,7 @@ const FaqLegal = ({ data }: Props) => {
         {showAccordeon && (
           <div className={styles.mainInfo}>
             {accordeonContent.map((item, i) => {
-              return <FaqList key={i} data={item} />;
+              return <FaqList key={i} data={item} />
             })}
           </div>
         )}

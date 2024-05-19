@@ -8,7 +8,7 @@ interface Props {
 
 const DateBage = ({ date }: Props) => {
   const formattedDate = dayjs(date).format("D MMMM YYYY");
-  return <div className={styles.dateBage}>{formattedDate}</div>;
+  return <div className={styles.dateBage}>{formattedDate}</div>
 };
 
 export default DateBage;
