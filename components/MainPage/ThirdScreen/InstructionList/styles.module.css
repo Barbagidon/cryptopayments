@@ -74,6 +74,7 @@
 
 .border {
   border-bottom: 2px solid var(--purple-light-4);
+  transition: all .3s;
 }
 
 @media (max-width: 880px) {

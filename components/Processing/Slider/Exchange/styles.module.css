@@ -26,11 +26,9 @@
   inset: 0;
   border-radius: 32px;
   padding: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(221, 205, 238, 1),
-    rgba(185, 150, 219, 1)
-  );
+  background: linear-gradient(to right,
+      rgba(221, 205, 238, 1),
+      rgba(185, 150, 219, 1));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -149,7 +147,8 @@
 }
 
 [data-theme="dark"] .titleText {
-  color: #fff
+  color: #fff;
+  border-bottom: none;
 }
 
 [data-theme="dark"] .text {
@@ -177,6 +176,7 @@
   .content {
     gap: 0;
   }
+
   .imageMob {
     display: block;
   }

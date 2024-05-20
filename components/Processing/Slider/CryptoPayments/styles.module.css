@@ -76,7 +76,7 @@
 
 [data-theme="dark"] .titleText {
   color: #fff;
-  border-bottom: 4px solid #ffffff25;
+  border-bottom: none;
 }
 
 .subTitle {
@@ -103,6 +103,11 @@
 .divider {
   height: 2px;
   background: var(--black-light-4);
+  transition: all .3s;
+}
+
+[data-theme="dark"] .divider {
+  background-color: #ffffff25;
 }
 
 .image {

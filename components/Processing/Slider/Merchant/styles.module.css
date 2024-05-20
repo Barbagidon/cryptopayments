@@ -39,6 +39,11 @@
   gap: 8px;
   padding-bottom: 16px;
   border-bottom: 4px solid var(--purple-light-4);
+  transition: all .3s;
+}
+
+[data-theme="dark"] .header {
+  border-bottom: none;
 }
 
 .title {
@@ -191,6 +196,10 @@
     background: var(--black-light-4);
     width: 100%;
     display: block;
+  }
+
+  [data-theme="dark"] .divider {
+    background-color: #ffffff25;
   }
 }
 
