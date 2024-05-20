@@ -191,8 +191,8 @@ const CircleImage = ({ className }: Props) => {
             y2="236.122"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0" />
-            <stop offset="1" stop-color="#8421F7" />
+            <stop stopColor="white" stopOpacity="0" />
+            <stop offset="1" stopColor="#8421F7" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_3025_5138"
@@ -202,8 +202,8 @@ const CircleImage = ({ className }: Props) => {
             y2="158.037"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0" />
-            <stop offset="1" stop-color="#8421F7" />
+            <stop stopColor="white" stopOpacity="0" />
+            <stop offset="1" stopColor="#8421F7" />
           </linearGradient>
         </defs>
       </svg>
@@ -392,8 +392,8 @@ const CircleImage = ({ className }: Props) => {
           y2="236.122"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#8421F7" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#8421F7" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_644_22450"
@@ -403,8 +403,8 @@ const CircleImage = ({ className }: Props) => {
           y2="158.037"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="#8421F7" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="#8421F7" />
         </linearGradient>
       </defs>
     </svg>
