@@ -17,8 +17,8 @@ const RoundTextIcon = ({ className }: Props) => {
       <path
         d="M182 111L118 175M118 175L118 127M118 175L166 175"
         stroke="#FCFAFF"
-        stroke-width="8"
-        stroke-linecap="round"
+        strokeWidth="8"
+       strokeLinecap="round"
         stroke-linejoin="round"
       />
       <path

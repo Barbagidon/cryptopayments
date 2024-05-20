@@ -23,7 +23,7 @@
   color: #74f721;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1140px) {
   .navigation {
     display: none;
   }
