@@ -17,6 +17,7 @@
   max-width: 222px;
   width: 100%;
   color: var(--purple-main);
+  transition: all .3s;
 }
 
 .descr {
@@ -24,6 +25,7 @@
   font-weight: 500;
   line-height: 140%;
   max-width: 240px;
+  transition: all .3s;
 }
 
 .number {
@@ -32,6 +34,18 @@
   line-height: 120%;
   text-transform: uppercase;
   color: var(--purple-light-3);
+}
+
+[data-theme="dark"] .title {
+  color: #fff;
+}
+
+[data-theme="dark"] .descr {
+  color: var(--purple-light-4);
+}
+
+[data-theme="dark"] .number {
+  color: #ffffff8e;
 }
 
 .rightText {
@@ -46,6 +60,7 @@
     position: relative;
     z-index: 1;
   }
+
   .title {
     font-size: 24px;
     max-width: 160px;

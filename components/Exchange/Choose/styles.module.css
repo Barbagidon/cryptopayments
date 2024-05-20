@@ -1,7 +1,13 @@
 .choose {
-  padding: 78px 100px 0 100px;
+  padding: 78px 100px 78px 100px;
   display: flex;
   justify-content: center;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .choose {
+  background: rgb(29, 29, 27);
+  background: linear-gradient(180deg, rgba(29, 29, 27, 1) 15%, rgba(120, 53, 186, 1) 100%);
 }
 
 .choose:hover {
@@ -17,6 +23,11 @@
   background: var(--absolut-white);
   padding: 54px 16px 202px 16px;
   position: relative;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .content {
+  background-color: var(--black);
 }
 
 .title {
@@ -26,6 +37,11 @@
   text-transform: uppercase;
   line-height: 120%;
   text-align: center;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .title {
+  color: #fff;
 }
 
 .topRow {
@@ -112,6 +128,10 @@
 }
 
 
+[data-theme="dark"] .gearIcon path {
+  fill: var(--purple-main);
+}
+
 
 .startedBtn {
   position: absolute;
@@ -147,6 +167,13 @@
 .bottomRightCorner {
   transform: rotate(180deg);
   right: -36px;
+}
+
+[data-theme="dark"] .topLeftCorner path,
+[data-theme="dark"] .bottomLeftCorner path,
+[data-theme="dark"] .topRightCorner path,
+[data-theme="dark"] .bottomRightCorner path {
+  stroke: var(--green);
 }
 
 @media (max-width: 1400px) {

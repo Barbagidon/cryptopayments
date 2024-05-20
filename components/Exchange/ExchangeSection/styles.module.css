@@ -1,9 +1,14 @@
 .exchangeSection {
-  background: var(--white);
+  background-color: var(--white);
   padding-top: 80px;
   padding-bottom: 120px;
   position: relative;
   overflow: hidden;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .exchangeSection {
+  background-color: var(--black);
 }
 
 .content {
@@ -44,6 +49,11 @@
   font-weight: 500;
 }
 
+[data-theme="dark"] .titleText,
+[data-theme="dark"] .subTitle {
+  color: #fff;
+}
+
 .cardList {
   display: flex;
   justify-content: center;
@@ -80,6 +90,12 @@
   transition: transform 0.65s;
 }
 
+[data-theme="dark"] .gearIcon path {
+  fill: var(--black);
+  fill-opacity: 1;
+  opacity: 1;
+}
+
 .gearIconAnim {
   transform: translateX(-50%) rotate(-180deg);
 }
@@ -91,6 +107,12 @@
   height: 1240px;
   position: absolute;
   top: -610px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .whiteCircle {
+  background: rgb(29, 29, 27);
+  background: linear-gradient(0deg, rgba(29, 29, 27, 1) 15%, rgba(120, 53, 186, 1) 100%);
 }
 
 .purpleWrap,
@@ -123,9 +145,23 @@
   top: 0;
 }
 
+[data-theme="dark"] .purpleArrow path {
+  fill: var(--purple-light-4);
+  stroke: var(--purple-light-4);
+}
+
 .yellowArrow {
   position: absolute;
   top: 0;
+}
+
+.yellowArrow path {
+  transition: all .3s;
+}
+
+[data-theme="dark"] .yellowArrow path {
+  fill: var(--green);
+  stroke: var(--green);
 }
 
 .bage {
@@ -148,6 +184,10 @@
   text-transform: uppercase;
   position: absolute;
   transition: all 0.8s;
+}
+
+[data-theme="dark"] .bage {
+  border-color: var(--green)
 }
 
 .usdBage {
@@ -361,9 +401,11 @@
   .animWrap:nth-child(1) {
     transform: translateY(526px);
   }
+
   .animWrap:nth-child(2) {
     transform: translateY(357px);
   }
+
   .animWrap:nth-child(3) {
     transform: translateY(189px);
   }
