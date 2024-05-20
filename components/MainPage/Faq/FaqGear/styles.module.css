@@ -1,0 +1,12 @@
+.faqGear {
+  display: contents;
+}
+
+.initialAnim {
+  transform: rotate(180deg);
+  transition: transform 0.8s;
+}
+
+.activeAnim {
+  transform: rotate(0);
+}

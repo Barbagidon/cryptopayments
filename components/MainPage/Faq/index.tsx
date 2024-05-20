@@ -4,8 +4,8 @@ import Arrow from "./icons/arrow";
 import Link from "next/link";
 import FaqList from "./FaqList";
 import { getMainPageFaq } from "@/actions/getMainPageFaq";
-import FaqHeader from "./FaqHeader"
-import FaqGear from "./FaqGear"
+import FaqHeader from "./FaqHeader";
+import FaqGear from "./FaqGear";
 
 const Faq = async () => {
   const faqData = await getMainPageFaq();
@@ -25,6 +25,7 @@ const Faq = async () => {
           </Link>
         </div>
       </div>
+
       <FaqGear />
     </section>
   );

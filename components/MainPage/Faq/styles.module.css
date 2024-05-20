@@ -4,7 +4,7 @@
   align-items: center;
   padding: 80px 80px 100px 80px;
   position: relative;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 [data-theme="dark"] .faq {
@@ -26,7 +26,7 @@
   position: relative;
   z-index: 1;
   transform: translateX(-200%);
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
 .header_active {
@@ -52,7 +52,7 @@
 }
 
 .bigCircleFaq {
-  top: -240px
+  top: -240px;
 }
 
 .faqList {
@@ -79,7 +79,7 @@
   font-size: 24px;
   font-weight: 500;
   flex-shrink: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 [data-theme="dark"] .showMoreText {
@@ -97,11 +97,11 @@
   width: 100%;
   height: 54px;
   flex-shrink: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .showMoreBtn:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 [data-theme="dark"] .showMoreBtn {
@@ -111,7 +111,6 @@
 .mobileArrow {
   display: none;
 }
-
 
 [data-theme="dark"] .arrowPc path {
   fill: var(--green);
@@ -186,31 +185,9 @@
 
 .fadeInUp {
   transform: translateY(50%);
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
 .fadeInUp_active {
   transform: translateY(0);
-}
-
-
-.animeBigCircleWrapper {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-@media(max-width:768px) {
-  .animeBigCircleWrapper {
-    right: inherit;
-  }
-}
-
-.animeBigCircle {
-  transform: rotate(180deg);
-  transition: transform .8s;
-}
-
-.animeBigCircle_active {
-  transform: rotate(0);
 }

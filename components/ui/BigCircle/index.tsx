@@ -16,14 +16,9 @@ const BigCircle = ({ className }: Props) => {
   const src = theme === "light" ? "/gear.png" : "/gearDark.png";
 
   return (
-    <div className={cn(styles.bigCircle, className, "bigCircleFaq")}>
-      <div className={styles.gearIconWrap}>
-        <Image
-          priority
-          alt={"gear icon"}
-          fill
-          src={src}
-        />
+    <div className={cn(styles.bigCircle, "bigCircleFaq")}>
+      <div className={cn(styles.gearIconWrap, className)}>
+        <Image priority alt={"gear icon"} fill src={src} />
       </div>
     </div>
   );
