@@ -1,3 +1,7 @@
+"use client";
+
+import { useTheme } from "@/stores/useTheme";
+import Image from "next/image";
 import React from "react";
 
 interface Props {
@@ -5,6 +9,21 @@ interface Props {
 }
 
 const MobileLogo = ({ className }: Props) => {
+  const theme = useTheme((state) => state.theme);
+
+  if (theme === "dark") {
+    return (
+      <Image
+        priority
+        alt="logo"
+        width={92}
+        height={40}
+        src={"/mobileLogoDark.png"}
+        className={className}
+      />
+    );
+  }
+
   return (
     <svg
       width="97"

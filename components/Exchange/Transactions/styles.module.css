@@ -1,10 +1,15 @@
 .transactions {
   display: flex;
   justify-content: center;
-  background: var(--purple-light-4);
+  background-color: var(--purple-light-4);
   padding: 200px 0 145px 0px;
   position: relative;
   overflow: hidden;
+}
+
+[data-theme="dark"] .transactions {
+  background: rgb(29, 29, 27);
+  background: linear-gradient(0deg, rgba(29, 29, 27, 1) 20%, rgba(120, 53, 186, 1) 100%);
 }
 
 .content {
@@ -24,7 +29,7 @@
   max-width: 705px;
   width: 100%;
   transform: translateX(-1000px);
-  transition: transform 0.65s;
+  transition: transform 0.65s, color .3s;
 }
 
 .titleAnim {
@@ -39,12 +44,21 @@
   font-weight: 500;
 }
 
+[data-theme="dark"] .titleText {
+  color: #fff;
+}
+
 .subTitle {
   font-size: 32px;
   color: var(--purple-main);
   font-weight: 500;
   display: inline-block;
   margin-left: 35px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .subTitle {
+  color: var(--green);
 }
 
 .btnContent {
@@ -66,6 +80,11 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 140%;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .btnText {
+  color: #fff;
 }
 
 .topLeftBlur {
@@ -98,6 +117,12 @@
   z-index: 1;
 }
 
+[data-theme="dark"] .centerBtmBlur,
+[data-theme="dark"] .topLeftBlur,
+[data-theme="dark"] .bottomRightBlur {
+  display: none;
+}
+
 .macBook {
   position: absolute;
   top: 0;
@@ -116,6 +141,10 @@
   position: absolute;
   left: -10px;
   top: 182px;
+}
+
+[data-theme="dark"] .line path {
+  stroke: var(--green);
 }
 
 .macbookMob {
@@ -138,11 +167,16 @@
   transform: translateX(-50%) rotate(-180deg);
 }
 
+[data-theme="dark"] .gearIcon path {
+  fill: #220144;
+}
+
 @media (max-width: 1440px) {
   .transactions {
     padding-left: 100px;
     justify-content: flex-start;
   }
+
   .macBook {
     width: 1340px;
     background: url("/exchange/macbook.png");
@@ -219,6 +253,10 @@
 
   .contentBorderAnim {
     border-color: var(--yellow);
+  }
+
+  [data-theme="dark"] .contentBorderAnim {
+    border-color: var(--green);
   }
 
   .mainContent {

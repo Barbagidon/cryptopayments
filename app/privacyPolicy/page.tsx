@@ -36,7 +36,7 @@ const PrivacyPolicy = async () => {
           structuredData={seoData.structuredData}
         />
       )}
-      <Legal data={pageData} />;
+      <Legal data={pageData} />
     </>
   );
 };

@@ -6,4 +6,10 @@
   font-weight: 400;
   line-height: 22px;
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .categoryBage {
+  color: var(--purple-main, #5603a9);
+  background: var(--purple-light-4, #ddcdee);
 }

@@ -11,6 +11,18 @@
   transition: color 0.3s;
 }
 
+[data-theme="dark"] .linkItem {
+  color: #fcfaff;
+}
+
 .linkItem:hover {
   color: var(--purple-main);
+}
+
+[data-theme="dark"] .linkItem:hover {
+  color: #74f721;
+}
+
+[data-theme="dark"] .arrowIcon path {
+  stroke: #74f721;
 }

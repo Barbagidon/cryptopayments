@@ -26,6 +26,10 @@
   color: var(--yellow);
 }
 
+[data-theme="dark"] .title {
+  color: #74f721;
+}
+
 .descr {
   color: var(--white);
   font-size: 18px;

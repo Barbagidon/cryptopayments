@@ -10,6 +10,7 @@ import MobileMenu from "./MobileMenu";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 import MobileLogo from "./icons/mobileLogo";
+import ThemeChanger from "./ThemeChanger";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -34,6 +35,7 @@ const Header = () => {
             <Navigation />
 
             <div className={styles.links}>
+              <ThemeChanger />
               <div className={styles.btnLinks}>
                 <Link
                   className={styles.joinLink}

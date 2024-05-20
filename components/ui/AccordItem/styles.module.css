@@ -17,6 +17,15 @@
   color: var(--black);
 }
 
+[data-theme="dark"] .title {
+  color: #fff;
+}
+
+
+[data-theme="dark"] .textContent {
+  color: #ffffffc5;
+}
+
 .arrowWrap {
   transition: transform 0.3s;
 }
@@ -35,6 +44,14 @@
 
 .rotatedArrow path {
   stroke: var(--purple-main);
+}
+
+[data-theme="dark"] .arrowWrap  path {
+  stroke: #fff;
+}
+
+[data-theme="dark"] .rotatedArrow path {
+  stroke: var(--green);
 }
 
 .textWrap {

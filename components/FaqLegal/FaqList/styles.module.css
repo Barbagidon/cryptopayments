@@ -12,6 +12,11 @@
   border-bottom: 2px solid var(--gray);
   font-size: 32px;
   font-weight: 700;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .accordeonHeader {
+  color: #fcfaff;
 }
 
 .header {

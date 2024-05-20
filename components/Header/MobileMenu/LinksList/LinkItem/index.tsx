@@ -17,7 +17,7 @@ const LinkItem = ({ linkData, closeMenuHanlder }: Props) => {
   return (
     <Link onClick={closeMenuHanlder} href={href} className={styles.linkItem}>
       {title}
-      <Arrow />
+      <Arrow className={styles.arrowIcon} />
     </Link>
   );
 };

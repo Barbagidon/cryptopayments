@@ -2,4 +2,9 @@
   font-size: 16px;
   color: var(--black-light-2);
   font-weight: 500;
+  transition: color .3s;
+}
+
+[data-theme="dark"] .footerTitle {
+  color: var(--dark-gray)
 }

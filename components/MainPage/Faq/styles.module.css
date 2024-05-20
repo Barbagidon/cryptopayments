@@ -4,6 +4,12 @@
   align-items: center;
   padding: 80px 80px 100px 80px;
   position: relative;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .faq {
+  background-color: var(--black);
+  color: #fff;
 }
 
 .content {
@@ -20,7 +26,7 @@
   position: relative;
   z-index: 1;
   transform: translateX(-200%);
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
 .header_active {
@@ -38,6 +44,15 @@
   font-weight: 500;
   color: var(--black);
   text-transform: uppercase;
+}
+
+[data-theme="dark"] .title,
+[data-theme="dark"] .subTitle {
+  color: #fff;
+}
+
+.bigCircleFaq {
+  top: -240px;
 }
 
 .faqList {
@@ -64,6 +79,11 @@
   font-size: 24px;
   font-weight: 500;
   flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .showMoreText {
+  color: var(--purple-light-4);
 }
 
 .showMoreBtn {
@@ -77,10 +97,23 @@
   width: 100%;
   height: 54px;
   flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.showMoreBtn:hover {
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .showMoreBtn {
+  border-color: #fff;
 }
 
 .mobileArrow {
   display: none;
+}
+
+[data-theme="dark"] .arrowPc path {
+  fill: var(--green);
 }
 
 @media (max-width: 1200px) {
@@ -152,30 +185,9 @@
 
 .fadeInUp {
   transform: translateY(50%);
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
 .fadeInUp_active {
   transform: translateY(0);
-}
-
-
-.animeBigCircleWrapper {
-  position: absolute;
-  right: 0;
-}
-
-@media(max-width:768px) {
-  .animeBigCircleWrapper {
-    right: inherit;
-  }
-}
-
-.animeBigCircle {
-  transform: rotate(180deg);
-  transition: transform .8s;
-}
-
-.animeBigCircle_active {
-  transform: rotate(0);
 }

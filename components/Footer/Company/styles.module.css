@@ -24,12 +24,23 @@
   line-height: 22px;
 }
 
+[data-theme="dark"] .text {
+  color: var(--gray);
+  transition: color .3s;
+}
+
 .bottomText {
   max-width: 323px;
   width: 100%;
+  transition: color .3s;
+}
+
+[data-theme="dark"] .bottomText {
+  color: var(--gray)
 }
 
 @media (max-width: 930px) {
+
   .company,
   .bottomText {
     max-width: unset;

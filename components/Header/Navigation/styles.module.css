@@ -11,11 +11,19 @@
   text-transform: uppercase;
 }
 
+[data-theme="dark"] .navLink {
+  color: rgba(252, 250, 255, 1);
+}
+
 .navLink:hover {
   color: var(--purple-main);
 }
 
-@media (max-width: 1024px) {
+[data-theme="dark"] .navLink:hover {
+  color: #74f721;
+}
+
+@media (max-width: 1140px) {
   .navigation {
     display: none;
   }

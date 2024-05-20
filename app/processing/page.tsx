@@ -40,8 +40,10 @@ const Processing = async () => {
         />
       )}
       <AnimWrap className={styles.processing}>
-        <ReceivePayments />
-        <AdvList />
+        <div className={styles.darkThemeBgWrapper}>
+          <ReceivePayments />
+          <AdvList />
+        </div>
         <Integrate />
         <Slider />
       </AnimWrap>

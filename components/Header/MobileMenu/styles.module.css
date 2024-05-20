@@ -13,6 +13,10 @@
   z-index: 4;
 }
 
+[data-theme="dark"] .mobileMenu {
+  background: #1d1d1b;
+}
+
 .logoLink {
   display: flex;
   align-items: center;
@@ -32,6 +36,17 @@
   justify-content: center;
   border: none;
 }
+
+[data-theme="dark"] .closeBtn svg circle {
+  stroke: #fcfaff;
+  stroke-opacity: 0.3;
+  fill: none;
+}
+
+[data-theme="dark"] .closeBtn svg path {
+  stroke: #fcfaff;
+}
+
 .btnLinks {
   display: flex;
   align-items: center;
@@ -53,6 +68,12 @@
   text-align: center;
 }
 
+[data-theme="dark"] .loginLink {
+  background: transparent;
+  color: #fcfaff;
+  border: 1px solid var(--white, #fcfaff);
+}
+
 .joinLink {
   width: 100%;
   padding: 16px 32px;
@@ -64,6 +85,11 @@
   color: var(--white);
   text-transform: uppercase;
   text-align: center;
+}
+
+[data-theme="dark"] .joinLink {
+  background: var(--purple-light-4, #ddcdee);
+  color: var(--black-black, #1d1d1b);
 }
 
 .showMenu {

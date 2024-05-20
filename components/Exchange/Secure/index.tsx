@@ -23,8 +23,8 @@ const config = [
 
 const Secure = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true });
-  const isInViewVector = useInView(containerRef, { once: true, amount: .1 });
+  const isInView = useInView(containerRef, { once: true, amount: 0.7 });
+  const isInViewVector = useInView(containerRef, { once: true, amount: 0.7 });
 
   return (
     <div className={styles.secure}>
@@ -38,7 +38,11 @@ const Secure = () => {
             An extremly important aspect of cryptocurrency services and
             solutions is the secure storage of funds
           </span>
-          <MobileVectors className={cn(styles.mobileVectors, { [styles.mobileVectors_active]: isInViewVector })} />
+          <MobileVectors
+            className={cn(styles.mobileVectors, {
+              [styles.mobileVectors_active]: isInViewVector,
+            })}
+          />
         </div>
         <div className={styles.cardBlock}>
           <div className={styles.card}>
@@ -56,7 +60,11 @@ const Secure = () => {
           <HalfCircle className={styles.halfCircle} />
         </div>
       </div>
-      <Vectors className={cn(styles.vectors, { [styles.vectors_active]: isInViewVector })} />
+      <Vectors
+        className={cn(styles.vectors, {
+          [styles.vectors_active]: isInViewVector,
+        })}
+      />
     </div>
   );
 };

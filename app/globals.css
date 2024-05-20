@@ -7,6 +7,7 @@
 html {
   width: 100vw;
 }
+
 html {
   scroll-padding-top: 114px;
 }
@@ -30,6 +31,7 @@ button,
 input {
   font-family: inherit;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -52,17 +54,17 @@ a {
   --purple-main: #5603a9;
   --black: #1d1d1b;
   --gray: #b2b2b2;
+  --dark-gray: #818080;
   --yellow: #f8e32b;
+  --green: #74F721;
   --absolut-white: #fff;
   --purple-light-1: #7835ba;
   --purple-light-2: #9a68cb;
   --purple-light-3: #bb9add;
   --purple-light-4: #ddcdee;
+  --purple-dark-2: #340265;
+  --purple-dark-4: #110122;
   --black-light-1: #4a4a49;
   --black-light-2: #777776;
   --black-light-4: #d2d2d1;
-}
-
-[data-theme="dark"] {
-  --white-30: red;
 }

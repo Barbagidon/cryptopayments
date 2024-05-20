@@ -21,6 +21,16 @@
   font-size: 16px;
 }
 
+
+[data-theme="dark"] .text {
+  color: #fff
+}
+
+
+[data-theme="dark"] .descr {
+  color: var(--purple-light-4)
+}
+
 .littleIcon {
   display: none;
 }

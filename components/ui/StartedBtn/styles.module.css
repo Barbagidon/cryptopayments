@@ -9,6 +9,11 @@
   position: relative;
   z-index: 2;
   min-width: 209px;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .startedBtnWrap {
+  border-color: white;
 }
 
 .startedBtnWrap:hover {
@@ -39,6 +44,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .startedBtn {
+  border-color: rgba(116, 247, 33, 1);
 }
 
 .arrowBtn {
@@ -51,6 +61,12 @@
   padding: 8px;
   position: absolute;
   right: -20px;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .arrowBtn {
+  background: rgba(116, 247, 33, 1);
+  border-color: transparent;
 }
 
 .arrowBtn svg {
@@ -61,12 +77,29 @@
   animation: shadowAnimation 1.5s linear infinite;
 }
 
+[data-theme="dark"] .animate {
+  animation: shadowAnimationDark 1.5s linear infinite;
+}
+
 @keyframes shadowAnimation {
   0% {
     box-shadow: none;
   }
   50% {
     box-shadow: 0px 0px 33px var(--yellow);
+  }
+
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes shadowAnimationDark {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0px 0px 33px rgba(116, 247, 33, 1);
   }
 
   100% {

@@ -2,12 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("/mainPage/getStartedBg.png");
+  background-image: url("/mainPage/getStartedBg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 139px 134px 138px 80px;
   overflow: hidden;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .getStartedSection {
+  background-image: url("/mainPage/darkGetStartedBg.png");
 }
 
 .content {
@@ -38,6 +43,11 @@
 
 .colorText {
   color: var(--yellow);
+  transition: all .3s;
+}
+
+[data-theme="dark"] .colorText {
+  color: var(--green)
 }
 
 .subTitle {

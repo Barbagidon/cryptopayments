@@ -9,6 +9,11 @@
   background: var(--purple-light-4);
   flex-grow: 1;
   overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .legal {
+  background: #1d1d1b;
 }
 
 .content {
@@ -28,6 +33,11 @@
   line-height: 120%;
   text-transform: uppercase;
   color: #1d1d1b;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .title {
+  color: #fff;
 }
 
 .date {
@@ -36,6 +46,10 @@
   line-height: 140%;
   color: #1d1d1b;
   flex-shrink: 0;
+}
+
+[data-theme="dark"] .date {
+  color: #fff;
 }
 
 .descr {
@@ -52,6 +66,14 @@
   padding: 0px 40px 56px 40px;
   background: var(--white);
   margin-top: 60px;
+  transition: all 0.3s;
+}
+
+[data-theme="dark"] .mainInfo {
+  background: var(
+    --bg-mob,
+    linear-gradient(180deg, #7835ba 4.5%, #1d1d1b 70.56%)
+  );
 }
 
 @media (max-width: 1024px) {
@@ -63,6 +85,10 @@
 @media (max-width: 640px) {
   .title {
     font-size: 40px;
+  }
+
+  .mainInfo {
+    padding: 0px 16px 56px 16px;
   }
 }
 
