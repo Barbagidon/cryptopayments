@@ -25,7 +25,7 @@ const CardList = () => {
   return (
     <div className={styles.cardList}>
       {cardData.map((card, i) => {
-        return <Card cardData={card} key={i} />;
+        return <Card cardData={card} key={i} />
       })}
     </div>
   );

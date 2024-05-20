@@ -4,4 +4,22 @@
   width: 100%;
   margin: 0 auto;
   max-width: 1920px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .darkThemeBgWrapper {
+  background-image: url(/processing/darkProcessingMainBg.png);
+  background-size: cover;
+}
+
+@media(max-width:1023px) {
+  [data-theme="dark"] .darkThemeBgWrapper {
+    background-image: url(/processing/darkProcessingMainBgTablet.png);
+  }
+}
+
+@media(max-width:767px) {
+  [data-theme="dark"] .darkThemeBgWrapper {
+    background-image: url(/processing/darkProcessingMainBgMob.png);
+  }
 }

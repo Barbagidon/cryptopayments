@@ -5,6 +5,12 @@
   padding-left: 100px;
   padding-right: 100px;
   position: relative;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .sectionWrapLegal {
+  background-color: var(--black);
+  color: #fff;
 }
 
 .sticky {

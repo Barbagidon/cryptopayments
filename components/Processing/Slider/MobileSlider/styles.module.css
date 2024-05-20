@@ -1,11 +1,15 @@
 .mobileSlider {
   width: 100%;
-  background: url("/processing/building.png");
+  background-image: url("/processing/building.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 66px 0 47px 0;
   display: none;
+}
+
+[data-theme="dark"] .mobileSlider {
+  background-image: url("/processing/darkBuilding.png");
 }
 
 .swiperSlide {

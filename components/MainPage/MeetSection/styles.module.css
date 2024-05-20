@@ -6,6 +6,12 @@
   background: linear-gradient(180deg, #ddcdee 0%, #b996db 100%);
 }
 
+[data-theme="dark"] .meetSection {
+  background: rgb(29, 29, 27);
+  background: linear-gradient(180deg, rgba(29, 29, 27, 1) 14%, rgba(120, 53, 186, 1) 90%);
+
+}
+
 .content {
   max-width: 1240px;
   width: 100%;
@@ -19,7 +25,11 @@
   text-transform: uppercase;
   text-align: center;
   transform: translateX(-200%);
-  transition: transform .8s;
+  transition: transform .8s color .3s;
+}
+
+[data-theme="dark"] .title {
+  color: #fff;
 }
 
 .title_active {
@@ -41,6 +51,14 @@
   top: -63px;
   transform: rotate(-360deg);
   transition: transform .8s;
+}
+
+.gearIcon path {
+  transition: fill .3s;
+}
+
+[data-theme="dark"] .gearIcon path {
+  fill: var(--green);
 }
 
 .gearIcon_active {

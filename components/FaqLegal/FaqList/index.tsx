@@ -24,7 +24,7 @@ const FaqList = ({ className, data }: Props) => {
         </li>
       )}
       {AccordeonItems.map((item, i) => {
-        return <AccordItem key={i} data={item} />;
+        return <AccordItem key={i} data={item} />
       })}
     </ul>
   );

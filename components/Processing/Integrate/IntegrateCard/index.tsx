@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import cn from "classnames";
+import { useTheme } from "@/stores/useTheme";
 
 interface Props {
   card: {
@@ -14,6 +15,18 @@ interface Props {
 
 const IntegrateCard = ({ card, className }: Props) => {
   const { descr, title } = card;
+  const theme = useTheme((state) => state.theme);
+
+  const src =
+    theme === "light"
+      ? "/processing/integrateCard.png"
+      : "/processing/darkIntegrateCard.png";
+
+
+  const srcMob =
+    theme === "light"
+      ? "/processing/integrateCardMob.png"
+      : "/processing/darkIntegrateCard.png";
 
   return (
     <div className={cn(styles.integrateCard, className)}>
@@ -23,7 +36,7 @@ const IntegrateCard = ({ card, className }: Props) => {
         sizes="100vw"
         alt="card bg"
         className={styles.image}
-        src={"/processing/integrateCard.png"}
+        src={src}
         priority
       />
       <Image
@@ -32,7 +45,7 @@ const IntegrateCard = ({ card, className }: Props) => {
         sizes="100vw"
         alt="card bg"
         className={styles.mobImage}
-        src={"/processing/integrateCardMob.png"}
+        src={srcMob}
         priority
       />
       <div className={styles.textContent}>

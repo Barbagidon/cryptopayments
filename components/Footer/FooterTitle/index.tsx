@@ -8,7 +8,7 @@ interface Props {
 }
 
 const FooterTitle = ({ children, className }: Props) => {
-  return <span className={cn(styles.footerTitle, className)}>{children}</span>;
+  return <span className={cn(styles.footerTitle, className)}>{children}</span>
 };
 
 export default FooterTitle;

@@ -29,6 +29,14 @@
   border-bottom: 4px solid #ffffff13;
 }
 
+.date {
+  transition: all .3s;
+}
+
+[data-theme="dark"] .date {
+  color: var(--dark-gray)
+}
+
 .bottomContent {
   margin-top: 32px;
   display: flex;

@@ -35,7 +35,7 @@ const Complaint = async () => {
           structuredData={seoData.structuredData}
         />
       )}
-      <Legal data={pageData} />;
+      <Legal data={pageData} />
     </>
   );
 };

@@ -1,9 +1,14 @@
 .receivePayments {
-  background: url("/processing/processingMainBg.png");
+  background-image: url("/processing/processingMainBg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .receivePayments {
+  background-image: none;
 }
 
 .sectionWrap {
@@ -35,7 +40,11 @@
   position: relative;
   z-index: 2;
   transform: translateX(-300%);
-  transition: transform 1s;
+  transition: transform 1s color .3s;
+}
+
+[data-theme="dark"] .title {
+  color: #fff;
 }
 
 .titleAnim {
@@ -49,11 +58,20 @@
 
 .shadowText {
   text-shadow: -3px 5px var(--yellow);
+  transition: all .3s;
+}
+
+[data-theme="dark"] .shadowText {
+  text-shadow: none;
 }
 
 .colorText {
   color: var(--purple-main);
   position: relative;
+}
+
+[data-theme="dark"] .colorText {
+  color: var(--green);
 }
 
 .btnContent {
@@ -76,6 +94,11 @@
   font-size: 18px;
   font-weight: 500;
   color: var(--black);
+  transition: all .3s;
+}
+
+[data-theme="dark"] .btnText {
+  color: #fff;
 }
 
 .startedBtn {
@@ -88,12 +111,22 @@
   right: -20px;
 }
 
+[data-theme="dark"] .buttonBg path:nth-child(2) {
+  stroke: var(--green);
+  fill: var(--green);
+}
+
 .ellipse {
   position: absolute;
   top: 145px;
   right: 197px;
   width: 720px;
   height: 720px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .ellipse svg path {
+  stroke: var(--green);
 }
 
 .usdtIcon {
@@ -127,6 +160,7 @@
   0% {
     transform: translateY(-1000px);
   }
+
   40% {
     transform: translateY(60px);
   }

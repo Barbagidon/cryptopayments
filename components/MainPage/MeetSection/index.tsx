@@ -16,7 +16,7 @@ const MeetSection = async () => {
         {sortedEvents && (
           <ul className={styles.cardList}>
             {sortedEvents.map((card, i) => {
-              return <Card cmsUrl={process.env.CMS_URL} cardData={card.attributes} key={i} />;
+              return <Card cmsUrl={process.env.CMS_URL} cardData={card.attributes} key={i} />
             })}
 
             <MeetGeat />

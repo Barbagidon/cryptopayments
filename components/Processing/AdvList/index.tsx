@@ -33,7 +33,7 @@ const AdvList = () => {
   });
 
   return (
-    <SectionWrap>
+    <SectionWrap className={styles.darkBg}>
       <div ref={containerRef} className={styles.content}>
         <motion.div
           className={cn(styles.advList, { [styles.animAdvList]: isInView })}

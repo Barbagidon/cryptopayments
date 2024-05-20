@@ -6,7 +6,7 @@ interface Props {
 }
 
 const CaterogyBage = ({ category }: Props) => {
-  return <div className={styles.categoryBage}>{category}</div>;
+  return <div className={styles.categoryBage}>{category}</div>
 };
 
 export default CaterogyBage;
