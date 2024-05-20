@@ -20,7 +20,7 @@ const Faq = async () => {
           </span>
           <Arrow className={styles.arrowPc} />
 
-          <Link href={"#"} className={styles.showMoreBtn}>
+          <Link href={"/faq"} className={styles.showMoreBtn}>
             show more
           </Link>
         </div>
