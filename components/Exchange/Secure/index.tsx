@@ -23,8 +23,8 @@ const config = [
 
 const Secure = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.7 });
-  const isInViewVector = useInView(containerRef, { once: true, amount: 0.7 });
+  const isInView = useInView(containerRef, { once: true, amount: 0.45 });
+  const isInViewVector = useInView(containerRef, { once: true, amount: 0.3});
 
   return (
     <div className={styles.secure}>

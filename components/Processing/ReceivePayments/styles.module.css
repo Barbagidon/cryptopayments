@@ -4,7 +4,6 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  transition: all .3s;
 }
 
 [data-theme="dark"] .receivePayments {
@@ -40,7 +39,7 @@
   position: relative;
   z-index: 2;
   transform: translateX(-300%);
-  transition: transform 1s color .3s;
+  transition: transform 1s color 0.3s;
 }
 
 [data-theme="dark"] .title {
@@ -58,7 +57,7 @@
 
 .shadowText {
   text-shadow: -3px 5px var(--yellow);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 [data-theme="dark"] .shadowText {
@@ -94,7 +93,7 @@
   font-size: 18px;
   font-weight: 500;
   color: var(--black);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 [data-theme="dark"] .btnText {
@@ -122,7 +121,7 @@
   right: 197px;
   width: 720px;
   height: 720px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 [data-theme="dark"] .ellipse svg path {
