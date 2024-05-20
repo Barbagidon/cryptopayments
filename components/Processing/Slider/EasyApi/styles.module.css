@@ -23,6 +23,27 @@
   transition: all 0.3s;
 }
 
+[data-theme="dark"] .content {
+  border: 4px solid var(--green);
+  background-color: var(--black);
+  color: #fff;
+}
+[data-theme="dark"] .advIcon path {
+  stroke: var(--green);
+}
+
+[data-theme="dark"] .titleText {
+  color: #fff
+}
+
+[data-theme="dark"] .text {
+  color: #fff
+}
+
+
+[data-theme="dark"] .descr {
+  color: var(--purple-light-4)
+}
 .inActive {
   border-color: transparent;
   position: relative;

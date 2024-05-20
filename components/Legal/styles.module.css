@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+[data-theme="dark"] .legal {
+  background-color: #000;
+  color: #fff;
+}
+
 .content {
   max-width: 1240px;
   width: 100%;

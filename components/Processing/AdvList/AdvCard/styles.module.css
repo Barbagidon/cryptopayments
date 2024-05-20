@@ -1,13 +1,18 @@
 .advCard {
   padding: 24px;
-  /* width: calc(100% / 3); */
-width: 100%;
+  width: 100%;
   border-radius: 24px;
   border: 1px solid var(--black-light-1);
-  background: var(--absolut-white);
+  background-color: var(--absolut-white);
   display: flex;
   flex-direction: column;
   gap: 24px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .advCard {
+  background-color: var(--purple-dark-4);
+  border: 1px solid var(--purple-light-1)
 }
 
 .number {
@@ -17,6 +22,11 @@ width: 100%;
   text-transform: uppercase;
   padding-bottom: 24px;
   border-bottom: 2px solid var(--purple-light-4);
+  transition: all .3s;
+}
+
+[data-theme="dark"] .number {
+  color: var(--purple-light-4);
 }
 
 .content {
@@ -30,13 +40,24 @@ width: 100%;
   font-size: 40px;
   font-weight: 500;
   max-width: 270px;
+  transition: all .3s;
+}
+
+[data-theme="dark"] .mainText {
+  color: #fff;
 }
 
 .text {
   font-size: 18px;
   font-weight: 400;
   color: var(--black);
+  transform: all .3s;
 }
+
+[data-theme="dark"] .text {
+  color: #fff;
+}
+
 
 .divider {
   height: 2px;

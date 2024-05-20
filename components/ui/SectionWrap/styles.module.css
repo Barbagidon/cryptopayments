@@ -8,7 +8,7 @@
   transition: all .3s;
 }
 
-[data-theme="dark"] .sectionWrap {
+[data-theme="dark"] .sectionWrapLegal {
   background-color: var(--black);
   color: #fff;
 }

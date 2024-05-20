@@ -16,6 +16,7 @@
   transition: transform 0.5s;
 }
 
+
 .animAdvList {
   animation: jumpAnimation 1s ease-in-out forwards;
 }
@@ -24,6 +25,7 @@
   0% {
     transform: translateY(1000px);
   }
+
   40% {
     transform: translateY(-60px);
   }
@@ -55,9 +57,11 @@
   .animWrap:nth-child(1) {
     transform: translateY(526px);
   }
+
   .animWrap:nth-child(2) {
     transform: translateY(357px);
   }
+
   .animWrap:nth-child(3) {
     transform: translateY(189px);
   }
