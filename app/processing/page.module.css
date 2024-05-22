@@ -10,15 +10,3 @@
   background-image: url(/processing/darkProcessingMainBg.png);
   background-size: cover;
 }
-
-/* @media (max-width: 1023px) {
-  [data-theme="dark"] .darkThemeBgWrapper {
-    background-image: url(/processing/darkProcessingMainBgTablet.png);
-  }
-}
-
-@media (max-width: 767px) {
-  [data-theme="dark"] .darkThemeBgWrapper {
-    background-image: url(/processing/darkProcessingMainBgMob.png);
-  }
-} */
