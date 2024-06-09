@@ -21,7 +21,6 @@
   color: #fff;
 }
 
-
 [data-theme="dark"] .textContent {
   color: #ffffffc5;
 }
@@ -46,7 +45,7 @@
   stroke: var(--purple-main);
 }
 
-[data-theme="dark"] .arrowWrap  path {
+[data-theme="dark"] .arrowWrap path {
   stroke: #fff;
 }
 
@@ -55,7 +54,13 @@
 }
 
 .textWrap {
-  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.3s;
+}
+
+.activeItem {
+  grid-template-rows: 1fr;
 }
 
 .textContent {
@@ -66,6 +71,12 @@
   width: 100%;
   margin-top: 24px;
   white-space: pre-wrap;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.hideTextContent {
+  margin-top: 0;
 }
 
 .textContent ul,

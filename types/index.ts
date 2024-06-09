@@ -35,7 +35,7 @@ interface MetaImage {
       createdAt: string;
       updatedAt: string;
     };
-  };
+  } | null;
 }
 
 export interface IPageSEO {

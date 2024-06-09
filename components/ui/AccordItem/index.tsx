@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-
-import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 import ReactMarkdown from "react-markdown";
-import { animVariants } from "./animVariants";
 import Arrow from "./icons/arrow";
 import { IAccordItem } from "./types";
 
@@ -17,6 +14,21 @@ const AccordItem = ({ data, className }: Props) => {
   const { title, descr } = data;
 
   const [showText, setShowText] = useState(false);
+
+  useEffect(() => {
+    const stringFormatter = (value: string) => {
+      return value.replace(/\s+/g, "").toLowerCase();
+    };
+    const urlHash = stringFormatter(
+      decodeURIComponent(location.hash.substring(1))
+    );
+
+    if (!urlHash) return;
+
+    const formattedTitle = stringFormatter(title);
+    setShowText(urlHash === formattedTitle);
+  }, [title]);
+
   return (
     <li className={cn(styles.listItem, className)}>
       <div
@@ -33,21 +45,15 @@ const AccordItem = ({ data, className }: Props) => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {showText && (
-          <motion.div
-            variants={animVariants}
-            initial={"initial"}
-            animate={"animate"}
-            exit={"initial"}
-            className={styles.textWrap}
-          >
-            <ReactMarkdown className={styles.textContent}>
-              {descr}
-            </ReactMarkdown>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className={cn(styles.textWrap, { [styles.activeItem]: showText })}>
+        <ReactMarkdown
+          className={cn(styles.textContent, {
+            [styles.hideTextContent]: !showText,
+          })}
+        >
+          {descr}
+        </ReactMarkdown>
+      </div>
     </li>
   );
 };

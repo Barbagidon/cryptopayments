@@ -9,12 +9,15 @@ export async function generateMetadata() {
   if (seoData) {
     const { metaTitle, metaDescription, metaImage, canonicalURL, keywords } =
       seoData;
+
     return {
       title: metaTitle,
       description: metaDescription,
       keywords: keywords,
       openGraph: {
-        images: process.env.CMS_URL + metaImage.data.attributes.url,
+        images: metaImage.data
+          ? process.env.CMS_URL + metaImage.data.attributes.url
+          : null,
       },
       alternates: {
         canonical: canonicalURL,
