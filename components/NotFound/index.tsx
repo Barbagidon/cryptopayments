@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.css";
 import TriangleIcon from "./icons/triangleIcon";
 import ArrowIcon from "./icons/arrowIcon";
-import Link from "next/link";
 
 const NotFound = () => {
   return (
@@ -15,9 +14,9 @@ const NotFound = () => {
       <div className={styles.middleContent}>
         <span> That page doesn&apos;t exist</span>
         <ArrowIcon className={styles.arrowIcon} />
-        <Link className={styles.mainPageLink} href={"/"}>
+        <a className={styles.mainPageLink} href={"/"}>
           Main Page
-        </Link>
+        </a>
       </div>
     </main>
   );
