@@ -14,7 +14,9 @@ export async function generateMetadata() {
       description: metaDescription,
       keywords: keywords,
       openGraph: {
-        images: process.env.CMS_URL + metaImage.data.attributes.url,
+        images: metaImage.data
+          ? process.env.CMS_URL + metaImage.data.attributes.url
+          : null,
       },
       alternates: {
         canonical: canonicalURL,
