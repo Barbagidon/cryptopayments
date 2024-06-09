@@ -15,10 +15,11 @@ const AccordItem = ({ data, className }: Props) => {
 
   const [showText, setShowText] = useState(false);
 
+  const stringFormatter = (value: string) => {
+    return value.replace(/[^a-zA-Z]/g, "").toLowerCase();
+  };
+
   useEffect(() => {
-    const stringFormatter = (value: string) => {
-      return value.replace(/[^a-zA-Z]/g, "").toLowerCase();
-    };
     const urlHash = stringFormatter(
       decodeURIComponent(location.hash.substring(1))
     );
@@ -36,7 +37,7 @@ const AccordItem = ({ data, className }: Props) => {
         className={styles.header}
       >
         <span className={styles.title}>{title}</span>
-        <div id={title} className={cn(styles.arrowWrap)}>
+        <div id={title.replace("?", "")} className={cn(styles.arrowWrap)}>
           <Arrow
             className={cn(styles.arrow, {
               [styles.rotatedArrow]: showText,
