@@ -17,7 +17,7 @@ const AccordItem = ({ data, className }: Props) => {
 
   useEffect(() => {
     const stringFormatter = (value: string) => {
-      return value.replace(/\s+/g, "").toLowerCase();
+      return value.replace(/[^a-zA-Z]/g, "").toLowerCase();
     };
     const urlHash = stringFormatter(
       decodeURIComponent(location.hash.substring(1))
