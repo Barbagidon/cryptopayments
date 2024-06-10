@@ -28,10 +28,10 @@ const Header = () => {
       <div className={styles.headerWrap}>
         <header className={cn(styles.header)}>
           <div className={styles.headerContent}>
-            <a className={styles.logoLink} href={"/"}>
+            <Link className={styles.logoLink} href={"/"}>
               <LogoIcon className={styles.logo} />
               <MobileLogo className={styles.mobileLogo} />
-            </a>
+            </Link>
             <Navigation />
 
             <div className={styles.links}>
