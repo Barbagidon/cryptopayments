@@ -22,16 +22,14 @@ const Footer = () => {
         <div className={styles.bottomContent}>
           <div className={styles.bottomTextWrap}>
             <span className={styles.bottomText}>
-              Cryptopayments is a brand name of Stellar LLC, Registry code: 2969
-              LLC 2023
+              Cryptopayments is a brand name of Cleverlee UAB, Registry code: 302935751
             </span>
             <span className={styles.bottomText}>
-              Registered office: Suite 305, Griffith Corporate Centre,
-              Beachmont, Kingstown, St. Vincent and the Grenadines
+              Registered office: Vilnius, Eišiškių Sodų 18-oji st. 11, LT-02194
             </span>
           </div>
           <div className={styles.date}>
-            © Copyright Stellar LLC {currentYear}
+            © Copyright Cleverlee UAB {currentYear}
           </div>
         </div>
       </div>

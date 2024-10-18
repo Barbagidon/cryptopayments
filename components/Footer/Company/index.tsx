@@ -8,12 +8,11 @@ const Company = () => {
       <FooterTitle>Company</FooterTitle>
       <div className={styles.list}>
         <div className={styles.topListItems}>
-          <div className={styles.text}>Stellar LLC</div>
-          <div className={styles.text}>Registry code: 2969 LLC 2023</div>
+          <div className={styles.text}>Cleverlee UAB</div>
+          <div className={styles.text}>Registry Code: 305935751</div>
         </div>
         <div className={(styles.text, styles.bottomText)}>
-          Address: Suite 305, Griffith Corporate Centre, Beachmont, Kingstown,
-          St. Vincent and the Grenadines
+          Address: Vilnius, Eišiškių Sodų 18-oji st. 11, LT-02194
         </div>
       </div>
     </div>

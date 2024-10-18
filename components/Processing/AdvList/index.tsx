@@ -15,7 +15,7 @@ const config = [
   },
   {
     title: "AUTO CONVERSION",
-    descr: "Swap crypto accets",
+    descr: "Swap crypto assets",
     num: 2,
   },
   {

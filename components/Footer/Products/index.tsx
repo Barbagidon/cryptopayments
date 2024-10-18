@@ -16,7 +16,7 @@ const Products = () => {
           Exchange & Wallets
         </Link>
         <Link
-          href={"https://app.cryptopayments.com/swagger/"}
+          href={"https://developers.cryptopayments.com/docs/getting-started"}
           className={styles.link}
         >
           For developers
