@@ -31,7 +31,7 @@ export default function RootLayout({
         className={interTight.className}
       >
         <GoogleAnalytics gaId="G-1LWPP4LXCP" />
-        <GoogleTagManager gtmId="GTM-TXV3QWJX" />
+        <GoogleTagManager gtmId="GTM-KGJFQVK3" />
         <Suspense fallback={null}>
           <FacebookPixelEvents />
         </Suspense>
